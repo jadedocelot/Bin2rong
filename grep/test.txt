@@ -1,0 +1,5 @@
+This grep file will be my tester file. Some info on me, my name is Edgar Ortega and I currently live in Lake Forest California.
+edgar ortega 
+edgar ortegaman
+Some people call me Bin2Rong instead of Edgar Ortega 
+ 
