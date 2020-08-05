@@ -1,3 +1,5 @@
+
+
 while True: 
 	line = input('> ') # you will infinitely be asked to input charaters
 	if line[0] == '#': # if # entered in then move on to continue
