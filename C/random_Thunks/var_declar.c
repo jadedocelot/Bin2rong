@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-
 extern int x; 
 extern int y;
 extern float fundsOne;
+extern float fundsTwo;
 
 
 int main(){

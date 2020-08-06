@@ -46,6 +46,14 @@
                             NOTE: FORMAT SPECIFIERS within printf
                     
 
+
+                        OUTPUT: 
+                            
+                            43.946003
+
+
+                    __________
+                            
                     EXAPLE 2:
                     __________
 
@@ -66,5 +74,3 @@
                     return 0; 
                     } 
                     
-                        OUTPUT: 
-                            43.946003

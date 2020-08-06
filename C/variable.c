@@ -83,8 +83,9 @@
 
 #include <stdio.h>
 
+// NOTE: that the (Extern) is only needed if you are declaring a var outside of the main()
 // Variable Declaration:
-extern int a,b;     /// 
+extern int a,b;     /// You will use the keyword (EXTERN) to declare a variable at any place.
 extern int sum;
 extern float f;
 
@@ -107,3 +108,86 @@ int main() {
 
 return 0;
 } 
+
+
+
+EXAMPLE 2:
+
+
+#include <stdio.h>
+
+
+extern int x; // (extern only needed when declar outstide of main())
+extern int y;
+extern float fundsOne;
+
+
+int main(){
+
+int x;
+int y; 
+double fundsOne; 
+float sum; // in order for a clean output -- sum will need to be defined as a float since at leat one number/results will include fractions
+
+
+x = 32; 
+y = 54; 
+
+fundsOne = 19.32;
+
+sum = x * fundsOne;
+
+printf("Your pay for Tuesday is : %f",sum);
+
+
+return 0; 	
+}
+
+
+ 	-> The same concept applies when declaring a function when you provide a function name at declaration AND its actual definition can be given anywhere else.
+
+
+ 				// function declaration
+ 					int myFunc();
+
+
+
+ 					int main() {
+ 						// function call
+ 						int i = func();
+
+ 					}
+
+
+ 					// function definition  
+
+ 					int func(){
+
+
+ 					return 0;	
+ 					}
+
+
+-------- - - - - ---- -- 
+
+LValues and RValues in C
+
+---   ------- -- --- --  
+
+
+	- There are two kind of expressions in C
+
+			* Lvalue - Expressions that refer to a memory location are called 
+			"Lvalue" expressions. An lvalue may appear as either the left-hand or right-hand of an assignment. 
+
+			* Rvalue - The term (ravalue) refers to a data value that is stored at some address in memory. An rvalue is an expression that cannot have a value assigned to it which means an rvalue may appear on the right-hand side but not the left-hand side of assignment.
+
+					- VAR are (Lvalues) and so they may appear on the left-hand side of the assignement (=) 
+					- Numeric literals are (Rvalues) and so they may not be assigned and cannot appear on the left-hand side
+
+
+					// (Lvalue)	
+					int  = 20; // valid statement
+
+					// (Rvalue)
+					10 = 20; // invalid statement; would generate compile-time error
