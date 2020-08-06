@@ -8,7 +8,7 @@ _______________________________________________________
 - %f				  - | -   Float values
 - %g or %G		      - | -   Similar as %e or %E
 - %hi				  - | -   Signed integer (short)
-- %hu				  - | -   Unsigned intege	r (short)
+- %hu				  - | -   Unsigned integer (short)
 - %i	 			  - | -   Unsigned integer	
 - %l or %ld or %li    - | -   Long
 - %lf				  - | -   Double

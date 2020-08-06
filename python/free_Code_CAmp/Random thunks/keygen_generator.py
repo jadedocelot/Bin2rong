@@ -18,6 +18,7 @@ print("Your final score is: ", userTally)
 time.sleep(0.80)
 print("Please allow a moment to generate a new keygen....")
 
+# myFunc()
 def myFunc(argOne,argTwo):
 	argOne.append(argTwo)
 	time.sleep(1.20)
@@ -41,6 +42,3 @@ newKeyGen.append(randNumTw)
 time.sleep(1.60)
 print("\nyour new keygen is below:\n")
 print(newKeyGen)
-
-
-
