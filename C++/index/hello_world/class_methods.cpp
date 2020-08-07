@@ -98,7 +98,7 @@ return 0;
 				int main() {
 
 					myClass myObj; // create the object
-					myObj.myMethod(); // call the method
+					myObj.myMethod(); // call the methods
 
 
 				return 0;	
