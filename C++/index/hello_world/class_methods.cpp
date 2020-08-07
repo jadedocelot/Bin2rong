@@ -14,18 +14,6 @@ Class Methods:
 
 	- There are two ways to define funtions that belongs to a class: 
 
-		* Outside class definition -- EXAMPLE: 1
-		_______________________________		
-
-				void myMethod(int x, int y) { // myMethod is the FUNCTION, FYI
-					return x + y;
-				}  
-
-				class myClass {
-				public: /// STOP FORGETTING TO INCLUDE PUBLIC!
-
-				};
-
 
 		* Inside class definition -- EXAMPLE: 2
 		_______________________________
@@ -73,15 +61,45 @@ public: // STOP FORGETTING to make publicx
 	}
 }; // semi to close  class
 
-
 int main() {
-
 myClass myObj;
 
 cout << myObj.myMethod(12,32) << endl; // Cout since method/funtion includes (return)
-
 
 return 0;
 } 
 
 // OUTPUT: 384
+
+
+- To declare a function outside the class definition, you have to declare it inside the class and define it outside of the clas. 
+
+	- This is done by specifying the name of the class, followed the scope resolution (::) operator, followed by the name of the funtion.
+
+
+		* Outside class definition -- EXAMPLE: 1
+		_______________________________		
+ 		
+
+				class myClass { // The class
+					public: // Access specifier
+						int myMethod(); // method function declaration
+
+				};
+
+					/// Method/Fuction definition outside the class
+
+				int myClass::myMethod() { // myMethod is the FUNCTION, FYI
+					return x + y;
+				} 
+
+
+
+				int main() {
+
+					myClass myObj; // create the object
+					myObj.myMethod(); // call the method
+
+
+				return 0;	
+				}
