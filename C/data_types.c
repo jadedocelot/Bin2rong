@@ -83,7 +83,8 @@ printf("USHRT_MAX:%d\n",USHRT_MAX); // USHRT_MAX:65535
 }
 
 
- 																The VOID Type
+ 									The VOID Type
+ 									
  	- The void type specifies that no value is available. It use in 3 kinds of situations:
 
  	1. Functions Returns as Void:

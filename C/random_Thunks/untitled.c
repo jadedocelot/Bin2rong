@@ -1,28 +1,26 @@
+
 #include <stdio.h>
 
 
-extern int x; 
-extern int y;
-extern float fundsOne;
+extern float area;
 
 
 int main(){
 
-int x;
-int y; 
-double fundsOne; 
-float sum;
+float area; 
+
+const float WIDTH = 24.25;
+const float HEIGHT = 55.86;
 
 
-x = 32; 
-y = 54; 
+area = WIDTH + HEIGHT; 
 
-fundsOne = 19.32;
+	printf("Total measurment is: %f\n", area);
 
-sum = x * fundsOne;
-
-printf("Your pay for Tuesday is : %f",sum);
 
 
 return 0; 	
 }
+
+
+// OUTPUT: Total measurment is: 80.110001
