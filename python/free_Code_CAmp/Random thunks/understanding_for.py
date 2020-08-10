@@ -1,14 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
 # friends = ['Joe','Meg','Alex'] ## Old set
 friends = ['Joe','Kim','Alex','Maria','Meg','Edgar','Bryan'] ## New set
 
