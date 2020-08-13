@@ -1,0 +1,18 @@
+<!-- This is the HTML skeleton that can be accessed from any point-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"> <!-- same setup for Javascript-->
+	{% block head %}{% endblock %} 
+	<!-- jinja2 sytax that FLASK uses -->
+	<!-- This outlines where we will enter in the pages unique code-->
+
+</head>
+<body>
+	{% block body %}{% endblock %}<!-- This outlines where we will enter in the pages unique code-->
+</body>
+</html>
