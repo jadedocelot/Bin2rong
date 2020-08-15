@@ -40,6 +40,34 @@ Class Methods:
 				} 
 
 
+// Example #2
+#include<iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+
+
+class const_car {
+public:
+	void dans_constant(string x){ 
+		cout << "Dan's car: " << x << endl;
+	}
+
+}; 
+
+
+int main(){
+
+ const_car dans_car; 
+
+	dans_car.dans_constant("BMW");
+
+
+return 0; 	
+}
+
+
+
 - In Example 2 (seen above), we can see a method (function) being defined within a class. And as you can see we have named it "myMethod"
 
 NOTE: You can access methods. just like you can access (Attributes); by creating an object of the class and by using the dot syntax (.);
@@ -103,3 +131,79 @@ return 0;
 
 				return 0;	
 				}
+
+
+
+
+
+				 									PARAMETERS
+
+	- You can also add parameters (NO WAY!) 
+
+// My example
+
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+
+class myClass {
+public: // STOP FORGETTING to make publicx
+	int myMethod(int x, int y){ // int fuctio
+		return x * y;
+	}
+}; // semi to close  class
+
+int main() {
+myClass myObj;
+
+cout << myObj.myMethod(12,32) << endl; // Cout since method/funtion includes (return)
+
+return 0;
+} 
+
+
+
+//W3school example:
+
+#include <iostream>
+using namespace std;
+
+
+class Car {	 // Create class
+ public: // Access specifier
+ 	int speed(int maxSpeed); 
+ 		// Method function declaration
+ 	   // parameters are included unpon declaring class
+};
+
+ // Method/Function definition outside of class
+// And once again parameters are brought up upond defining a method
+int Car::speed(int maxSpeed) {
+	return maxSpeed;
+
+} 
+
+int main(){
+	Car myObj; // Create object of (Car)
+	cout << myObj.speed(200) << endl; // Call method
+
+
+return 0;
+}
+
+	// OUTPUT: 200
+
+
+
+
+
+
+
+
+
+
+
+
+

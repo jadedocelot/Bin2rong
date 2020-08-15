@@ -1,22 +1,23 @@
+// untitled.cpp
+
+
 #include <iostream>
 #include <string>
 #include <cmath>
 using namespace std;
 
-class myClass {
-public:
-	int myMethod(int x, int y);
-};
 
-int myClass::myMethod(int x, int y){
-	return x * y;
-}
+class myClass{
 
-int main(){
-myClass myObj;
+// Since an access specifier was not assigned to this class, by default it will be teamed with (private) specifier 
+	
+string color;
+string brand; 
+string year;
 
-	cout << myObj.myMethod(32,7) << endl;
-
-return 0;
-}
-// OUTPUT: 224
+	myClass(string x, string y, string z){
+		color = x;
+		brand = y;
+		year = z;
+	}
+} ;

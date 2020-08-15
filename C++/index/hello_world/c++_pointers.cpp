@@ -33,7 +33,7 @@ cout << &mealOne << endl; // Output the memory address (0x7ffeeceb9708)
 
 
 // Note there are (3) ways to declare pointer variables, but the first way is prefferred:
-
+	
 	1. string* pntrMeal
 	2. string * pntrMeal
 	3. string *pntrMeal
