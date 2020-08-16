@@ -12,7 +12,6 @@ Encapsulation
 
 
 
-
 		 Access Private Members
 
 		 	- To access a private attribute, use  public "get" and "set" methods: 
@@ -34,7 +33,7 @@ class Employee {
  	int restricted_salary; //
  		//(int) 'restricted_salary' has been assigned a (private) access specifier
 
-
+xz
  public: // public setter for a private access specifie r
  	void setSalary(int s) { // our new (public) method which will allow our private specifier to be accessed
  		restricted_salary = s; // (restricted_salary) has been declared and is ready to take in arguments

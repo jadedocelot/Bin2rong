@@ -8,8 +8,7 @@ int myNum = 28; /* int = integer which stores whole positive and negative number
 double myFloat = 2.23; /* Double represents floating numbers with decimals, Sufficient for storing 15 decimal digits */ ====> 4 bytes 
 float myDouble = 3.32; /* Double represents floating numbers with decimals, Sufficient for storing 7 decimal digits */ ====> 8 bytes 
 char myLetter = "A"; /* char is a single charater type that uses "A" and "B" and so on and so on */ ====> 1 byte
-bool myBool = True; /* bool represents boolean which use TRUE or FALSE values */ ====> 1 byte 
-string text = "Hello world!"; /* and strings uses. You guessed it, strings/text */  ====>
+bool myBool = True; /* bool represents boolean which use TRUE or FA string text = "Hello world!"; /* and strings uses. You guessed it, strings/text */  ====>
 
 Float vs Double: 
 // The precision if a floating point value indicates how many digits the value cab can have after the decimal point. 

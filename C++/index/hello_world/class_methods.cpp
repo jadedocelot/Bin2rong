@@ -34,7 +34,7 @@ Class Methods:
 
 				myObj.myMethod();
 
-					cout << myObj.myMethod(12,12) << endl;s
+					cout << myObj.myMethod(12,12) << endl;
 
 				return 0;	
 				} 
