@@ -1,23 +1,45 @@
-// untitled.cpp
 
-
-#include <iostream>
-#include <string>
-#include <cmath>
+#include include <iostream>
+#include include <cmath>
+#include include <string>
 using namespace std;
 
 
-class myClass{
+class carBackup {
+private:
+	int emergency_brake_speed;
+};
 
-// Since an access specifier was not assigned to this class, by default it will be teamed with (private) specifier 
-	
-string color;
-string brand; 
-string year;
 
-	myClass(string x, string y, string z){
-		color = x;
-		brand = y;
-		year = z;
+
+Class carBackup_implemented {
+public:
+	void backupBrake(int safe_speed){
+
+		adjusted_speed = safe_speed;
+
+public:
+	int current_speed();
+		return adjusted_speed;
+
+
 	}
-} ;
+
+
+};
+
+
+
+int main(){
+
+int errorSpeed = 100;
+int speedDecrease = 30;
+
+carBackup_implemented myCar;
+
+
+
+
+
+return	
+}

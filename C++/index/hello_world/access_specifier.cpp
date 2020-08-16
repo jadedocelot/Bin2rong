@@ -99,9 +99,9 @@ class myClass{
 
 // Since an access specifier was not assigned to this class, by default it will be teamed with (private) specifier 
 	
-string color;
-string brand; 
-string year;
+string color; // private attribute
+string brand; // private attribute
+string year; // private attribute
 
 	myClass(string x, string y, string z){
 		color = x;
