@@ -1,7 +1,7 @@
 
-#include include <iostream>
-#include include <cmath>
-#include include <string>
+#include <iostream>
+#include <cmath>
+#include <string>
 using namespace std;
 
 
@@ -12,34 +12,34 @@ private:
 
 
 
-Class carBackup_implemented {
+class carBackup_implemented { // Setter
 public:
-	void backupBrake(int safe_speed){
-
-		adjusted_speed = safe_speed;
-
-public:
-	int current_speed();
-		return adjusted_speed;
-
-
+	void backupBrake(int x, int y){
+		emergency_brake_speed = x - y;
 	}
-
+public: // Getter
+	int current_speed(){ 
+		return emergency_brake_speed;
+	}
 
 };
 
 
-
 int main(){
 
-int errorSpeed = 100;
-int speedDecrease = 30;
+int errorSpeed;
+// int speedDecrease = 30;
 
-carBackup_implemented myCar;
+// carBackup_implemented myCar;
+
+cout << "What is your current speed? ";
+cin >> errorSpeed;
+cout << errorSpeed;
 
 
 
 
 
-return	
+
+return0
 }
