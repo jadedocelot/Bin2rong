@@ -1,0 +1,8 @@
+This is my statement:
+I would like to let the people of the US know 
+that we are going to have some time to show
+you what is going to happen when 
+we allow 
+Python 
+to count the lines 
+of a text file for us. 

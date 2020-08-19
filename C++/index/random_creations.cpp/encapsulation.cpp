@@ -21,12 +21,13 @@ public:
 int main(){
 int x;
 int stable_speed;
-// int emergency_speed_reduction = 30;
+int emergency_speed_reduction = 30;
 int error_Speed;	
 
 carBackup speed_Monitoring;
-cout << speed_Monitoring.backupBrake(10,100);
-
+speed_Monitoring.backupBrake(emergency_speed_reduction,error_Speed);
+//(emergency_speed_reduction,emergency_speed_reduction)
+//(emergency_speed_reduction,emergency_speed_reduction)
 cout << "What is your current speed? ";
 cin >> x;
 
@@ -37,7 +38,6 @@ if (x > 95){
 }
 
 cout << error_Speed;
-///
 
 if (error_Speed > 95){
 	cout << speed_Monitoring.current_speed() << endl;
