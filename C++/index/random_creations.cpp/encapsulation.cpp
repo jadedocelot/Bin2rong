@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <cmath>
 #include <string>
@@ -36,15 +35,12 @@ if (x > 95){
 } else{
 	stable_speed = x;
 }
-
-cout << error_Speed;
-
+//cout << error_Speed; // Removing this line will only output 30 
 if (error_Speed > 95){
 	cout << speed_Monitoring.current_speed() << endl;
 } else{
 	cout << stable_speed << endl;
 }
-
 
 return 0;
 }
