@@ -21,27 +21,29 @@ int main(){
 int x;
 int stable_speed;
 int emergency_speed_reduction = 30;
-int error_Speed;	
 
 carBackup speed_Monitoring;
-speed_Monitoring.backupBrake(emergency_speed_reduction,error_Speed);
-//(emergency_speed_reduction,emergency_speed_reduction)
+//speed_Monitoring.backupBrake(emergency_speed_reduction,x)
 //(emergency_speed_reduction,emergency_speed_reduction)
 cout << "What is your current speed? ";
 cin >> x;
 
 if (x > 95){
-	error_Speed = x;
+    // int error_Speed = x;
+    speed_Monitoring.backupBrake(x,emergency_speed_reduction);
+    cout << "Your speed has been reducted: " << speed_Monitoring.current_speed() << "MPH" << endl; 
 } else{
 	stable_speed = x;
+    cout << "You're driving at a stable speed of: " << stable_speed << "MPH" << endl;
 }
 //cout << error_Speed; // Removing this line will only output 30 
+/*
 if (error_Speed > 95){
 	cout << speed_Monitoring.current_speed() << endl;
 } else{
 	cout << stable_speed << endl;
 }
 
+*/
 return 0;
 }
-
