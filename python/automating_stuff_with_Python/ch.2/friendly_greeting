@@ -1,0 +1,6 @@
+userName = input("What is your name?")
+
+if userName == "edgar":
+    print("Hi Edgar!")
+else:
+    print("Hello stranger..")
