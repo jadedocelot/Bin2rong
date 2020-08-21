@@ -20,4 +20,10 @@ Ending a program early with sys.exit()
 
 - This control will terminate the program 
 
-- When your program reaches the bottom of the instructions. However you can cause the program to terminate, or exit, by calling the sys.exit() functions
+- When your program reaches the bottom of the instructions. However you can cause the program to terminate, or exit, by calling the sys.exit() function
+ 
+ 	- since the this function is in the sys module, you have to imort sys 
+
+ 		# import sys
+
+ 		
