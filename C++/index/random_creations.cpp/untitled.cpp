@@ -1,45 +1,40 @@
+// untitled.cpp 
 
 #include <iostream>
 #include <cmath>
 #include <string>
 using namespace std;
 
-
-class carBackup {
-private:
-	int emergency_brake_speed;
+// BASE
+	// Parent class
+class myClass {
+public:
+ void myFunc() {
+ 	cout << "Some content in parent class";
+ 	}
 };
 
 
-
-class carBackup_implemented { // Setter
+// Another base class
+class myClassTwo{
 public:
-	void backupBrake(int x, int y){
-		emergency_brake_speed = x - y;
-	}
-public: // Getter
-	int current_speed(){ 
-		return emergency_brake_speed;
-	}
+ void myTwo(){
+ 	cout << "\nAnd a lil bit from my other func\n";
+ 	} 
+};
+
+// Derived class
+class myChildClass: public myClass, public myClassTwo {
 
 };
 
 
 int main(){
+myChildClass myObj;
 
-int errorSpeed;
-// int speedDecrease = 30;
-
-// carBackup_implemented myCar;
-
-cout << "What is your current speed? ";
-cin >> errorSpeed;
-cout << errorSpeed;
+myObj.myFunc();
+myObj.myTwo();
 
 
-
-
-
-
-return0
-}
+return 0; 	
+} 
