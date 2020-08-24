@@ -8,7 +8,7 @@
 #Fifth Try
 print('Beginning of nested list scrape:')
 nest_list = [[4,8,5],[54,32,44],[32,2,77],[498,23,56],[34,2345,23]]
-blank_list = []
+blank_list = list() # list() is a method which will create an empty list
 nest_snake = None
 
 for sub_bot in nest_list:
