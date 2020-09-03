@@ -1,0 +1,14 @@
+userInput = float(input("Enter in your number: "))
+# x = float(userInput)
+border = "======================================="
+
+print("Your number is ",float(userInput))
+
+y = input("Would you like to sum up?\n")
+if y == "yes":
+    sum = userInput * 100
+    print(border)
+    print("\nYour sum is: ",sum,"\n")
+    print(border)
+else:
+    print("Thank you for your business!")
