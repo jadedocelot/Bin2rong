@@ -3,7 +3,8 @@
 #include <string>
 using namespace std;
 
-class carBackup {private:
+class carBackup {
+private:
 	int emergency_brake_speed;
 
 public:

@@ -12,7 +12,7 @@ b = 5;
 c = (float) a / b;
 
 cout << c << endl;
-
+		
 return 0;
 }
 
