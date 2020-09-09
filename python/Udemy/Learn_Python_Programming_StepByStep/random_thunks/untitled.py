@@ -1,5 +1,6 @@
-x = 10 / 2
-y = 10 // 2
+USER_NAME = input("What is your name? ")
 
-print(x)
-print(y)
+if USER_NAME == "edgar" or USER_NAME == "Edgar":
+    print("Greetings Edgar!")
+else:
+    print("Cannot locate name is game memory.") 
