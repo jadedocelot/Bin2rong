@@ -9,21 +9,19 @@ duration = [20,40,60,80,100]
 
 #OUTPUT:
 """
-0 :  scala
-1 :  C
-2 :  Python
-3 :  Go
-4 :  Rust
+0 : scala
+1 : C
+2 : Python
+3 : Go
+4 : Rust
 """
 
-
-#for d,c in zip(duration,course): 
-	#print("Duration: ",d," Course Name: ",c)
+# for d,c in zip(duration,course): 
+	# print("Duration: ",d," Course Name: ",c)
 
 # 1st line used d and c almost as paramters 
 # The zip function combines both lists
 # The duration will also act a beaker for the itteration, in which case the iteration will only go as far as the duration goes
-
 
 """
 Duration:  20  Course Name:  scala
