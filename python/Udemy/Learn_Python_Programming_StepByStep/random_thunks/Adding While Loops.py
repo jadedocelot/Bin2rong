@@ -24,7 +24,6 @@ while num > 0:
 print("The factorial of ",n,"is ",fact)
 """
 
-
 while True:
 	lower = int(input("Enter lower range: "))
 	upper = int(input("Enter upper range: "))

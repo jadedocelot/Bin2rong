@@ -1,4 +1,4 @@
-
+	
 # EXAMPLE 1
 ROI = 11.5 # GLOBAL variable can only be accessed outside/within a function (that does not include a variable with a similar name)
 
@@ -23,3 +23,4 @@ print(ROI,id(ROI)) # 11.4 4539052112
 
 help(calculate) 
 
+ROI.

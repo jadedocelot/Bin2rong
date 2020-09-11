@@ -24,6 +24,8 @@ final_Grade = locate_marks(userGrade,userGradeTwo,userGradeThree)
 avg = average(final_Grade)
 print("Total Marks: {} Average: {}".format(final_Grade,avg))
 grade(avg)
+ 
+
 
 """
 Enter 1st Score: 64 // userGrade input 
