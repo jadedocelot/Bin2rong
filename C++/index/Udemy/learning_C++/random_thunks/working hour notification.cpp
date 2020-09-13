@@ -1,5 +1,5 @@
 // COMPLETE
-	// Need to fix the random num gen after every compile
+	// Need to fix the random num gen after every compile. 
 	// Though clean it up?
 
 // FIRST COMPILE: 14 ERRORS!
@@ -37,7 +37,10 @@ cin >> USER_RESPONSE;
 
 if (USER_RESPONSE >= 0 && USER_RESPONSE <=9) 
 {
-	cout << "Sorry, our offices are currently closed. Please provide an email so that a ticket # may be provided and a representative will reach out at their earliest convenience" << endl; 
+
+	cout << "========================================================\n";
+	cout << " Sorry, our offices are currently closed. Please provide\n an email so that a ticket # may be provided and a representative\n will reach out at their earliest convenience" << endl; 
+	cout << "========================================================\n";
 	cin >> user_EMAIL;	
 		if (user_EMAIL.size() > 3)
 		{
@@ -53,7 +56,9 @@ if (USER_RESPONSE >= 0 && USER_RESPONSE <=9)
 	/// Im not geting the the OPENED hour response
 	else if (USER_RESPONSE >= 18 && USER_RESPONSE <=24) 
 		{
-		cout << "Sorry, our offices are currently closed. Please provide an email so that a ticket # may be provided and a representative will reach out at their earliest convenience" << endl; 
+	cout << "========================================================\n";
+	cout << " Sorry, our offices are currently closed. Please provide\n an email so that a ticket # may be provided and a representative\n will reach out at their earliest convenience" << endl; 
+	cout << "========================================================\n";
 			cin >> user_EMAIL;
  		}
 			if (user_EMAIL.size() > 3)
