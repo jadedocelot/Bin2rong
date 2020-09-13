@@ -28,4 +28,6 @@ print(w) #TIME: 0.010104135000000625 (ran 1000 times)
 f = timeit(for_test, number = 1000)
 print(f) #TIME: 0.004389644999999831 (ran 1000 times)
 
-# These will be great for when deciding which funtion will run quicker
+# These will be great for when deciding which funtion will run quicker 
+
+
