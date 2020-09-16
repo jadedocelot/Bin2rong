@@ -1,10 +1,12 @@
+-- CONSUMER COMPLAINTS
+
 CREATE TABLE consumer_complaints (
     date_received varchar,
     product_name varchar,
     sub_product varchar,
     issue varchar,
     sub_issue varchar,
-    consumer_complaint_narrative varchar,
+    cons umer_complaint_narrative varchar,
     company_public_response varchar,
     company varchar,
     state_name varchar,
