@@ -27,8 +27,7 @@ COPY consumer_complaints FROM '/users/ilyaeremenko/Desktop/ConsumerComplaints.cs
 
 
 -- My Computer
-COPY consumer_complaints FROM '/users/edgar/Desktop/Bin2rong/SQL/SQL_datascience_design/challenge_1/ConsumerComplaints.csv' DELIMITER ',' CSV HEADER;
-COPY consumer_complaints FROM '/users/edgar/Desktop/Bin2rong/SQL/SQL_datascience_design/challenge_1/ConsumerComplaints.csv' DELIMITER ',' CSV HEADER;
+COPY consumer_complaints FROM '/users/edgar/Desktop/Bin2rong/SQL/SQL_datascience_design/challenge_1/ConsumerComplaints.csv' DELIMITER ',' CSV HEADER; 
 
 -- GRANT SELECT ON consumer_complaints TO PUBLIC;
 GRANT SELECT ON consumer_complaints TO PUBLIC;
