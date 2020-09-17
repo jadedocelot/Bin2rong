@@ -1,7 +1,63 @@
+
 # Sets 
 
 
-mySet = {213,23,55,4,765,34,2}
+short_codes = set({213,23,55,4,765,34,2})
+
+"""
+if 213 in short_codes:
+	print('We got it!')
+else:
+	print('Not here boss')
 
 
-print(mySet)
+# OUTPUT: We got it!
+"""
+# Will add 2020 to the SET 
+short_codes.add(2020)
+
+for cursor in short_codes:
+	print(cursor,end="-")	
+print("\n\nEnd of Set")
+ 
+
+# It prints out like so due to end="" in PRINT
+# OUTPUT: 34-2-4-213-55-23-2020-765-
+
+
+short_codes.pop()
+
+print(short_codes)
+# 34 has been 'popped' out of the sets
+
+short_codes.remove(2020)
+# 2020 will be removed from the set
+
+print(short_codes)
+
+# Now lets wipe this shit set 
+
+short_codes.clear()
+
+print(short_codes)
+# OUTPUT: set()
+
+#COMMON
+				1 4 6 7 8 9 10 11 12 67
+setOne = {1,#2,#3,4,#5,6,7,8 ,9} 
+setTwo = {10,11,#2,#3,12,#5,67}
+
+
+print(setOne | setTwo) # {1, 2, 3, 4, 5, 6, 7, 8, 9, 67, 10, 11, 12} # remove an element which already been used (No repeats)
+
+print(setOne - setTwo) # {1, 4, 6, 7, 8, 9} # remove matching number from "setOne"
+
+print(setOne & setTwo) # {2, 3, 5} # "setOne keep number that match number fromr setTwo"
+
+print(setOne ^ setTwo) # {1, 67, 4, 6, 7, 8, 9, 10, 11, 12} # no matching values, unordered set
+
+
+
+
+
+
