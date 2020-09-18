@@ -13,7 +13,7 @@ print(mathcedColors.keys())
 print(mathcedColors.items())
 
 # for laser in mathcedColors.values():
-# 	print(laser, end="•")
+# 		print(laser, end="•")
 
 for k,l in mathcedColors.items():
 	print(k,"º",l)
