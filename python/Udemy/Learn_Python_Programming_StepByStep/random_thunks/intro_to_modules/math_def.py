@@ -24,3 +24,17 @@ def add_ret (a,b):
 # DICT 
 
 myDict = dict({})
+
+
+
+# list
+
+# myList consists of random string elements
+myList = ["Tamales","Airpods","Fries","Carbonated Water","Sontag"]
+
+
+# The bottom variable will genertate list maxing out at 302
+intList = list(range(302)) 
+
+# The bottom function will show an example of on how to generate multiple 
+# nubers from list
