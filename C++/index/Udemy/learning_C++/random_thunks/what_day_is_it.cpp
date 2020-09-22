@@ -3,13 +3,12 @@
 #include <cmath>
 using namespace std;
 
-
 int main(){
 
 int x;
 
 Beginning: // Label used to repeat the program
-// Need to working on repeating scripts
+// Need to working on repeating scripts 
   
 cout << "What day is it? (enter 1-7):" << endl;
 
@@ -46,6 +45,5 @@ else{
 } 
 		
 
-		
 return 0;
 } 

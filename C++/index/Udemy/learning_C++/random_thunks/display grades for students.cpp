@@ -1,6 +1,5 @@
 // Display Grades for Students
 
-
 #include<iostream>
 #include<cmath>
 #include<string>
@@ -24,7 +23,7 @@ sum = avg / 3;
 		cout << "B" << endl;
 	}
 	else if (sum < 35){
-		cout << "C" << endl;			
+		cout << "C << endl;			
 	} 
 
 return 0;	
