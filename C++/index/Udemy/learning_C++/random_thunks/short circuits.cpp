@@ -28,5 +28,5 @@ if (x < y || ++z > y)
 cout << z << endl;
 
 
-return 0;
+ return 0;
 }
