@@ -1346,7 +1346,7 @@ In this video, we will be learning how to create and extract zip archives. We wi
 
 _______________________________________________________________________________
 
-Now we will pul the link/video from that area as well.
+- Now we will pul the link/video from that area as well.
 
 	source = requests.get('https://coreyms.com/').text
 	
@@ -1640,6 +1640,139 @@ ______________________________________________________________________________
 
 from bs4 import BeautifulSoup
 import requests
+import csv 
+	* first we must import the CSV module
+
+source = requests.get('https://coreyms.com/').text
+	
+	* We will use REQUESTS to scrape information from  the site within our .get() method. We will place this request within the source variable
+
+soup = BeautifulSoup(source,'lxml')
+	
+	* We will then use the BeautifulSoup package to exctract data from the website stored in "source". As you can see the arguments stored within the BeautifulSoup() method are the  "source" variable (which includes the site we are scraping for data) and "lxml", which handles XML and HTML files and can also be used to assist in website data scraping
+
+csv_file = open('cms_scrape.csv','w')
+
+	* the "csv_file" stores the open() method which will open a new CSV file.
+	* the arguments within the open() method are as follows:
+		* 'cms_scrape.csv' is the name/type our newly opened will will be saved as 
+		* 'w'stands for for permission granted for said CSV file to be written in. Just remember that W stands for write
+
+csv_writer = csv.writer(csv_file)
+		* Return a writer object responsible for converting the user’s data into delimited strings on the given file-like object. csvfile can be any object with a write() method. 
+
+		* The file we will be writing on will be the "csv_file" we opened above. And as you can see we passed that variable as an argument within the .writer() method
+
+csv_writer.writerow(['headline','summary','video_link'])
+	* .writerow will used the csv_writer to writed the following arguments 	    within .writerow([x,y,z])
+	* ([x,y,z]) will be the collumn names with at the top of our csv
+		* The names column names within this line almost act as parameters
+
+* below we will be using a for loop to scrape our data
+
+* for 'article' will loop through the souce code of the website within the 'soup' variabl
+
+* the .find_all method is then used to locate all the 'article' keywords within the source code of our desired website
+
+* The first chunk of code we will be extracting we be the headlines of each article within the site
+
+	*Phthon will locate each <div> with the artitcle keyword
+	* then for the <h2> keyword within that block
+		* Then locate the <a> tag and extract the HEADER within it and store it within the "headline" variable
+
+for article in soup.find_all('article'):
+	headline = article.h2.a.text
+	print(headline)
+	print()
+	
+	* Once we have our headers, our for loop will then proceed to extracting our article summary 	
+
+	* our "summary" variable will locate all "article" tag
+	* And within that tag Python will search for a <div> with the CLASS keyword "entry-content"
+		* once located Python will locate the <p> tag (paragraph tag) within that and extract the TEXT
+	* Then we will have successfully extracted our article summary
+
+	summary = article.find('div',class_="entry-content").p.text
+	print(summary) 
+	print()
+	
+	* So far we have extracted the article headers and placed them within "headline"
+	* And have extracted the article summary and placed them within summary
+
+	* NOW, we will extract the video within each article
+
+	* As you can see we use TRY/EXCEPT here for some of the posts dont include videos and if our scrape comes across something with no video content, it will break the process and send back a TRACEBACK. So to avoid this we use try/except
+
+	* python will "TRY" to extract the video URL of each article
+
+	* Are variable "vid_src" will scrape through "article"
+		* once we have located said "article" keyword Python will then look for the 'iframe' tag with the class_= name 'youtube-player'
+
+		 * Though this will extract a LARGE youtube link, all we need is the video ID and in order to get that we need to parse said large link into LIST format 
+
+	try:
+		vid_src = article.find('iframe',class_='youtube-player')['src']
+
+		* So extracted that LARGE ass URL link and now we will parse it to extract the ID. We will place this URL within vid_src
+
+		* we will place vid_src within vid_id and use the.split() method to create. Use each '/' as starting point for each split, once completed we will then have list which is indexed startibng with 0 
+
+
+		* But we dont exactly have the video ID just yet, we need to parse once more to get EXACLTY what we want, CAUSE WE RE AMERICANS AND THIS AMERICA!
+
+		 	* Now we will place vid_id into a new variable called, vid_id (some inception shit right there). We will
+
+		 	* We will repeat the split once more with the (old) already parsed list vid_id varible. This using '?' as the starting point for each split bitch.
+
+		 	* Once second of parsing is completed we SHOULD have our video ID
+ 
+
+		vid_id = vid_src.split('/')[4]
+		vid_id = vid_id.split('?')[0]
+	
+
+			* Now that we have our video we will pop it into a "YOUTUBE" format variable hence the 'f' in "yt_link"
+
+			* and print said yt_link
+
+		yt_link = f'http://youtube.com/watch?v={vid_id}'
+		print(yt_link)
+		print()
+	except Exception as e:
+		
+		* and the except is for when an artical does not have a video then rather than the Python returning a traceback, return "None"
+
+		yt_link = None
+
+	print()
+
+	csv_writer.writerow([headline,summary,yt_link])
+		
+		* once we are done scraping, we now has to add the collected data to its assigned column within the new CSV file.
+		
+		* Remember the collumns we created above (The ones that were parameters[that will now take in arguments by order]), now we can specify what sraped information can can go to whihc column by passing in the informations variable name as arguments
+
+csv_file.close()
+			
+		* Once the scraped data has been written onto the "csv_file" we can then close it using the .close() method at the end of our function
+
+
+
+- And with this will not only scrape the desired information into our terminal but will have it saved to a CSV file where our PY file resides.
+
+
+______________________________________________________________________________
+
+
+
+- Syntax in its entirety without notes:
+
+
+
+
+
+from bs4 import BeautifulSoup
+import requests
 import csv
 
 source = requests.get('https://coreyms.com/').text
@@ -1678,3 +1811,21 @@ for article in soup.find_all('article'):
 
 
 csv_file.close()
+
+
+______________________________________________________________________________
+
+# Simple code to extract source code from any site:
+
+
+
+
+
+from bs4 import BeautifulSoup
+import requests
+
+
+source = requests.get('<site URL>').text
+soup = BeautifulSoup(source,'lxml')
+	
+print(soup.prettify())
