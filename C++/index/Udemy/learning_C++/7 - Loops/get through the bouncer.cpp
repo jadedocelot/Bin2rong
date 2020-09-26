@@ -1,7 +1,6 @@
 // Need to work on this one a bit more 
 // will really only work if x is lest than 34
 
-
 #include<iostream>
 #include<cmath>
 #include<string>

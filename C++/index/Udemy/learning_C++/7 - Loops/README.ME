@@ -3,10 +3,10 @@
 		LOOPS/REPEATING STATEMENTS/ITERATIVE STATEMENTS
 		________________________________________________
 
-		1. while
-		2. do while
-		3. for 
-		4. for each
+		1. while(): pre-tested loop
+		2. do while(): post-tested loop
+		3. for: counter controled loop
+		4. for each: for each loop for collections
 
 
 		"You will continue to add sugar to your coffee untill it is sweet.  "
@@ -144,3 +144,118 @@ return 0;
 }
 
 //while (x <= 100);(z = z * 12);
+
+
+
+			WHILE LOOPS within WHILE LOOPS
+
+
+
+
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main() {
+
+bool coin = false;
+
+while (coin == false) 
+{
+//bool coin = false;
+while (coin == false)
+{
+int lock_one = 5;
+while (lock_one <= 50)
+{
+	lock_one++;
+	cout << lock_one << endl; 
+	}
+	cout << endl << "Lock One Unlocked\n" << endl;
+	coin = true;
+	} 
+
+} 						
+bool coinTwo = false;
+
+while (coinTwo == false)
+{
+	
+int lock_two = 3;
+while (lock_two <= 41) 
+{
+	lock_two++;
+	cout << lock_two << endl; 
+}
+	cout << endl;
+	cout << "\nLock two Unlocked";
+	coinTwo = true;
+} 
+
+coin = true;
+cout << "\n_________________________________\n";
+cout << endl << "\nChest Unlocked!\n" << endl;
+
+return 0;
+}
+
+
+
+
+
+				 		FOR LOOPS 
+
+- Loops /respecting statements/ Interative Statements
+
+* The for loop will consist of 3 parts
+
+		
+		- The numbered steps below will be repeated
+
+
+		 1:      2:5:8:11:fail: 4:7:10:
+		 |			   |		   |
+for (initialization,condition,updation)
+{
+	process -> 3:6:9:12: 
+}
+
+
+- For: if you know the number times you want to loop
+ 
+	- It is refered to as (counter control loop)
+		- whenver counting is involved for repetation then we use (for) loop
+
+
+
+int main() {
+
+int n,i;	
+
+	cout << "Enter n";
+	cin n;
+
+		- The for() loop is doing the following:
+			- assigning the value of 1 
+			- if 1 is less than or = to n
+			- increment i by 1 in each interation 
+			- print out i new value within each itteration
+
+	for (i =1; 1 <= n; i++)
+	{
+		cout << i << end ;
+	}
+}	
+
+
+
+- For() loop is the most used loop in C++
+
+
+
+
+
+
+
+		Creating a Multiplication Table With While Loops
