@@ -13,11 +13,14 @@ int i,n,fact;
 
 for (i = 1; i <= n;i++)
 {
-	if (n%i==0){	
+	if (n%i==0)
+	{	
 		cout << i << endl;
-
 	}
 }
+return 0;	
+}
+
 /* 
 	while(i <= n){
 		if (n % i == 0)
@@ -31,8 +34,5 @@ for (i = 1; i <= n;i++)
 		} 
 	}
 		cout << "Thes Above Integers Are Your Factorså" << endl;
-*/ 
-return 0;	
-}
-
+*/
 

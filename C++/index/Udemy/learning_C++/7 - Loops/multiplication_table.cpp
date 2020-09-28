@@ -10,9 +10,9 @@ int n;
 cout << "Please enter in a number for N" << endl;
 cin >> n;
 
-while(i <= 10){
+while(i <= 20){
     int sum = n * i;
-    cout << endl << i << " x " << n << " = " << sum << endl; 
+    cout << endl << i << " x " << n << " = " << sum << endl << endl; 
     i++;
 }
 
