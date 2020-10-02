@@ -518,11 +518,11 @@ return 0;
 
 1	| 8 % 1 == 0| 0 + 1 = 1 
 2	| 8 % 2 == 0| 1 + 2 = 3
-3	| 8 % 3 == 0| 
+3	| 8 % 3 == 0| --DONT ADD--
 4	| 8 % 4 == 2| 3 + 4 = 7
-5	| 8 % 5 == 0|
-6	| 8 % 6 == 3|
-7	| 8 % 7 ==  |		
+5	| 8 % 5 == 3|--DONT ADD--
+6	| 8 % 6 == 2|--DONT ADD--
+7	| 8 % 7 == 1|--DONT ADD--
 8	| 8 % 8 == 0| 7 + 8 = 15
 
 
@@ -599,6 +599,264 @@ OUTPUT:
 3
 7
 15
-Not a Perfect Number!
+Not a Perfect Number!  
 
 Sum of Factors is: 15
+
+----------------------- Perfect Numbers with Other Numbers -------------------
+
+In the folliwing example we use the number 44
+int n;
+int i = 1;
+int sum = 0;
+
+cout << "Enter N" << endl;
+cin >> n;
+
+while (i <= n){
+	if (n % i == 0){
+		//i++;
+		cout << sum << " + " << i << " = " << sum << endl;
+		sum = sum + i;
+		i++;
+		cout << sum << endl;
+
+		}	
+		else{
+			i++;
+		}
+	} 
+	if (2 * n == sum) {
+		cout << "Perfect Number!" << endl;
+	}
+	else {
+		cout << "Not a Perfect Number!" << endl;
+	} 
+
+cout << endl << "Sum of Factors is: " << sum << endl;
+
+return 0;
+
+INPUT: 44 
+
+
+while (i <= n){
+	if (n % i == 0){
+
+		- so as we increment up my 1 to 44 we will see if the current itteration is divisible by 0, and if so we will add that number to sum
+
+		- Though we must take the following into consideration,
+
+		else{
+			i++;
+		}
+
+			- Obviously if we dont enter the last loop our number wont be incremented so we will have to include the following so that we may continue on adding up to 44
+
+
+cout << sum << " + " << i << " = " << sum << endl;
+
+- The above was added so that we can not only get the sum but the mathmatic equations that were used to print out the below results
+
+
+0 + 1 = 1
+1 + 2 = 3
+3 + 4 = 7
+7 + 11 = 18
+18 + 22 = 40
+40 + 44 = 84
+
+
+Not a Perfect Number!
+
+Sum of Factors is: 84
+
+
+		- Now how do we get a perfect number!
+
+	If we input 6 then we  will end up with a perfect number 
+
+
+INPUT: 6
+
+
+0 + 1 = 1
+
+1 + 2 = 3
+
+3 + 3 = 6
+
+6 + 6 = 12 
+
+	- Now once  we are outside of the function, we will proceed to our next block of code
+
+	- Once we are out of the while loop we will see if the the sum we have ended up with will be the same number if 2 is multiplied by n (the number we originally entered in. Which in this case was 6)
+
+if (2 * n == sum) {
+	cout << "Perfect Number!" << endl;
+}
+
+	- it is the same number after multiplication then  it is in fact a PERFECT NUMBER! If not then it is Not a Perfect Number
+
+
+
+else {
+	cout << "Not a Perfect Number!" << endl;
+} 
+
+
+
+
+Perfect Number!
+
+
+
+	-------- -- - - - - -- ------- -- - -
+----- Program to Find Prime Numbers - --- - - - -- - - -
+	 - - - - --    - - - - - - ----- 
+
+Prime Number: Is a number divisible by itself and 1 (EXAMPLE: The first 5 prime numbers  are 2,3,5,7, and 11) 
+
+
+	n = 8  : factors 1,2,4,8
+		count = 4
+			NOT PRIME NUMBER
+
+
+	n = 13 : factors 1,2
+		count = 2 
+			PRIME NUMBER
+
+
+	n = 15 : factors 1,3,5,15
+		count = 4
+			NOT PRIME NUMBER
+
+SYTAX BELOW:
+
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+int count = 0, i,n; 
+
+cout << "Enter N" << endl;
+cin >> n;
+
+for (i = 1; i <= n;i++){
+	
+	if (n % i == 0){
+
+		count++;
+		cout << count << endl;
+		}	
+	} 
+	if (count == 2) {
+		cout << "Prime Number!" << endl;
+	}
+	else {
+		cout << "Not a Prime Number!" << endl;
+	} 
+
+
+
+return 0;
+}
+
+
+Enter N
+3 <-- INPUT
+
+1
+2
+Prime Number!
+
+
+Enter N
+4 <-- INPUT
+
+1
+2
+3
+Not a Prime Number!
+
+
+Enter N
+5 <-- INPUT
+
+1
+2
+Prime Number!
+
+
+
+---- - -- Prime Number as a while Loop= == == \ \ 
+
+
+ 
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+int i = 1, count = 0, n;
+
+cout << "Enter N" << endl;
+cin >> n;
+
+
+while (i <= n){
+	if (n % i == 0) {
+		i++;
+		count++;
+		cout << count << endl;
+	}
+	else{
+		i++;
+	} 
+}
+if (count == 2) {
+		cout << "Prime Number!" << endl;
+}
+else {
+	cout << "Not a Prime Number!" << endl;
+} 
+
+return 0;
+}
+
+
+Enter N
+5 <-- INPUT
+
+1
+2
+Prime Number!
+
+
+Enter N
+6 <-- INPUT
+
+1
+2
+3
+4
+Not a Prime Number!
+
+
+Enter N
+11 <-- INPUT
+
+1
+2
+Prime Number!
+
+
+
+
+

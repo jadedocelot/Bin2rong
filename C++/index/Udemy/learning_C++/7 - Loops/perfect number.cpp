@@ -8,24 +8,28 @@ int main(){
 
 int n;
 int i = 1;
-int sum = 0;
+int count = 0;
 
 cout << "Enter N" << endl;
 cin >> n;
 
-while (i <= n){
+ (){
+ 	// cout << sum << " + " << i << " = " << sum << endl;
+ 		// To see the math problems of the numbers being added up
+	
 	if (n % i == 0){
 		//i++;
 		sum = sum + i;
 		i++;
 		cout << sum << endl;
+
 		}	
 		else{
 			i++;
 		}
 	} 
-	if (2 * n == sum) {
-		cout << "Perfect Number!" << endl;
+	if (n % n == sum) {
+		cout << "Prime Number!" << endl;
 	}
 	else {
 		cout << "Not a Perfect Number!" << endl;
