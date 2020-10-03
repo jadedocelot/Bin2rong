@@ -1,0 +1,375 @@
+ Chapter 12 - Exception Handeling
+ 			  |
+ 			  |
+ 			  |
+ 			  |
+ 			  |
+ 			  |
+ 			  |
+ 			  |
+ 			  |
+ 			  |
+ 			  |
+	   What is an Exception?
+
+__________________________________________________________________________________
+
+stm = "Python is Tits"
+
+print(stm.upper())
+print(len(stm))
+
+try:
+	print(stm.index("Jave"))
+except: 
+	print("We can't find java but the index for Python is: ", stm.index("Tits"))
+
+__________________________________________________________________________________  
+
+
+- An Exception is an error that happens during execution of the program.
+
+stm = "Python is Tits" /// Our variable
+
+print(stm.upper()) // Will print out stm(string) all in UPPERCASE --> PYTHON IS TITS
+print(len(stm)) // print out the --> 14
+
+
+// Now below is out our try and except
+// it will try to locate the index position op "Java" within the 'stm' string
+
+try:
+	print(stm.index("Jave"))
+
+// And if it cannot, it will print the message below as well as the position for "Python"
+
+except: 
+	print("We can't find java but the index for Python is: ", stm.index("Tits"))
+
+
+// This is incredibly useful for preventing traceback errors
+
+
+ - Now ther Try and Except are not the only options to handle this function but there are also; 
+
+  - finally
+  - raise
+
+- We have our try and except below and once Python has decided which one it will go with it will then process the whatevey syntax resides within Finally.
+
+- Note that for that for your except you can add a value to it which may include to indicated what kind of error it is.
+
+- for example, the reason we would get a tracback would be for Python not locating the value in which the user would like Python to index. So, it is a value error (NOTE: that this indicator acts like a comment so it will not appear in print).
+
+Technically, except is raising
+
+
+try:
+ 	print(stm.index("Jave"))
+except ValueError: 
+	print("We can't find java but the index for Python is: ", stm.index("Tits"))
+finally:
+	print(stm.upper())
+	print(len(stm))
+
+
+OUTPUT: 
+
+We can't find java but the index for Python is:  10
+PYTHON IS TITS
+14
+
+
+
+
+
+---- Not Divifing by zero -------- 
+
+
+
+first_num = int(input("Enter First Number:\n"))
+second_num = int(input("Enter Second Number:\n"))
+
+try:
+	result = first_num/second_num 
+	print("And Your Result is: ",int(result))
+except ZeroDivisionError as obj:
+	# print("Cannot Divide by Zero.")
+	print(obj)
+
+______-_-__-_--_--____----__--_-___-____---__-__-
+
+
+first_num = int(input("Enter First Number:\n"))
+second_num = int(input("Enter Second Number:\n"))
+
+try:
+	result = first_num/second_num 
+	print("And Your Result is: ",int(result))
+except ZeroDivisionError as obj:
+		- ZeroDivisionError is a class, though by include as obj, we have made it an object
+
+	# print("Cannot Divide by Zero.")
+	print(obj)
+___________________________________________________________________________________________
+
+
+			What if we repeat the above division syntax but enter in a string?
+
+___________________________________________________________________________________________			
+
+- Easy, we just create two WHILE blocks, each with 1 input and a try/except to assure user passes through integers.
+
+- Once 2 ints have been entered in then it will proceed to the final block which will check for 0s and divid the data 
+
+
+
+
+
+while True:
+	try:
+		first_num = int(input("Enter First Number:\n"))
+		break
+	except:
+		print("Oooppp, it a ppears as though your dumbass has entered in something that is NOT a number. Try again.")
+
+while True:
+	try:
+		second_num = int(input("Enter Second Number:\n"))
+		break
+	except:
+		print("Oooppp, it appears as though your dumbass has entered in something that is NOT a number. Try again.")
+
+try:
+	result = first_num/second_num 
+	print("And Your Result is: ",int(result))
+except ZeroDivisionError as obj:
+	# print("Cannot Divide by Zero.")
+	print(obj)
+
+
+- Now there is a cleaner way of processing the syntax above:
+
+
+try:
+	first_num = int(input("Enter First Number:\n"))
+	second_num = int(input("Enter Second Number:\n"))
+	result = first_num/second_num 
+	print("And Your Result is: ",int(result))
+except ZeroDivisionError as obj:      			<-- As you can see,
+	# print("Cannot Divide by Zero.")
+	print(obj)
+except ValueError as vde:
+	# print("Cannot Divide by Zero.")
+	print(vde)
+
+
+	****
+**** OR **** 
+	****
+
+
+while True:
+	try:
+		first_num = float(input("Enter First Number:\n"))
+		second_num = float(input("Enter Second Number:\n"))
+		result = first_num/second_num 
+		print("And Your Result is: ",float(result))
+		break
+	except ZeroDivisionError as obj:
+		# print("Cannot Divide by Zero.")
+		print(obj)
+	except ValueError as vde:
+		# print(vde)
+		print("Please Enter a Number")
+
+
+----- Fun one for FLOATS -   - -- - - - -
+
+
+try:
+	first_num = float(input("Enter First Number:\n"))
+	second_num = float(input("Enter Second Number:\n"))
+	result = first_num/second_num 
+	print("And Your Result is: ",float(result))
+except ZeroDivisionError as obj:
+	# print("Cannot Divide by Zero.")
+	print(obj)
+except ValueError as vde:
+	# print("Cannot Divide by Zero.")
+	print(vde)
+ 
+
+
+
+-------- - -- -- - - -- -- - - -- - -- ELSE CLAUSE --- - - -- - - - -- - - -- - - -- - - - - - - -
+
+
+    - In exception handeling, else is a block that will execute when there is no exception.
+
+while True:
+	try:
+		first_num = float(input("Enter First Number:\n"))
+		second_num = float(input("Enter Second Number:\n"))
+		result = first_num/second_num 
+		print("And Your Result is: ",float(result))
+	except ZeroDivisionError as obj:
+		# print("Cannot Divide by Zero.")
+		print(obj)
+	except ValueError as vde:
+		# print(vde)
+		print("Please Enter a Number")
+	else:
+		break
+
+
+OUTPUT: 
+	
+Enter First Number:
+32
+Enter Second Number:
+0
+float division by zero
+
+Enter First Number:
+32
+Enter Second Number:
+dasd
+Please Enter a Number
+
+Enter First Number:
+43
+Enter Second Number:
+2
+
+And Your Result is:  21.5
+
+
+
+
+--- We can also combine exception classes as appose ot 
+
+
+
+while True:
+	try:
+		first_num = float(input("Enter First Number:\n")) 
+		second_num = float(input("Enter Second Number:\n"))
+		result = first_num/second_num 
+		print("And Your Result is: ",float(result))
+	except (ZeroDivisionError,ValueError) as obj:
+		# print("Cannot Divide by Zero.")
+		print(obj)
+	else:
+		break
+
+
+
+--- What if there was an exception that can handle all exceptions, well there is bitch.
+
+
+except exceptions as obj: 
+
+
+- NOTE: that this is not required, a simple except will work: 
+
+except: 
+	print("")
+
+	- This will work as well though it will not specify the exact error but print only the custom message
+
+
+
+	____--_-___-___--___-_-__--__---  How to Raise an Exception ______-___--__-__-_--___-_
+
+# raise is a keyword for exception - As you can see we can "raise" an exception within an if block, we can use raise said exception if certain conditions within the if block are exectuted. 
+
+- We ask the user to enter a username, though if said usernames is less than 5 characters long in length (len(username) <= 5) or if the username has any spaces (username.count(" ") > 0) then it will raise the ValueError exception.
+
+
+
+while True:
+	try:
+		username = input("Enter username: ")
+		if len(username) <= 5 or username.count(" ") > 0:
+			raise ValueError  
+		print("Hello,",username)
+	except ValueError:
+		print("Please try again")
+	else:
+		break
+	
+
+
+- When raising the the exception within the if function, you can also state right there and then what teh exception will say. And within the except block all that will need to be done is to print the object which contains said except declariation 
+	____--_-___-___--___-_-__--__--- ____--_-___-___--___-_-__--__--- 
+	
+				raise ValueError("Please Enter a Valid Username")  
+	
+			print("Hello,",username)
+	
+		except ValueError as vae:   // Declaring the obj with the above string value
+
+
+	____--_-___-___--___-_-__--__--- ____--_-___-___--___-_-__--__--- 
+
+ 
+
+while True:
+	try:
+		username = input("Enter username: ")
+		if len(username) <= 5 or username.count(" ") > 0:
+			raise ValueError("Please Enter a Valid Username")  
+		print("Hello,",username)
+	except ValueError as vae:
+		print(vae)
+	else:
+		break
+	
+	# raise is a keyword for exception
+
+
+
+- We can pass multiple parameters through the raise of the exception, by doing this will allow you to output multiple arguments once the except is reached.
+
+
+
+while True:
+	try:
+		username = input("Enter username: ")
+		if len(username) <= 5 or username.count(" ") > 0:
+			raise ValueError("Please Enter a Valid Username. ","Username cannot contain less than 5 characters.","Username cannot contain any spaces.")  
+		print("Hello,",username)
+	except ValueError as vae:
+		print(vae)
+	else:
+		break
+
+input:
+
+Enter username: ewe
+
+
+OUTPUT:
+
+('Please Enter a Valid Username.', 'Username cannot contain less than 5 characters.', 'Username cannot contain any spaces.')
+
+
+- Though we can have the except handle accecc a specific index of the above raise() method. This is done with .arg()
+
+
+
+while True:
+	try:
+		username = input("Enter username: ")
+		if len(username) <= 5 or username.count(" ") > 0:
+			raise ValueError("Please Enter a Valid Username. ","Username cannot contain less than 5 characters.","Username cannot contain any spaces.")  
+		print("Hello,",username)
+	except ValueError as vae:
+		print(vae.args[1])  <----------* 
+	else:
+		break
+
+
+
+- NOTE: That for the most of the above to raising examples to work you will need to know the TraceBack Type error 
