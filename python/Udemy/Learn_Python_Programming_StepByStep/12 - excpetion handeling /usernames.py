@@ -6,8 +6,12 @@ while True:
 			raise ValueError("Please Enter a Valid Username. ","Username cannot contain less than 5 characters.","Username cannot contain any spaces.")  
 		print("Hello,",username)
 	except ValueError as vae:
-		print(vae.args[1])
+		print(vae.args[0])
 	else:
 		break
 	
+
+
+
+
 	# raise is a keyword for exception

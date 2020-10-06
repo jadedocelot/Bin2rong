@@ -6,3 +6,4 @@ source = requests.get('https://www.interpals.net/bin2rong').text
 soup = BeautifulSoup(source,'lxml')
 	
 print(soup.prettify())
+
