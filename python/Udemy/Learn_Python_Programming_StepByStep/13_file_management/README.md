@@ -155,3 +155,215 @@ print(myfile.read(5))
 OUTPUT:
 
 There
+
+	* If you were to enter in a larger number within the parameters like so, then you will the get everything within the file; 
+
+		print(myfile.read(5000))
+
+
+OUTPUT:
+
+There are 4 assholes in your text
+
+
+- The next file will read the LINE of the file;readline(size=-1, /) method of _io.TextIOWrapper instance
+Read until newline or EOF.
+
+Returns an empty string if EOF is hit immediately.
+
+
+print(myfile.readline())
+
+ 	* now with the readline() method we can specify the number of characters we would like to read
+
+ 		print(myfile.readline(5))
+
+
+ 		OUTPUT:
+ 			There  
+
+
+- The following reads multiple line as a list; 
+
+	print(myfile.readlines())
+
+
+	OUTPUT:
+
+		['There are 4 assholes in your text.']
+ 
+
+- The prefered method of printing each line (which I tunked of before the teacher taught me .........good grief)
+
+	for line in myfile.readlines(): 
+		print(line
+
+
+
+ 			__-___-___--_---__-__-_________-_-_-_----___-_-
+			
+			
+						Tell and Seek Function
+			
+			__-___-___--_---__-__-_________-_-_-_----___-_-
+
+
+				print(myfile.read())
+				
+
+				print(myfile.tell())	
+					 - The .tell() function above will tell the current pointer position, after it is being read (ater exectuting the code above it.)
+
+					 OUTPUT: 
+
+						There are 4 assholes in your text.
+						34
+
+		- But what if you run the tell function before reading the file
+
+
+						print(myfile.tell())
+						print(myfile.read())
+						print(myfile.tell())
+
+
+				- Then you will get the position of the pointer before reading the file and after reading the file.
+
+
+				OUTPUT:
+
+					0
+					There are 4 assholes in your text.
+					34
+
+
+				
+				print(myfile.tell())
+				print(myfile.read(5))
+				print(myfile.tell())
+
+				OUTPUT:
+					0
+					There
+					5
+
+
+	- The .seek() function
+
+	myfile.seek(5,0)
+	print(myfile.read(8))
+	print(myfile.tell())
+
+
+	OUTPUT:
+
+		are 4 a
+		13
+
+
+
+
+	 print(myfile.read(10)) // read soley from myfile
+	 print(myfile.tell()) // Print the current pointer
+	 myfile.seek(0,2) // from last possition start from 0 to end 
+
+
+
+	 OUTPUT:
+	 	
+	 	There are
+	 	10
+
+- Better understanding the .seek() function
+	seek(cookie, whence=0, /) method of _io.TextIOWrapper instance
+    Change stream position.
+
+    Change the stream position to the given byte offset. The offset is
+    interpreted relative to the position indicated by whence.  Values
+    for whence are:
+
+    * 0 -- start of stream (the default); offset should be zero or positive
+    * 1 -- current stream position; offset may be negative
+    * 2 -- end of stream; offset is usually negative
+
+	
+	 myfile.seek(0,2)
+	 print(myfile.read())
+	 print(myfile.tell())
+	 myfile.write(" Hello")
+
+
+	 asshole_count.txt now reads:
+
+	 	There are 4 assholes in your text. Hello
+
+- Getting an error with .seek()
+
+Traceback (most recent call last):
+  File "untitled.py", line 16, in <module>
+    myfile.seek(1,2)
+io.UnsupportedOperation: can't do nonzero end-relative seeks
+
+
+
+
+ 			__-___-___--_---__-__-_________-_-_-_----___-_-
+			
+			
+								OS Module
+			
+			__-___-___--_---__-__-_________-_-_-_----___-_-
+
+
+			import os
+# Above we are imorting the OS module
+
+os.rename("asshole_count.txt","ac.txt")
+# with OS we are using the rename function to rename asshole_count.txt to
+# ac.txt
+	
+	.rename(<file youd like to rename>,<New name>)
+
+
+	* once syntax has been ex
+
+
+- To remove a file
+
+	os.remove("ac.txt") 
+		* Once syntax has been executed then file will be removed
+
+- To create a directory
+
+	os.mkdir("python programs")
+
+
+- And to see if a directory exists;
+
+	print(os.path.isdir("test"))
+
+		* This will return a boolean (True or False) 
+
+- Now lets see if a file exists within the pathw
+
+	print(os.path.isfile("ac.txt"))
+
+		OUTPUT:
+
+			 True (DDDDUUUUUHHHHH!!!!)
+
+
+- eturn the name of the user logged in on the controlling terminal of the process. For most purposes, it is more useful to use getpass.getuser() since the latter checks the environment variables LOGNAME or USERNAME to find out who the user is, and falls back to pwd.getpwuid(os.getuid())[0] to get the login name of the current real user id.
+
+			print(os.getlogin())
+
+
+			OUTPUT:
+
+				Edgar
+
+
+
+TO LEARN MORE ABOUT OS MODULES!
+
+https://docs.python.org/3/library/os.html#os.getlogin

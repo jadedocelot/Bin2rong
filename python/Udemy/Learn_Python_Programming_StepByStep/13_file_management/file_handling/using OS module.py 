@@ -1,0 +1,12 @@
+import os
+# Above we are imorting the OS module
+
+# os.rename("asshole_count.txt","ac.txt")
+# with OS we are using the rename function to rename asshole_count.txt to
+# ac.txt
+
+# os.mkdir("test")
+print(os.path.isdir("test"))
+print(os.path.isfile("ac.txt"))
+print(os.getlogin())
+print(os.getpgrp())
