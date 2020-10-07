@@ -247,3 +247,46 @@ ORDER BY game_rank
 SELECT to_date(CAST(game_year as varchar(4)), 'yyyy')
 FROM console_games
 ORDER BY game_rank
+
+
+
+
+
+						_____________________________
+						|					  		|
+						|	  Working With NULL  	|
+						_____________________________
+
+
+- NULLs are classified with cells with NO DATA in them
+
+- For this one we will be working with, consol_games; 
+
+SELECT *  <-- SELECT all
+FROM console_games <-- From the console_games table
+WHERE game_name IS NULL;
+
+- If you are wondering why we are not using (=) for NULL, it is cause NULL does not equal anything 
+
+- Our last go to method would be to delete the rows with NULL
+
+- So what the first thing we want to do is see if we can locate the data to input within the NULL. We will look at the info that IS provided for the the NULL ROW and enter the following.
+
+SELECT *
+FROM console_games
+WHERE game_year = 1998 AND platform = 'GB' AND genre = 'Role-Playing' 
+
+_________________________________________________________________________
+
+WHERE game_year = 1998 AND platform = 'GB' AND genre = 'Role-Playing' 
+
+	- Where <column> = element AND <column> = element AND <column> = element
+
+	- The columns in which we have decided to focus on actually contain data, so we can focus on these areas to to see if we can locate the correct information to fill in the blank slots.
+
+
+- In the next example we look at brain age (game_name) and notice that that there is NULL within jp_sales, global_sales, na_sales. To obtain the the jp_sales we will need to get the the average of na_sales,eu_sales, and other_sales
+
+UPDATE console_games
+SET jp_sales = round((na_sales + eu_sales + other_sales)/ 3 )
+WHERE game_name = 'Brain Age: Train Your Brain in Minutes a Day'

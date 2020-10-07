@@ -38,4 +38,4 @@ COPY console_dates FROM 'C:\Users\Kirill\Desktop\Databases\ConsoleDates.csv' DEL
 COPY console_dates FROM '/Users/ilyaeremenko/Desktop/ConsoleDates.csv' DELIMITER ',' CSV HEADER;
  
  -- Where the file is on my computer
-COPY console_dates FROM '/users/edgar/Desktop/Bin2rong/SQL/SQL_datascience_design/challenge_5_working_with_data/P9-ConsoleDates.csv' DELIMITER ',' CSV HEADER;
+COPY console_dates FROM '/users/edgar/Desktop/Bin2rong/SQL/SQL_datascience_design/challenge_5_working_with_data/P9-ConsoleDates.csv' DELIMITER ',' CSV HEADER; 
