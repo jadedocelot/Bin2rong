@@ -23,7 +23,7 @@ if (z < 10000){
 	cout << "\nGuest # "<< z << ". Welcome to Z\n";
 }
 else if (z > 10000) {
-	cout << "\nGuest # " << z << " Sorry, we have reached full capacity. Please come back again next week.";
+	cout << "\nGuest # " << z << " Sorry, we have reached full capacity. Please come back again next week." << endl;
 }  
 
 return 0;	

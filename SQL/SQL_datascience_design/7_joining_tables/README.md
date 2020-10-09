@@ -414,3 +414,12 @@ FROM pets;
 											
 												Full Outer Join
 					__________________________________________________________________  
+
+----- FULL OUTER JOIN --------
+SELECT *
+FROM pets AS A 
+FULL OUTER JOIN procedurehistory AS B
+ON A.petid = B.petid;
+
+
+- A FULL OUTER join just mushed everything together to present you with a giant pile of shit

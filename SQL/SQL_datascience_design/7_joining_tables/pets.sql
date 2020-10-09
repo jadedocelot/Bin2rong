@@ -64,6 +64,7 @@ CREATE TABLE procedurehistory (
 COPY procedurehistory FROM '/users/edgar/Desktop/Bin2rong/SQL/SQL_datascience_design/7_joining_tables/P9-ProceduresHistory.csv' DELIMITER ',' CSV HEADER;
 
 
+ 
 
 
 SPEGEETTTEEEE attempts:
