@@ -293,7 +293,7 @@ while (l <= h)
 		cout << "Found at: " << mid << endl;
 		return 0; // <- This will end the program
 	}
-	else if (key < arr[mid]) h = mid - 1;
+	else if (key < arr[mid]) h = mid - 1; // if key < 4 
 	else l = mid + 1; 
 	}
 
@@ -327,3 +327,308 @@ Not Found
 Not Found
 */
 
+// int arr[10] = {32,4,56,333,12,2,7,54,1,22};
+					 1         4     7 
+
+
+ 	 				__ -_-__--__-_-______----_____--_--_---__--__
+
+
+ 	 					 			 Nest For Loop
+
+					__ -_-__--__-_-______----_____--_--_---__--__
+
+- As you imagined this is a for loop within a for loop
+
+#include<string>
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main(){
+
+for (int i = 0; i < 3; i++){
+	for(int j = 0;j < 3;j++){
+		cout << i << j << endl; 
+	}
+}
+
+
+return 0;
+}
+
+// OUTPUT:
+/* 
+// OUTPUT:
+/* 
+	  i ->	01 <- j
+			02
+			10
+			11
+			12
+			20
+			21
+			22
+			*/
+
+- WHATS HAPPENING?
+
+i  |  j
+0  |  0
+0  |  1 
+0  |  2 
+1  |  0 
+1  |  1
+1  |  2
+2  |  0
+2  |  1 
+2  |  2 
+
+- As we can see above, the incrementation focuses on 'J' untill it has reached 3, once at 3 it will break out of the loop and begin 'I' incrementation, note that 
+
+- 'i' will act as a row index and 'j' will act as a column index
+
+- Both loops wont end untill 'i' HN
+
+- Nested for loops work like "rows and columns"
+
+- 2 diment 
+
+
+# Some more examples of nested for loops #
+
+
+#include<string>
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main(){
+
+for (int i = 0; i < 4; i++){
+	for(int j = 0;j < 4;j++){
+		cout << j << i << j << endl; 
+	}
+}
+
+
+return 0;
+}
+						
+
+                     i	
+                    \/
+			'j'->	000   <-'j'
+			'j'->	101	  <-'j'
+			'j'->	202	  <-'j'
+			'j'->	303	  <-'j'	
+					010  
+					111
+					212
+					313
+					020
+					121
+					222
+					323
+					030
+					131
+					232
+					333					
+
+
+
+------------------------
+
+#include<string>
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main(){
+
+for (int i = 0; i < 4; i++){
+
+	for(int j = 0;j < 3;j++){
+		cout <<"This is i -> "<< i << " This is j -> " << j << endl; 
+	}
+}
+
+
+return 0;
+}
+
+
+This is i -> 0 This is j -> 0
+This is i -> 0 This is j -> 1
+This is i -> 0 This is j -> 2
+This is i -> 1 This is j -> 0
+This is i -> 1 This is j -> 1
+This is i -> 1 This is j -> 2
+This is i -> 2 This is j -> 0
+This is i -> 2 This is j -> 1
+This is i -> 2 This is j -> 2
+This is i -> 3 This is j -> 0
+This is i -> 3 This is j -> 1
+This is i -> 3 This is j -> 2  
+
+
+
+------------------------------------------------
+
+- In the example below we can see a 2 dimensional array
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	for(int i=1;i <= 5;i++)
+	{
+		for (int j= 1;j <= 5;j++)
+		{
+			cout << "( " << i << " , " << j<< " ) ";
+
+		}
+		cout << endl;
+	}
+return 0;
+}
+
+OUTPUT: 
+( 1 , 1 ) ( 1 , 2 ) ( 1 , 3 ) ( 1 , 4 ) ( 1 , 5 )
+( 2 , 1 ) ( 2 , 2 ) ( 2 , 3 ) ( 2 , 4 ) ( 2 , 5 )
+( 3 , 1 ) ( 3 , 2 ) ( 3 , 3 ) ( 3 , 4 ) ( 3 , 5 )
+( 4 , 1 ) ( 4 , 2 ) ( 4 , 3 ) ( 4 , 4 ) ( 4 , 5 )
+( 5 , 1 ) ( 5 , 2 ) ( 5 , 3 ) ( 5 , 4 ) ( 5 , 5 )
+
+
+
+
+
+
+
+------------
+
+- In the example below we fish for 4s in a two dimensional array. And then ask the user to input a number which will be deducted from you grand total, so you better choose wisely. After being cut, you will see if your remaining total will cover the entrance fee.
+
+
+
+// in the example below we presnet a two dimensional array, and everytime j (our column index increment) = 4, 4 will be added to x(0). At the end of the loops we will see the grand total of x 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+int x = 0;
+
+	for(int i=1;i <= 5;i++)
+	{
+		for (int j= 1;j <= 5;j++)
+		{
+			cout << "( " << i << " , " << j<< " ) ";
+				if (j == 4){
+					x = (x + j) * 4;
+				}			
+		}
+		cout << endl;
+	}		
+
+int user_input;
+
+	cout << "Now enter a number to deduct: " << endl;
+	cin >> user_input;
+
+	x = x - user_input;
+
+
+	if (x < 10) {	
+		cout << "Welp you don't enough to enter buddy" << endl;
+		cout << "And the totatl for x is: " << x << endl;
+		return 0;
+	}
+	else if (x > 10) {
+		cout << "Congrats! You got enough to enter.";
+		cout << "And the totatl for x is: " << x << endl;
+		return 0;
+	}
+
+}
+
+input: 
+
+14
+
+OUTPUT:
+
+( 1 , 1 ) ( 1 , 2 ) ( 1 , 3 ) ( 1 , 4 ) ( 1 , 5 )
+( 2 , 1 ) ( 2 , 2 ) ( 2 , 3 ) ( 2 , 4 ) ( 2 , 5 )
+( 3 , 1 ) ( 3 , 2 ) ( 3 , 3 ) ( 3 , 4 ) ( 3 , 5 )
+( 4 , 1 ) ( 4 , 2 ) ( 4 , 3 ) ( 4 , 4 ) ( 4 , 5 )
+( 5 , 1 ) ( 5 , 2 ) ( 5 , 3 ) ( 5 , 4 ) ( 5 , 5 )
+Now enter a number to deduct:
+5442
+Congrats! You got enough to enter.And the totatl for x is: 14
+
+
+
+
+ 	 				__ -_-__--__-_-______----_____--_--_---__--__
+
+
+ 	 					 			 Drawing a Patten
+
+					__ -_-__--__-_-______----_____--_--_---__--__
+
+
+
+- This will require a nested for loop
+
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std; 
+
+
+int main(){
+
+int count = 1;
+
+for (int i = 0; i < 20;i++){
+			if (i >= j)
+			cout << "*";
+	for (int j = 0; j < 20;j++){	
+		if (i >= j)
+			cout << "*";
+		}
+	 cout << endl;
+	}
+
+return 0;
+}
+
+
+// OUTPUT:
+
+/*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*/

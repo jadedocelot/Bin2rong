@@ -1,4 +1,4 @@
-# check ch READ.ME for notes
+// Check CH READ.ME 
 
 #include<iostream>
 #include<cmath>
@@ -9,6 +9,10 @@ int main(){
 
 int arr[10] = {32,4,56,333,12,2,7,54,1,22};
 int l = 0, h = 9, key, mid;
+//int l = 5, h = 9, key, mid;
+//int l = 5, h = 6, key, mid;
+//int l = 6, h = 6, key, mid;
+
 
 cout << "Enter a number for key" << endl;
 cin >> key;
@@ -20,8 +24,7 @@ while (l <= h)
 	if (key == arr[mid]){ 
 		cout << "Found at: " << mid << endl;
 		return 0; // <- This will end the program
-	}
-	else if (key < arr[mid]) h = mid - 1;
+	 	else if (key < arr[mid]) h = mid - 1;
 	else l = mid + 1; 
 	}
 

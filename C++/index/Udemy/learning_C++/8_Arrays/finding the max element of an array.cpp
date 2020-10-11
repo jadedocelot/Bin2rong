@@ -23,4 +23,9 @@ cout << "The max element within your array is: " << chum_bucket << endl;
 
 
 return 0;
-}
+} 
+
+// Say the array above consisted of negative integers then locating the max
+// number with zero ('dig_net') will be somewhat impossible since 0 is greater
+// than all negatitve numbers, this is where;
+// dig_net = INT_MIN comes in hady 
