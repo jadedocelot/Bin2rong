@@ -595,8 +595,6 @@ int main(){
 int count = 1;
 
 for (int i = 0; i < 20;i++){
-			if (i >= j)
-			cout << "*";
 	for (int j = 0; j < 20;j++){	
 		if (i >= j)
 			cout << "*";

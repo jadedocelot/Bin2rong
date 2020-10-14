@@ -1,0 +1,427 @@
+										---___---____-_-_----
+							
+											   GO Lang
+							     	    ---___---____-_-_----
+
+		    - Was founded in 2007
+
+- GO lang is a young language compared to some that have been around. This relatively young age allows GOlang to be more or less modern and  use technologies other languages can't, primarily due to their age.
+
+- GOlang is very small, simple, and minimilist
+		* It only has a handful of features. The features provided dont interfere with each other
+
+WHAT IS CONCURRENCY? 
+
+- The only two areas where you might have some problems with GOlang are INTERFACES and the CONCURRENCY fatures, GOroutines and channels.
+ 
+ - GO > C 
+
+  - Go provides convenient tools for testing
+
+
+IS GOLANG actually worth learning?
+
+
+- Google came up with Golang - its very own programming languagel it was only but natural that it should become one the most widley used computer languages
+
+What can I do with Golang?
+
+The beauty of Golang is that its a universal language
+
+- "Golang is a great alternative to python, and in some aspects its better."
+
+- Golang, becuase it uses goroutines instead of traditional threads (you can spin millions of them at the same time), secondly, becuase concurrency is built on the language level
+
+- It's lightweight. Again, goroutines take much less memory than usual threads, primarily becuase they were devleoped much later when development standards and tech possibilities were so much higher.
+
+- Golang is apparently far more simple than Python 
+
+
+GO is awesome for microservices: 
+	Its when instead of developing one complex (monolithic) archetecture, you break it into a bunch of microservices, designed to perform only one function
+
+
+	* Why is it a comfortable option? 
+		Microsevices, designed with Golang, are easy to modify, debug, and test
+
+
+- Golang can be used for server development
+
+ 	*Golang is very comfortable for back-end. It's been a global tendency for a while, and of course, there are reasons to why Go became so popular recently.
+
+
+- If you need to build a data munging tool, backend service or general networking tool, GO is as good as any other alternative.
+
+
+ DISADVANTAGES!
+
+ 	- Go's age. However, as much as Go's young age is its blessing, it's also its curse  
+
+ 	- Ugly error handleling
+
+
+
+
+
+What differs Golang from older languages like C++, java, or Python?
+
+
+- Use of GOroutines instead of ordinary threads (GOroutine is a lightweight thread used in Golang)
+
+							
+							---------------------
+							
+							Goroutines vs Threads
+							
+							---------------------
+
+
+"Go lang will be the server langauge of the future." - Tobias Lutke, S  hopify
+
+	
+	- Go utlizes memory space 
+
+		_ Dropbox switched their back-end from Python to Golang
+
+		Go is perfect for backendb
+
+
+- Golang unoficially belongs to the C family but not really. But it is also considered C of the 21st century
+
+
+  
+  - We will be isntalling cover the following;
+
+  	- Struts, Interface, packages, and data structures
+
+    	 funtions, pointers, and GOs special function called Receiver Function 
+
+    - File handling, channels, concurrency & Goroutines
+
+    - We will be creating a very short web server
+
+
+     When setting up GO
+
+     - after installing GO to your computer 
+     - We now need to set up the .bash_profile within the HOME DIRECTORY 
+
+     -  Once we are editing .bash_profile in Sublime, then we must add the following;
+
+
+
+     export GOPATH=$HOME/go
+     export GOBIN=HOME/go/bin
+
+     - Then save
+
+
+     to test, enter the following in your terminal;
+
+     - go version
+
+
+     	OUTPUT: go version go1.14.3 darwin/amd64
+
+
+    	OR
+
+    	echo $GOPATH
+
+    	OUTPUT:
+
+    	/Users/edgar/go
+
+
+
+GO COMPILER:
+
+
+To see what compiler your GOLANG will run off and other info, enter the following in your terminal;
+
+			go env
+
+ 
+
+GO111MODULE=""
+GOARCH="amd64"
+GOBIN="/Users/edgar/go/bin" <--- GO BIN
+GOCACHE="/Users/edgar/Library/Caches/go-build"
+GOENV="/Users/edgar/Library/Application Support/go/env"
+GOEXE=""
+GOFLAGS=""
+GOHOSTARCH="amd64"
+GOHOSTOS="darwin"
+GOINSECURE=""
+GONOPROXY=""
+GONOSUMDB=""
+GOOS="darwin"
+GOPATH="/Users/edgar/go" <-- This is our GO path
+GOPRIVATE=""
+GOPROXY="https://proxy.golang.org,direct"
+GOROOT="/usr/local/Cellar/go/1.14.3/libexec"
+GOSUMDB="sum.golang.org"
+GOTMPDIR=""
+GOTOOLDIR="/usr/local/Cellar/go/1.14.3/libexec/pkg/tool/darwin_amd64"
+GCCGO="gccgo"  <--- This is our compiler
+AR="ar"
+CC="clang"
+CXX="clang++"
+CGO_ENABLED="1"
+GOMOD=""
+CGO_CFLAGS="-g -O2"
+CGO_CPPFLAGS=""
+CGO_CXXFLAGS="-g -O2"
+CGO_FFLAGS="-g -O2"
+CGO_LDFLAGS="-g -O2"
+PKG_CONFIG="pkg-config"
+GOGCCFLAGS="-fPIC -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/var/folders/ls/r_0ng8bx0sx7gmbk07dd3dd00000gn/T/go-build441019124=/tmp/go-build -gno-record-gcc-switches -fno-common"
+
+
+
+					CREATING YOUR FIRST HELLO WORLD
+
+			- The file name is; playfro
+
+
+
+				package main
+				
+				import "fmt"
+				
+				func main() {
+					fmt.Println("Hello World!")
+				} 
+
+
+
+- and to run it, though the terminal enter the following;  
+
+
+	go run playground.go
+
+
+Now we need to proceed to to building it;
+
+	go build playground.go
+
+ Which then puts your code in its native language and to run that compiled program  you will need to input;
+
+			
+				./playground 
+
+
+
+
+
+
+									___-___--------_--_-_-__
+
+									
+									UNDERSTANDING THE PROGRAM
+
+									___-___--------_--_-_-__
+
+
+				package main
+				// Package decleration - The GO standard library
+				
+				import "fmt"
+				// The package that is being installed ("fmt") is part of the GO standard library. We need this to use the following functions (println)
+				
+				func main() {
+					fmt.Println("Hello World!")
+					// Printing "Hello World!"
+					// println is a functioon which will be imported from 'fmt'
+				} 
+
+
+
+- Understanding packacges
+
+SANDWICH <--> PROGRAM
+
+
+- Butter or cheese <---> packages
+
+-Veggies
+
+- Ketchup
+
+(The packages need to be imported)
+
+
+
+
+
+									___-___--------_--_-_-__
+
+									
+									Our First Guessing Game
+
+									___-___--------_--_-_-__
+
+
+package main
+
+import "fmt"
+ 
+func main(){
+	var userInput int 
+
+	fmt.Println("Please Enter a Number") 
+	fmt.Scan(&userInput)
+	fmt.Println("You Entered: ", userInput)
+
+} 
+
+
+
+
+  - Understanding what is going on
+
+
+
+
+  package main
+
+import "fmt"
+	// importing fmt 
+
+func main(){
+	var userInput int
+		// Declaring an integer variable but not initializing it
+
+	fmt.Println("Please Enter a Number") 
+		//  Above we print out the line which states to enter in an int
+
+	fmt.Scan(&userInput)
+		// fmt.Scan takes INPUT from user (function from FMT "Packacges")
+		// (&userInput) - We are assigning the userinput as value to our declarized variable 
+		// We will be learning more about (&) later one but it seems to be working like a "pointer"?
+
+	fmt.Println("You Entered: ", userInput)
+		// Print out a string and the value witin userInput
+		// Notice the ( , ) between variable and string
+		// Also notice ( & ) is not being used
+} 
+
+
+
+
+
+									___-___--------_--_-_-__
+
+									
+									Using the Random Function
+
+									___-___--------_--_-_-__
+				
+
+				åpackage main
+				
+				import (
+					"fmt"
+					"math/rand"
+					"time"
+				)
+				
+				
+				func main(){
+				
+				var userInput int
+				var secretNum int
+				
+				rand.Seed(time.Now().Unix())
+				secretNum = rand.Intn(100)
+					
+					fmt.Println("Your secret number is: ",secretNum)
+				
+					fmt.Println("Please enter a number: ")
+					fmt.Scan(&userInput)
+					fmt.Println("Please verify your number: ", userInput)
+				
+				
+				}
+
+
+
+  - Understanding what is going on
+
+
+
+  package main
+
+import(
+	"fmt"
+	"math/rand"
+	"time"
+)
+ 
+func main(){
+
+var userInput int
+var winNum int
+// Declared variable whihch will carry our random number value
+
+rand.Seed(time.Now().Unix()) 
+// This will act as a seed on the basis of generating a random
+// number
+winNum = rand.Intn(100)
+fmt.Println("The secret Number is: ",winNum)
+  
+	fmt.Println("Enter a Number: ")
+	fmt.Scan(&userInput)
+	fmt.Println("User guess is: ",userInput)
+
+
+} 
+
+
+								  ___-___--------_--_-_-___--_-_-__
+
+									
+									If/Else If in a Guessing Game
+
+								   ___-___--------_--_-_-___--_-_-__
+
+
+
+			package main
+			
+			import (
+				"fmt"
+				"math/rand"
+				"time"
+			)
+			
+			
+			func main(){
+			
+			var userInput int
+			var secretNum int
+			
+			rand.Seed(time.Now().Unix())
+			secretNum = rand.Intn(100)
+			
+				fmt.Println("Please enter a number: ")
+				fmt.Scan(&userInput)
+			
+			if userInput == secretNum {
+				fmt.Println("You Won Bish!")
+				fmt.Println("The secret number is: ",secretNum)
+			} else if userInput < secretNum { 
+				 fmt.Println("Too low.")
+				 fmt.Println("The secret number is: ",secretNum)	
+			} else if userInput > secretNum {
+				fmt.Println("Too High.")
+				fmt.Println("The secret number is: ",secretNum)
+			}
+			
+			
+			} 
+
+  
+				
+
+
