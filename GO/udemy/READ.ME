@@ -384,9 +384,6 @@ fmt.Println("The secret Number is: ",winNum)
 									If/Else If in a Guessing Game
 
 								   ___-___--------_--_-_-___--_-_-__
-
-
-
 			package main
 			
 			import (
@@ -425,3 +422,124 @@ fmt.Println("The secret Number is: ",winNum)
 				
 
 
+								  ___-___--------_--_-_-___--_-_-__
+
+									
+										Enter the Users Name
+
+								   ___-___--------_--_-_-___--_-_-__
+
+					package main 
+					
+					import "fmt"
+					
+					func main(){
+					
+						var firstName string
+						var lastName string
+						
+						fmt.Println("What is Your First Name?")
+						fmt.Scan(&firstName)
+						
+						fmt.Println("What is Your Last Name?")
+						fmt.Scan(&lastName)
+						
+						fmt.Println("Please Confirm Your Full name:",firstName,lastName)
+					
+					}
+
+
+
+								  ___-___--------_--_-_-___--_-_-__
+
+									
+										 Variables and Constants 
+
+								   ___-___--------_--_-_-___--_-_-__ 								           
+
+- GO is a strictly typed langauge
+
+- It appears that the variable has to be declared within the func main(){}
+
+- NOTE: That when declaring variables you must do take camel Case into consideration
+
+- Data Types: sringg, boolean, int, float
+
+var - keyword
+	* var is a keyword
+
+	1. var <name> <data type> 
+
+	2. var  userName  string  <-- Declaring the variable
+
+	3. userName = "Edgar" <-- Initializing the variable - This is for when you store your value within you declarized variable
+
+
+- There is also a shorthand method to declaring a variable, using (:=)
+
+	firstName := "Edgar" 
+	lastName := "Ortega"  
+
+
+- Another way to declare variables:
+	
+	var (
+	a string = "tic"
+	b int = 4
+	c bool = true
+
+	)
+
+	fmt.Println(a,b,c)
+
+
+
+-----------------------------------------------------
+
+- How to use the variables listed below
+
+	var d, e, f = "I am a string", 4.0, true
+
+	fmt.Println(d,e,f)
+
+			* d will be a String
+			* e will be a Float  
+			* f will be a Boolean
+	
+
+
+- Note that you cannot declare/initialize a variable leave it unused
+
+package main
+
+import "fmt"
+
+func main(){
+
+var (
+a string = "tic"
+b int = 4
+c bool = true
+
+)
+
+fmt.Println(a,b,c)
+
+
+var d,e,f = "I am a string",4.4, true
+
+	fmt.Printf("d: %v,e: %v, f: %v\n", d, e, f)
+ // %v stands for the default value of the data type  
+
+}
+
+OUTPUT:
+
+tic 4 true
+
+d: I am a string,e: 4.4, f: true
+
+
+------------------------------------
+
+- (OR fmt.Printf("d: %.1f,e: %v, f: %v\n", d, e, f))
