@@ -539,7 +539,139 @@ tic 4 true
 
 d: I am a string,e: 4.4, f: true
 
-
 ------------------------------------
 
 - (OR fmt.Printf("d: %.1f,e: %v, f: %v\n", d, e, f))
+
+
+
+
+						___-___--------_--_-_-___--_-_-__
+
+									
+						     		Constants 
+
+						___-___--------_--_-_-___--_-_-__ 		
+
+- The constant contains a value that cannot be changed, hence constant 
+
+const API_KEY = 22112233
+
+fmt.rintln(API_KEY)
+
+OUTPUT: 
+
+22112233
+
+
+- If at any point you try to change a constant, you will receive and traceback of some sort when compiling
+
+- If you noticed our constant is all uppercase, we do this to distinguish a CONSTANT from a regular VARIABLE
+
+
+
+
+						___-___--------_--_-_-___--_-_-__
+
+									
+						     Understanding Data Types 
+
+						___-___--------_--_-_-___--_-_-__ 
+
+
+	 "Hello World! " --> string
+	 	32			 --> integer
+	 	324.43		 --> Float
+	 	true		 --> Boolean (Boolean is a condition)
+
+
+
+// The following will print out the data types
+
+package main
+
+import "fmt"
+
+func main(){
+
+name := "Edgar"
+age := 29
+weight:= 158.3
+adult := false 
+
+fmt.Printf("Name: %T\n", name)
+fmt.Printf("Age: %T\n", age)
+fmt.Printf("Weight: %T\n", weight)
+fmt.Printf("Adult: %T\n", adult)
+
+}
+
+
+
+OUTPUT: 
+
+Name: string
+Age: int
+Weight: float64
+Adult: bool
+
+- (%T) Is what allows GOlang to print out the data type
+
+
+rune is an alias for int32: integer with 32 bits
+
+
+
+
+bool
+
+string
+
+int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr
+
+byte // alias for uint8
+
+rune // alias for int32
+     // represents a Unicode code point
+
+float32 float64
+
+complex64 complex128
+
+
+------------------------------------------------------------------------
+
+
+package main
+
+import "fmt"
+
+func main(){
+
+name := "Edgar"
+age := 29
+weight:= 158.3
+adult := false 
+
+fmt.Println("Name: ", name, "\nData Type: String")
+fmt.Println("Age: ", age, "\nData Type: Int")
+fmt.Println("Weight: ", weight, "\nData Type: Float")
+fmt.Println("Adult: ", adult, "\nData Type: Boolean")
+ 
+}
+
+
+OUTPUT:
+
+Name:  Edgar
+Data Type: String
+Age:  29
+Data Type: Int
+Weight:  158.3
+Data Type: Float
+Adult:  false
+Data Type: Boolean
+
+
+
