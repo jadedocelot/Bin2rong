@@ -15,17 +15,17 @@ class shitHead:
 
 	def grade(self,avg):
 		if avg > 80:
-			grade = "A"
-			return grade
+			A = "A"
+			return A
 		elif avg > 60:
-			grade = "B"
-			return grade
+			B = "B"
+			return B
 		elif avg > 40:
-			grade = "C"
-			return grade
+			C = "C"
+			return C
 		else:
-			grade = "F"
-			return grade
+			F = "F"
+			return F
 
 	def display_student_info(self):
 		print("\nName: {}\nRollno: {}\nclass: {}\n".format(self.name,self.rollno,self.std))
@@ -43,9 +43,9 @@ test2 = int(input("What was your score for test 2: "))
 test3 = int(input("What was your score for test 3: "))
 
 s1 = shitHead(name,rollno,std)
-total = s1.total_marks(test1,test2,test3)
-avg = s1.average(total)
-grade = s1.grade (avg)
+s1.total_marks(test1,test2,test3)
+s1.average(total)
+
 
 #total = s1.total_marks(test1,test2,test3)
 

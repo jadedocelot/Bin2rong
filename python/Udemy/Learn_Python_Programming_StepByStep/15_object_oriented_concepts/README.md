@@ -258,6 +258,26 @@ class shitHead:
 	def display(self): # the "display" method will print out the students info which is stored in our first __init__ method above
 		print("\nName: {}\nRollno: {}\nclass: {}\n".format(self.name,self.rollno,self.std)) # <- format(self.name,self.rollno,self.std) is used to position properties/arguments within the STRING
 
+# __init__ method examples
+-The instantiation operation (“calling” a class object) creates an empty object. Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named __init__(), like this:
+
+-When a class defines an __init__() method, class instantiation automatically invokes __init__() for the newly-created class instance. So in this example, a new, initialized instance can be obtained by:
+
+
+- The instantiation operation (“calling” a class object) creates an empty object. Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named __init__(), like this:
+
+- Of course, the __init__() method may have arguments for greater flexibility. In that case, arguments given to the class instantiation operator are passed on to __init__(). For example,
+
+>>> class Complex:
+...     def __init__(self, realpart, imagpart):
+...         self.r = realpart
+...         self.i = imagpart
+...
+>>> x = Complex(3.0, -4.5)
+>>> x.r, x.i
+(3.0, -4.5)
+
+
  
 name = input("What Is your name? ")
 rollno = int(input("What Is your Roll Numbner? "))
@@ -268,7 +288,9 @@ test2 = int(input("What was your score for test 2: "))
 test3 = int(input("What was your score for test 3: "))
 
 s1 = shitHead(name,rollno,std) # s1 This will issue the value of our __init__ method within our "shitHead" class and use our name,rollno,std (INPUT) values as arguments BUT its also stores the the "shitHead" class in it's entirety
+	# 'total is now an instance'
 total = s1.total_marks(test1,test2,test3) # "Total" will store the value of the "total_marks" method within "s1"(which stores "shitHead") use our test1,test2,test3 (INPUT) values as arguments BUT its also stores the the "shitHead" class in it's entirety
+	# average_marks is now an instance
 average_marks = s1.average(total) #"average_marks" will store the "total_marks" method within "s1" which stores the "shitHead" class, it will use the value within the "total" variable as its argument
 
 s1.display() # "avtivate" "display" within "s1" which stores the "shitHead" class, the funcions within this method will print out  a string
