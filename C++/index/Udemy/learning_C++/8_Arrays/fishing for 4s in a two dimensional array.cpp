@@ -1,4 +1,5 @@
 // in the example below we presnet a two dimensional array, and everytime j (our column index increment) = 4, 4 will be added to x(0). At the end of the loops we will see the grand total of x 
+//
 
 #include <iostream>
 using namespace std;
@@ -29,16 +30,16 @@ int user_input;
 	if (x < 10) {	
 		cout << "Welp you don't enough to enter buddy" << endl;
 		cout << "And the totatl for x is: " << x << endl;
-		return 0;
+		//return 0;
 	}
 	else if (x > 10) {
 		cout << "Congrats! You got enough to enter.";
 		cout << "And the totatl for x is: " << x << endl;
-		return 0;
+		//return 0;
 	}
-
+return 0;
 }
-
+/*
 input: 
 
 14
@@ -53,3 +54,4 @@ OUTPUT:
 Now enter a number to deduct:
 5442
 Congrats! You got enough to enter.And the totatl for x is: 14
+*/
