@@ -243,13 +243,255 @@ def json():
             }
 
 
+_________________________
+
+The comlete code below:
+__________________________
+
+
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return ('<h1>This is the index page</h1>')
+
+@app.route('/json')
+def json():
+    return jsonify({'key' : 'values', 'listkey' : [1,2,3]})
+
+@app.route('/home')
+def home():
+    return ('<h1>Welcome Art Fag! This is the home page</h1>')
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
 
 
 
 
+                    ______________________________________
+
+                                Route Methods
+                    ______________________________________
+
+
+- By default the end points the app.route decorator are for GIT REQUEST only 
+
+        @app.route('/')
+
+
+- But say you want to make POST request, a 404 error message will be sent your way. In order for this to be done you will have to update the method of desired routed, to allow different http requests to come in 
+
+- So lets change the method for our JSON page
+
+@app.route('/json', methods=['GET'])
+def json():
+    return jsonify({'key' : 'values', 'listkey' : [1,2,3]})
+
+
+    * As you can see we have added a method to our route, GET is the defaul which again only allows GET PULL requests, we will need to add POST to make pull requests
+
+
+     @app.route('/', methods=['POST'])
+    
+
+     - Though doing this will only allow POST requests, in order to do both we will need to add GET and POST like so;
+
+
+    @app.route('/', methods=['GET','POST'])
+
+
+- By including the above you will now be able to GET and POST with zero 405 messages to appear 
+
+
+- Now APIs offer a variety of request (PUT,PATCH,DELETE,COPY, ETC}) so be sure to add them to your methods list
 
 
 
+
+
+
+                    ______________________________________
+
+                                Route Variable
+                    ______________________________________
+
+
+
+
+- A typical feature of a web app is to allow users to input custom information. And in order to do this we will need to pass VARIABLES in the URL iteself. So we will repalce our '/route'
+
+
+
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+
+@app.route('home/<name>', methods=['GET','POST'])
+def home(name):
+    return '<h1>Welcome {}! You Are Now an Art Fag! This is the home page</h1>'.format(name)
+
+- So what we ve added to our route is a custom variable, which when. accessing our rout through our URL we can / any tag which will direct us to our page. IT IS IMPORTANT that the function parameter MATCHES our route variable ('name')
+
+
+- Now we want our custom variable to appear on our page, we will need to add a placeholder to our sting({}) and include .format()
+
+return '<h1>Welcome {}! You Are Now an Art Fag! This is the home page</h1>'.format(name)
+
+
+
+- Though what if we left out the <name> from our URL, well then we would get a 404 error. What we would need is a default route. 
+
+
+
+@app.route('/home', methods=['GET','POST'], defaults = {'name' : 'Defualt'}) 
+
+    - As you can see above we have add another (route) decorator above the one below.
+
+    - As you can see its similar to the one below, thought we have left out the /<name>
+
+    - At the end you can see that we have added a new parameter titled 'defaults'
+
+         
+             defaults = {'key' : 'value'}      
+
+                    - the parameter takes in a Python dictionary and the key will be the name of the variable ('name') 
+
+                    - And the value will be ne a 'default' value
+
+
+                    - when you run this in your browser it will run a default value when a specific value is not entered in your route
+
+
+
+
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+
+@app.route('/', methods=['GET','POST'])
+def index():
+    return '<h1>This is the index page</h1>'
+
+@app.route('/json', methods=['GET','POST'])
+def json():
+    return jsonify({'key' : 'values', 'listkey' : [1,2,3]})
+
+@app.route('/home', methods=['GET','POST'], defaults = {'name' : 'Defualt'})
+@app.route('/home/<name>', methods=['GET','POST'])
+def home(name):
+    return '<h1>Welcome {}! You Are Now an Art Fag! This is the home page</h1>'.format(name)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+- Dont know if the below information is really needed
+
+- What if you wanted to enter in a number as opposed to say, in that case we would need to implemnet types. What we do is add the type and colon to our variable name like so;
+
+app.route('/home/<int:name>')
+
+    - This will assign a type to our variable
+
+
+
+
+                    ______________________________________
+
+                            Request Query String
+                    ______________________________________
+
+
+# (Query is another word for question. ... For example, if you need additional information from someone, you might say, "I have a query for you.")
+
+
+# Aside from passing things throught the URL there are other ways of passing data into the app
+
+# In this section we will see how to pass in data using a query string
+
+# To get started on out query we will add the following to our app
+
+
+
+    @app.route('/query')
+    def query():
+        return '<h1>You Are on The Query Page</h1>'
+
+# On`ce we refresh our web browser we will then see the following appear on our page, the following will appear;
+
+
+
+            You Are on The Query Page
+
+# now if you go to the URL, you will see
+
+http://127.0.0.1:5000/query
+
+# And if we were to add the following to it, nothing would happen
+
+
+http://127.0.0.1:5000/query?name=sara
+
+# Nothing would happen, cause its not reading that query string. To make this work the first thing we gotta do is import the request from flask;
+
+from flask import Flask, jsonify, request
+
+
+# The we are gonna have to add to add two variables which are going to hold the
+# the values from the query string
+
+    name = request.args.get('name')
+    location = request.args.get('location')
+
+# To get thesse values we use the request object from flask and args and then g
+# get. then we pass in the keys of what we wanna get 
+
+
+    request.args.get('name')
+    request.args.get('location')
+
+# Then we insert placeholders within our string and finish it with a .format
+
+
+return '<h1>Greetings {}, you have landed on the query page from {}</h1>'.format(name,location)
+
+# Now if we go to our web browser and enter the following into our URL
+
+
+http://127.0.0.1:5000/query?name=Edgar&location=California
+
+# We should now see the following appear on our page;
+
+
+
+Greeting Edgar, you have landed on the query page from California
+
+
+
+
+                    ______________________________________
+
+                                Request From Data
+                    ______________________________________
+
+
+- Now we are going save and retrieve from data, this is what we will be adding to our app.py
+
+
+@app.route('/theform')
+def theform():
+    return '''<form methodA="POST" action="/query">
+                <input type="text" name="name" >
+                <input type="text location="location">'
+                <input type="submit" value="coq">
+              </form>'''    
 
