@@ -1,4 +1,4 @@
-// Check CH READ.ME 
+ // Check CH READ.ME 
 
 #include<iostream>
 #include<cmath>
@@ -35,25 +35,24 @@ return 0;
 }
 
 
-/*
-32
-Not Found
-4
-Found at: 1 <--
-56
-Not Found
-333
-Not Found
-12
-Found at: 4 <--
-2
-Not Found
-7
-Not Found
-54
-Found at: 7 <--
-1
-Not Found
-22
-Not Found
-*/
+
+// 32
+// Not Found
+// 4
+// Found at: 1 <--
+// 56
+// Not Found
+// 333
+// Not Found
+// 12
+// Found at: 4 <--
+// 2
+// Not Found
+// 7
+// Not Found
+// 54
+// Found at: 7 <--
+// 1
+// Not Found
+// 22
+// Not Found
