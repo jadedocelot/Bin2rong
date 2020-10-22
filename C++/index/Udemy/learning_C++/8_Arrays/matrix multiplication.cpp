@@ -38,9 +38,9 @@ for (i = 0; i < r2;++i){
 // multiplying matrix a and b and storing in array mult
 for (i = 0; i < r1;++i){
 	for (j = 0;j < c2; ++j){
-		mult[i][j]=0;
+		mult[i][j]=0; 
 		for(k=0;k < c1;++k){
-			mult[i][j] += a[i][k] * b[k][k];
+			mult[i][j] += a[i][k] * b[k][j];
 		}
 	}
 }
