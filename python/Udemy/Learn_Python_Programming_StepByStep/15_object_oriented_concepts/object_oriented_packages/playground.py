@@ -1,63 +1,57 @@
-class shitHead:
-	def __init__(self,name,rollno,std):	# This will initialize 3 properties
-		self.rollno = rollno
+
+class Employee: 
+	company_name = "Bin2rong"
+	address = "Los Angeles"
+# Porperties belong to the class
+# And caln only be modified by the class
+# class properties
+
+	def __init__(self,name,emp_id,salary,employee_bonus_points):
 		self.name = name
-		self.std = std
-
-	def total_marks(self,sub1,sub2,sub3): # adds up total, then stores it in "total" variable and returns total (BUT DOES NOT PRINT)
-		total = sub1 + sub2 + sub3
-		return total #  may be taken in anywhere within the class and outside (think meta world)
-
-	def average(self,marks): # This method contains one property and takes in one argument
-		avg = marks/3 # "agv" will take ONE argument and divide it by 3
-		return avg # The (the actions performed within)avg will be returned 
-
-	def grade(self,avg): # the "grade" method will take in "avg" as property and its argument
-		if avg > 80: #As you can see "avg" will run through an if loop and which ever option the returned value applies to will print out a grade"
-			print("A")
-		elif avg > 60:
-			print("B")
-		elif avg > 40:
-			print("C")
+		self.emp_Id = emp_id
+		self.salary = salary
+		self.employee_bonus_points = employee_bonus_points
+# __init__ is used to initialize the class property
+# they can be called and modified by the instance
+# self(method) allows the properties to be called upon by the instance of
+	def change_company_address(self,new_address):
+		self.address = new_address
+	def emp_pnts(self,points):
+		if points > 0:
+			self.employee_bonus_points = self.employee_bonus_points + points
 		else:
-			print("F")
+			print("Please enter valid amount")
+	def check_balance(self):
+		return self.employee_bonus_points
+#Instance method
+
+access_acct_points = int(input("Please enter account number to access your employee points: "))
+
+el = Employee("Edgar",1821,66000,25)
+
+if access_acct_points == 1821:
+	print("Greetings {}".format(el.name))
+	user_dec = int(input("Please select the numbe for the disired action:\n1.Check Account Balance\n2.Deposit Points: "))
+	if user_dec == 1:
+		print("Your current balance is: ",el.check_balance())
+	elif user_dec == 2:
+		deposit = int(input("Please enter the amount you would like to deposit: "))
+		el.emp_pnts(deposit)
+		print(el.check_balance())
+
+#el.emp_pnts(500)
+
+#print(el.check_balance())
+
+#el.change_company_address("Las Vegas") 
+# instance to Empoloyee which allows us to change the value of the 
+# address property
 
 
-	def display(self): # the "display" method will print out the students info which is stored in our first __init__ method above
-		print("\nName: {}\nRollno: {}\nclass: {}\n".format(self.name,self.rollno,self.std)) # <- format(self.name,self.rollno,self.std) is used to position properties/arguments within the STRING
 
- 
-name = input("What Is your name? ")
-rollno = int(input("What Is your Roll Numbner? "))
-std = int(input("What Grade Are You In: "))
 
-test1 = int(input("What was your score for test 1: "))
-test2 = int(input("What was your score for test 2: "))
-test3 = int(input("What was your score for test 3: "))
+#print(el.address) # Prints instance new value
+#print(Employee.address) # prints designated class value/property
 
-s1 = shitHead(name,rollno,std) # s1 This will issue the value of our __init__ method within our "shitHead" class and use our name,rollno,std (INPUT) values as arguments BUT its also stores the the "shitHead" class in it's entirety
-total = s1.total_marks(test1,test2,test3) # "Total" will store the value of the "total_marks" method within "s1"(which stores "shitHead") use our test1,test2,test3 (INPUT) values as arguments BUT its also stores the the "shitHead" class in it's entirety
-average_marks = s1.average(total) #"average_marks" will store the "total_marks" method within "s1" which stores the "shitHead" class, it will use the value within the "total" variable as its argument
 
-s1.display() # "avtivate" "display" within "s1" which stores the "shitHead" class, the funcions within this method will print out  a string
-print("Total marks: {} Average:{}".format(total,average_marks)) # Here we will print a string which hold palceholders within it ({})
-#These placeholders will hold placement for the following variables which have been declared above with values; average_marks and total
-# .format is used for Python to know which order to print out the variables
 
-s1.grade(average_marks) 	
-
-""""
-What Is your name? Edgar
-What Is your Roll Numbner? 2111
-What Grade Are You In: 10
-What was your score for test 1: 87
-What was your score for test 2: 32
-What was your score for test 3: 77
-
-Name: Edgar
-Rollno: 2111
-class: 10
-
-Total marks: 196 Average:65.33333333333333
-B
-"""

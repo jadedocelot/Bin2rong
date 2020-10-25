@@ -1,5 +1,4 @@
-# import is similar to <iostream> // which is in c++
-# using (as) we have now changed the name of the import in this file to "mf"
+
 import math_def as mf # <---- classic import
 
 # Another way of importing:
@@ -41,7 +40,8 @@ myPet =  mf.myDict
 if x < 100:
     mf.mult(a,b)
     print("You managed to keep X below the limit, a pet has been added to your inventorty.")
-    myPet = mf.myDict[1] = "Dog" # We added a blank dict to our module, yay!
+    pet = input("Which of the following pets would you like to add to your inventory?\n1.Horse: May be ridden\n2.Dog: Maybe be used to call upon to attack enemies")
+    myPet = mf.myDict[0] = pet  # We added a blank dict to our module, yay!
     print(myPet)
 else:
     mf.sub(a,b)

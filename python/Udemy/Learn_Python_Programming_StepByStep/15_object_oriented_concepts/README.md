@@ -264,7 +264,7 @@ class shitHead:
 -When a class defines an __init__() method, class instantiation automatically invokes __init__() for the newly-created class instance. So in this example, a new, initialized instance can be obtained by:
 
 
-- The instantiation operation (“calling” a class object) creates an empty object. Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named __init__(), like this:
+-The instantiation operation (“calling” a class object) creates an empty object. Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named __init__(), like this:
 
 - Of course, the __init__() method may have arguments for greater flexibility. In that case, arguments given to the class instantiation operator are passed on to __init__(). For example,
 
@@ -315,3 +315,36 @@ class: 10
 Total marks: 196 Average:65.33333333333333
 B
 """
+
+
+
+
+			_--_-___--___-_---_--_-------__-_--__--_-
+
+						Types of Methods
+  
+     		 _--_-___--___-_---_--_-------__-_--__--
+
+- There are 3 types of methods:
+
+	1. Instance Method: It can modify the state of the instance
+
+	2. Class Method: It can modify the state of the class
+
+	3. It can't modify the state of the instance or class. Its like a utility method.
+
+
+
+# Instance Method
+
+access_acct_points = int(input("Please enter account number to access your employee points"))
+
+if access_acct_points == 1821:
+	print("Greetings {}".format(el.name))
+	user_dec = int(input("Please select the numbe for the disired action:\n1.Check Account Balance\n2.Deposit Points"))
+	if user_dec == 1:
+		print("Your current balance is: ",el.check_balance())
+	elif user_dec == 2:
+		deposit = int(input("Please enter the amount you would like to deposit")
+		el.emp_pnts(deposit)
+		print(el.check_balance())

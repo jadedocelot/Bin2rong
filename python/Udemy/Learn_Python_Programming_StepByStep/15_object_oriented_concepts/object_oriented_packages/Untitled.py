@@ -5,3 +5,4 @@ class student:
         self.name = name
         self.id = emp_id
         self.dep = dep
+
