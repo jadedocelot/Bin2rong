@@ -334,17 +334,193 @@ B
 	3. It can't modify the state of the instance or class. Its like a utility method.
 
 
+class Employee: 
+	company_name = "Bin2rong"
+	address = "Los Angeles"
+# Porperties belong to the class
+# And caln only be modified by the class
+# class properties
 
-# Instance Method
+	def __init__(self,name,emp_id,salary,employee_bonus_points):
+		self.name = name
+		self.emp_Id = emp_id
+		self.salary = salary
+		self.employee_bonus_points = employee_bonus_points
+# __init__ is used to initialize the class property
+# they can be called and modified by the instance
+# self(method) allows the properties to be called upon by the instance of
+	@classmethod
+	def change_company_name(cls,new_name):
+		cls.company_name = new_name
+# Class method
+# In order to create a class method you will need a decorators (@classmethod)
+# Instead of using self, we will be using cls which stands for CLASS
+# with this CLASS METHOD we can change the CLASS PROPERTIES
 
-access_acct_points = int(input("Please enter account number to access your employee points"))
+	def change_company_address(self,new_address):
+		self.address = new_address
+	def emp_pnts(self,points):
+		if points > 0:
+			self.employee_bonus_points = self.employee_bonus_points + points
+		else:
+			print("Please enter valid amount")
+	def check_balance(self):
+		return self.employee_bonus_points
+#methods
+	@staticmethod
+	def acct_hours():
+		print("Employee accounts can be accessed between 7:00 AM - 1:00 AM")
+# static method
+# in order to access static method, the following decorator will be needed; @staticmethod
+# static method can be called using the class or instance
+
+
+elTwo = Employee("Dave",1911,45000,0)
+el = Employee("Edgar",1821,66000,25)
+# Employees
+# instance
+Employee.change_company_name("Amazon")
+# Accessing the CLASS METHOD to change the value of the "company name" CLASS PROPERTIES
+
+print("\nBin2rong will be changing its name to ",Employee.company_name," due to a recent aquisition. Thank you for all the great years\n\n")
+# We will now print out the new value of the "company_name" class property (employee.company_name)
+
+access_acct_points = int(input("Please enter account number to access your employee points: "))
 
 if access_acct_points == 1821:
 	print("Greetings {}".format(el.name))
-	user_dec = int(input("Please select the numbe for the disired action:\n1.Check Account Balance\n2.Deposit Points"))
+	user_dec = int(input("Please select the numbe for the disired action:\n1.Check Account Balance\n2.Deposit Points:\n "))
 	if user_dec == 1:
 		print("Your current balance is: ",el.check_balance())
+		el.acct_hours()
 	elif user_dec == 2:
-		deposit = int(input("Please enter the amount you would like to deposit")
+		deposit = int(input("Please enter the amount you would like to deposit: "))
 		el.emp_pnts(deposit)
 		print(el.check_balance())
+		el.acct_hours()
+elif access_acct_points == 1911:
+	print("Greetings {}".format(elTwo.name))
+	user_dec = int(input("Please select the number for the disired action:\n1.Check Account Balance\n2.Deposit Points:\n "))
+	if user_dec == 1:
+		print("Your current balance is: ",elTwo.check_balance())
+		el.acct_hours()
+	elif user_dec == 2:
+		deposit = int(input("Please enter the amount you would like to deposit: "))
+		elTwo.emp_pnts(deposit)
+		print(elTwo.check_balance())
+		el.acct_hours()
+
+
+#el.emp_pnts(500)
+
+#print(el.check_balance())
+
+#el.change_company_address("Las Vegas") 
+# instance to Empoloyee which allows us to change the value of the 
+# address property
+
+
+
+
+#print(el.address) # Prints instance new value
+#print(Employee.address) # prints designated class value/property
+
+
+
+
+
+
+
+# Class Method
+
+- This can modify the state of the class
+- In order to create a class method you will need a decorators
+
+
+# Static Method
+- Static messages are good for when something does not need to be modified, really its good for anything thats soley print (maybe a greeting)
+- Just a "utility" method
+
+
+								_--_-___--___-_---_--_-------__-_--__--_-
+
+												inheritance
+  
+     							 _--_-___--___-_---_--_-------__-_--__--
+
+
+# this is apparently the most important features in object oriented programming languages 
+	- It allows to reuse the existing code
+	- it allows to inheritance the features of one class to another class
+	- save time and recources
+
+
+class employee:
+	pass
+
+class employer(employee):
+	pass
+
+- The above employer class will get its properties from the 'employee' class
+- In Python all the classed by default are derived by class
+
+
+class person:
+	def __init__(self,name,age):
+		self.name = name
+		self.age = age
+	def display(self):
+		print("name={} age={}".format(self.name,self.age))
+
+class employee(person):
+	def __init__(self,name,age,emp_id,salary):
+		person.__init__(self,name,age)
+		self.emp_id = emp_id
+		self.salary = salary
+	def display_emp(self):
+		
+		print("Empoyee id:{} Salary:{}".format(self.emp_id,self.salary))
+
+el = employee("Edgar",29,1822,65000)
+
+el.display()
+el.display_emp()
+ # OUTPUT
+ # name=Edgar age=29
+ # Empoyee id:1822 Salary:65000
+
+#print(isinstance(el,object))
+# isinstance will see if employer is a sub class of employee
+# True
+
+ #print(issubclass(employee,object))\
+
+ - Now we will see an example of method override
+
+ class person:
+	def __init__(self,name,age):
+		self.name = name
+		self.age = age
+	def display(self):
+		print("name={} age={}".format(self.name,self.age))
+
+class employee(person):
+	def __init__(self,name,age,emp_id,salary):
+		super().__init__(name,age)
+# Rather calling the method from our super class we can just use the super keyword, and notice how we dont need to use self
+# This is prefered method
+		self.emp_id = emp_id
+		self.salary = salary
+	def display(self):
+		super().display()
+# As you can see the display method is exactly the same as the our display method in our super class, this is method overide.
+# in order to access both methods we will use the super() keyword
+# super().display()
+		print("Empoyee id:{} Salary:{}".format(self.emp_id,self.salary))
+
+el = employee("Edgar",29,1822,65000)
+
+el.display()
+ # OUTPUT
+ # name=Edgar age=29
+ # Empoyee id:1822 Salary:65000
