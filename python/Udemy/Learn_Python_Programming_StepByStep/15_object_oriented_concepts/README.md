@@ -524,3 +524,24 @@ el.display()
  # OUTPUT
  # name=Edgar age=29
  # Empoyee id:1822 Salary:65000
+
+
+
+
+
+ 								_--_-___--___-_---_--_-------__-_--__--_-
+
+												Multi Line inheritance
+  
+     							 _--_-___--___-_---_--_-------__-_--__--
+
+						A           SUPER CLASS
+										 |
+						B		SUB-CLASS (SUPER CLASS) ----- (Remember that sub class gets its properties from super class)
+										 |
+						C            Sub-Class
+
+
+
+
+
