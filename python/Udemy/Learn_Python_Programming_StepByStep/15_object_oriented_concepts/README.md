@@ -540,8 +540,119 @@ el.display()
 						B		SUB-CLASS (SUPER CLASS) ----- (Remember that sub class gets its properties from super class)
 										 |
 						C            Sub-Class
+						
+
+
+
+ 								_--_-___--___-_---_--_-------__-_--__--_-
+
+											Specias Functions
+	
+     							 _--_-___--___-_---_--_-------__-_--__--
+- Special methods consist of 2x underscore (__ __  )
+
+# __str__ 
+
+- Called by the str() built-in function and by the print statement to compute the ``informal'' string representation of an object. This differs from __repr__() in that it does not have to be a valid Python expression: a more convenient or concise representation may be used instead. 
+
+class person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    def __str__(self): 
+        return "Name {} Age {}".format(self.name,self.age)
+
+
+print(em_01)
+em_01.display()
+
+
+# OUTPUT:
+
+Name Dan Age 20
+
+- The following methods can be defined to emulate numeric objects. Methods corresponding to operations that are not supported by the particular kind of number implemented (e.g., bitwise operations for non-integral numbers) should be left undefined.
+
+
+# __pow__ 
+
+Return a ** b, for a and b numbers.
+
+# See chapter README.md for notes on this file
+class method_playground:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+    def display(self):
+        print("The sum of pow1: {} and pow2: {}".format(self.x,self.y))
+    def __pow__(self,other):
+        a = self.x ** other.x
+        b = self.y ** other.y
+        return method_playground(a,b)
+
+pow1 = method_playground(5,5)
+pow2 = method_playground(5,5)
+pow_sum = pow1 ** pow2
+pow_sum.display()
+
+
+# OUTPUT:
+
+The sum of pow1: 3125 and pow2: 3125
+
+
+# __add__
+
+Return a + b, for a and b numbers.
 
 
 
 
+# See chapter README.md for notes on this file
+class method_playground:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+    def display(self):
+        print("The sum of pow1: {} and pow2: {}".format(self.x,self.y))
+    def __add__(self,other):
+        a = self.x + other.x
+        b = self.y + other.y
+        return method_playground(a,b)
 
+pow1 = method_playground(5,5)
+pow2 = method_playground(5,5)
+add_sum = pow1 + pow2
+add_sum.display()
+
+# OUTPUT
+
+
+The sum of pow1: 10 and pow2: 10
+
+
+ - playing around
+
+
+ class method_playground:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+    def display(self):
+        print("The sum of pow1: {} and pow2: {}".format(self.x,self.y))
+    def __add__(self,other):
+        a = self.x + other.x
+        b = self.y + other.y
+        if b < 11:
+            b = b + 10
+        	a = a - 10  
+        return method_playground(a,b)
+
+pow1 = method_playground(5,5)
+pow2 = method_playground(5,5)
+add_sum = pow1 + pow2
+add_sum.display()
+
+# OUTPUT:
+
+The sum of pow1: 0 and pow2: 20
