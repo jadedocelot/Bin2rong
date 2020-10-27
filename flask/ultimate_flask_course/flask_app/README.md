@@ -489,9 +489,114 @@ Greeting Edgar, you have landed on the query page from California
 
 @app.route('/theform')
 def theform():
-    return '''<form methodA="POST" action="/query">
-                <input type="text" name="name" >
-                <input type="text location="location">'
-                <input type="submit" value="coq">
+    return '''<form method="POST" action="/query">
+                <input type="text" name="name">
+                <input type="submit" value="submit">
               </form>'''    
 
+
+
+- Then we will have, have to creating landing page for our form above.
+
+@app.route('/query', methods=['POST','GET']) 
+def query():
+    name = request.form.get('name')
+    return '<h1>Greetings {}, you have landed on the query page!</h1>'.format(name)
+
+# http://127.0.0.1:5000/info?name=Edgar&location=California
+# OUTPUT: Greetings Edgar, you have landed on the query page from California
+
+
+                    ______________________________________
+
+                                Request Json Data
+                    ______________________________________
+- Using Postman
+
+POST - REQUEST - http://127.0.0.1:5000//postmanjson - SEND
+
+- then , POST request > Body > raw > (make sure the drop down to the far right is on JSON). Enter in the info. Enter in the following data;
+
+
+{"name" : "Edgar", "location": "Japan", "randomlist": ["pizza","chocolate","Soda"," weed"]}
+
+- and SEND (in the top right corner) 
+
+- Though nothing will happen since your app isnt actually proccessing the data. We will have to go to our '/postmanjson;' rounte in our code
+
+@app.route('/postmanjson',methods=['POST','GET'])
+# Make sure our methods has 'POST' so that we can send data from postma
+def postmanjson():
+    data = request.get_json()
+# data this is going to take the incoming json object from Postman and
+# turn it into Python data structures,arrays will be converted into lists
+    name = data['name']
+# name 'variable' which carries the key/object
+    location = data['location']
+# location 'variable' which carries the key/object
+    randomlist = data['randomlist']
+# Crea
+
+return jsonify({'key' : 'values','name':  name, 'location': location, 'Random Item': randomlist})
+
+# Our return we include some keys to the json object that is returned 
+
+- Once the above has been added, we will go back to POSTMAN and once again send the raw data and the follwoing should appear at the bottom of our page;
+
+  "Random Item": [
+    "pizza", 
+    "chocolate", 
+    "Soda", 
+    " weed"
+  ], 
+  "key": "values", 
+  "location": "Japan", 
+  "name": "Edgar"
+}
+
+
+
+
+                    ______________________________________
+
+                            Incoming Method Requests
+                    ______________________________________
+
+- There are multiple ways of sending data
+
+@app.route('/theform', methods=['POST','GET']) # <----- BUG
+def theform():
+    if request.method == 'GET':
+        return '''<form method="POST" action="/theform">
+                        <input name="name" type="text">
+                        <input type="submit" value="Submit">
+                      </form>'''
+               
+
+@app.route('/query', methods=['POST','GET']) 
+def query():
+    name = request.form.get('name')
+    return '<h1>Greetings {}, you have landed on the query page!</h1>'.format(name)
+
+OR
+
+@app.route('/theform', methods=['POST','GET']) # <----- BUG
+def theform():
+    if request.method == 'GET':
+# The if statement acts as a GET handle
+        return '''<form method="POST" action="/theform">
+                        <input name="name" type="text">
+                        <input type="submit" value="Submit">
+                      </form>'''
+    else:
+# The else statement acts like a POST handle
+        name = request.form.get('name')
+        
+        return '<h1>Greetings {}, you have landed on the query page!</h1>'.format(name)
+
+# This cant method can be used as a way to consolidate your code, you can do this as oppose to having a GET route and a seperate route for POST
+
+                    ______________________________________
+
+                            Incoming Method Requests
+                    ______________________________________
