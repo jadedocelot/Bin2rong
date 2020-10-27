@@ -598,5 +598,25 @@ def theform():
 
                     ______________________________________
 
-                            Incoming Method Requests
+                           Redirects and the URL
                     ______________________________________
+
+
+- Now we will figure out how to direct a user from page to another once they have completed the task
+
+- First off we will need to import URL_FOR is is the function of getting the URL for a particular route
+
+- second, we will need to import redirect which will, as you guessed it, handle the redirect from said rout
+
+# In the example below we will start off on our /theform page, enter in the requested info and the be redirected to our /home page
+
+@app.route('/theform', methods=['POST','GET'])
+def theform():
+    if request.method == 'GET':
+        return '''<form method="POST" action="/theform">
+                        <input name="name" type="text">
+                        <input type="submit" value="Submit">
+                      </form>'''
+    else:
+        name = request.form.get('name')
+        return redirect(url_for('home',name=name)) 

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, url_for, redirect
 
 app = Flask(__name__)
 
@@ -22,7 +22,8 @@ def theform():
 			      	  </form>'''
 	else:
 		name = request.form.get('name')
-		return '<h1>Greetings {}, you have landed on the query page!</h1>'.format(name)
+		return redirect(url_for('home',name=name)) 
+		#return '<h1>Greetings {}, you have landed on the query page!</h1>'.format(name)
 
 #WORKS 10/26
 @app.route('/info') 
