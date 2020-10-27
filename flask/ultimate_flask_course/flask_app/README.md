@@ -705,3 +705,19 @@ session.pop('name', None)
 # So if the 'name' is within the session, then we will continue on with the name. If not (else) then use(print) the backup message ('(Wait...who are you?)') as a value for name
 
 # Now to get session to use our unique name we will need to go back to /theform page and enter it again. Though remeber that any page with the pop method will remove/replace our session
+
+
+
+
+                    ______________________________________
+
+                                DEBUG MODE
+                    ______________________________________
+
+
+- While debug mode is ON, a DEBUG page will appear with a description of what is wrong when we have reached a bug in the code
+
+
+# SO DEBUG MODE REALLY HELPS ASSHOLE! 
+
+- Sometimes when on this page you will be asked to provide a PIN which can be found in our terminal under 'Debugger Pin' 166-239-698
