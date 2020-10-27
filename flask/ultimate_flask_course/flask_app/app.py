@@ -1,9 +1,10 @@
-from flask import Flask, jsonify, request, url_for, redirect
+from flask import Flask, jsonify, request, url_for, redirect, session
 
 app = Flask(__name__)
 
 app.config['DEBUG'] = True
 app.config['TESTING'] = True
+app.config['SECRET_KEY'] = 'SSHH'
 
 #WORKS 10/26
 @app.route('/', methods=['GET','POST'])
@@ -13,6 +14,7 @@ def index():
 @app.route('/home', methods=['GET','POST'], defaults = {'name' : 'Defualt'})
 @app.route('/home/<string:name>', methods=['GET','POST'])
 def home(name):
+	session['name'] = name
 	return '<h1>Welcome {}! You Are Now an Art Fag! This is the home page</h1>'.format(name)
 
 @app.route('/theform', methods=['POST','GET'])
@@ -31,9 +33,10 @@ def theform():
 #WORKS 10/26
 @app.route('/info') 
 def info():
-	name = request.args.get('name')
-	location = request.args.get('location')
-	return '<h1>Greetings {}, you have landed on the query page from {}</h1>'.format(name,location)
+	name = session['name']
+	# name = request.args.get('name')
+	# location = request.args.get('location')
+	return '<h1>Greetings {}, you have landed on the query page</h1>'.format(name)
 
 #WORKS 10/26
 @app.route('/postmanjson',methods=['POST','GET'])

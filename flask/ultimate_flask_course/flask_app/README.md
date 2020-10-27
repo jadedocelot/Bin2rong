@@ -642,5 +642,42 @@ app.config['DEBUG'] = True
 app.config['DEBUG'] = True
 app.config['TESTING'] = True
 
-# For a list of FLASK configs
+# For a list of FLASK configs 
 https://flask.palletsprojects.com/en/0.12.x/config/
+
+
+                    ______________________________________
+
+                                    Sessions
+                    ______________________________________
+
+- We re gonna need to configure a particular value to use sessions
+
+- Sessions in a web app to keep data persistant acrosse routes/pages 
+
+# EXAMPLE:
+    You log into a website, the site needs to know that its YOU going through the site, regardless of what pages you go to. This is where cookies come in handy, the app will go into this cookie to retrieve data of who you are
+
+- Now we will be bringing in sessions through the cofig dictionary;
+
+app.config['SECRET_KEY'] = 'SSHH'
+
+# NEVER PUT ANYTHING SENSETIVE INSIDE OF A SESSION
+
+- once we have our config set up then we will need to import sesssions; 
+
+import session
+
+- Now we will add the session dict to our /home route
+
+@app.route('/home', methods=['GET','POST'], defaults = {'name' : 'Defualt'})
+@app.route('/home/<string:name>', methods=['GET','POST'])
+def home(name):
+    session['name'] = name
+# SO now when we enter a 'name' through the /theform route and our directed, seesions, our cookie will now have store that 'name' value and know that is who is perusing the site 
+    return '<h1>Welcome {}! You Are Now an Art Fag! This is the home page</h1>'.format(name)
+
+
+- Once the above has been added then all the routes in our code will have accesss to our session
+
+- For a route to read the session;
