@@ -680,4 +680,28 @@ def home(name):
 
 - Once the above has been added then all the routes in our code will have accesss to our session
 
-- For a route to read the session;
+- For a route to read the session; 
+
+@app.route('/info') 
+def info():
+    name = session['name']
+    # name = request.args.get('name')
+    # location = request.args.get('location')
+    return '<h1>Greetings {}, you have landed on the query page</h1>'.format(name)
+
+- Now you gotta be careful when modifying a session, for you can run into a number of error if a session is modified
+
+# EXAMPLE: Say that when you land on the index page (/). The name is popped off and NOT replaced. 
+
+session.pop('name', None)
+
+# When going back to the /info page, you will be greeted with a SHIT ERROR. To avoid this we will need to use if/else
+    
+    if 'name' in session:   
+        name = session['name']
+    else:
+        name = '(Wait...who are you?)'
+
+# So if the 'name' is within the session, then we will continue on with the name. If not (else) then use(print) the backup message ('(Wait...who are you?)') as a value for name
+
+# Now to get session to use our unique name we will need to go back to /theform page and enter it again. Though remeber that any page with the pop method will remove/replace our session

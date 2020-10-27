@@ -9,6 +9,7 @@ app.config['SECRET_KEY'] = 'SSHH'
 #WORKS 10/26
 @app.route('/', methods=['GET','POST'])
 def index():
+	#session.pop('name', None)
 	return '<h1>This is the index page</h1>'
 #WORKS 10/26
 @app.route('/home', methods=['GET','POST'], defaults = {'name' : 'Defualt'})
@@ -33,14 +34,17 @@ def theform():
 #WORKS 10/26
 @app.route('/info') 
 def info():
-	name = session['name']
+	if 'name' in session:	
+		name = session['name']
+	else:
+		name = '(Wait...who are you?)'
 	# name = request.args.get('name')
 	# location = request.args.get('location')
 	return '<h1>Greetings {}, you have landed on the query page</h1>'.format(name)
 
 #WORKS 10/26
 @app.route('/postmanjson',methods=['POST','GET'])
-def postmanjson():
+def postmanjson(): 
 	data = request.get_json()
 
 	name = data['name']
