@@ -620,3 +620,27 @@ def theform():
     else:
         name = request.form.get('name')
         return redirect(url_for('home',name=name)) 
+
+
+
+                    ______________________________________
+
+                                Configuration
+                    ______________________________________
+
+- configuration value is 'debug'
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+- Though rather than in icluding debug=True like above, we can being it in through the app.config dictionary. Along with other configs
+
+app.config['DEBUG'] = True
+
+# And to addd multiple update keys;
+
+app.config['DEBUG'] = True
+app.config['TESTING'] = True
+
+# For a list of FLASK configs
+https://flask.palletsprojects.com/en/0.12.x/config/

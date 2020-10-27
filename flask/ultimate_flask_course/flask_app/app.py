@@ -2,6 +2,9 @@ from flask import Flask, jsonify, request, url_for, redirect
 
 app = Flask(__name__)
 
+app.config['DEBUG'] = True
+app.config['TESTING'] = True
+
 #WORKS 10/26
 @app.route('/', methods=['GET','POST'])
 def index():
@@ -11,7 +14,6 @@ def index():
 @app.route('/home/<string:name>', methods=['GET','POST'])
 def home(name):
 	return '<h1>Welcome {}! You Are Now an Art Fag! This is the home page</h1>'.format(name)
-#WORKS 10/26
 
 @app.route('/theform', methods=['POST','GET'])
 def theform():
@@ -24,6 +26,7 @@ def theform():
 		name = request.form.get('name')
 		return redirect(url_for('home',name=name)) 
 		#return '<h1>Greetings {}, you have landed on the query page!</h1>'.format(name)
+		# the commented return above will go to the 'query' page
 
 #WORKS 10/26
 @app.route('/info') 
@@ -43,6 +46,10 @@ def postmanjson():
 
 	return jsonify({'key' : 'values','name':  name, 'location': location, 'Random Item': randomlist})
 
-
 if __name__ == '__main__':
-	app.run(debug=True) 
+	app.run() 
+
+
+
+
+# See folder README for notes
