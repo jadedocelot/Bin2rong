@@ -721,3 +721,36 @@ session.pop('name', None)
 # SO DEBUG MODE REALLY HELPS ASSHOLE! 
 
 - Sometimes when on this page you will be asked to provide a PIN which can be found in our terminal under 'Debugger Pin' 166-239-698
+
+
+
+
+                ______________________________________
+
+                            Templates 
+
+                ______________________________________
+
+
+- Say within one of your routes you needed to return a lot of html, this is where templates come in handy.
+
+- First off will need to import render template;
+
+    import render_template
+
+- Now once we have imported render_templates, we will proceed to creating a 'templates' directory in our app ENV and once we do that we will create an html file within this new templates directory
+
+- And within the new html file (ours is: index.html) we will include the following and then delete it from our app.py file
+
+<form method="POST" action="/theform">
+    <input name="name" type="text">
+    <input type="submit" value="Submit">
+</form>'
+
+- Now what if we wanted to add a header so that it would appear above our input/submit box
+
+<h1>Please enter your name</h1>
+<form method="POST" action="/theform">
+    <input name="name" type="text">
+    <input type="submit" value="Submit">
+</form>'

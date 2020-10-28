@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, url_for, redirect, session
+from flask import Flask, jsonify, request, url_for, redirect, session, render_template
 
 app = Flask(__name__)
 
@@ -23,10 +23,7 @@ def home(name):
 @app.route('/theform', methods=['POST','GET'])
 def theform():
 	if request.method == 'GET':
-		return '''<form method="POST" action="/theform">
-						<input name="name" type="text">
-						<input type="submit" value="Submit">
-			      	  </form>'''
+		return render_template('index.html')
 	else:
 		name = request.form.get('name')
 		return redirect(url_for('home',name=name)) 
