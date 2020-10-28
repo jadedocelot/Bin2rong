@@ -754,3 +754,23 @@ session.pop('name', None)
     <input name="name" type="text">
     <input type="submit" value="Submit">
 </form>'
+
+ 
+
+                ______________________________________
+
+                            Template Variable
+
+                ______________________________________
+
+
+- There are a number of things that can be stored within a template, one important thing is a variable
+
+- In Python;
+
+return render_template('info.html', name=name)
+
+- and in your HTML your NEW info.html file;
+
+
+<h1>Welcome {{ name }}! You Are Now an Art Fag! This is the home page</h1>

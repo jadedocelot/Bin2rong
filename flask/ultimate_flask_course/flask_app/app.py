@@ -18,7 +18,7 @@ def index():
 @app.route('/home/<string:name>', methods=['GET','POST'])
 def home(name):
 	session['name'] = name
-	return '<h1>Welcome {}! You Are Now an Art Fag! This is the home page</h1>'.format(name)
+	return render_template('info.html', name=name)
 
 @app.route('/theform', methods=['POST','GET'])
 def theform():
@@ -27,8 +27,6 @@ def theform():
 	else:
 		name = request.form.get('name')
 		return redirect(url_for('home',name=name)) 
-		#return '<h1>Greetings {}, you have landed on the query page!</h1>'.format(name)
-		# the commented return above will go to the 'query' page
 
 #WORKS 10/26
 @app.route('/info') 
@@ -37,8 +35,6 @@ def info():
 		name = session['name']
 	else:
 		name = '(Wait...who are you?)'
-	# name = request.args.get('name')
-	# location = request.args.get('location')
 	return '<h1>Greetings {}, you have landed on the query page</h1>'.format(name)
 
 #WORKS 10/26
