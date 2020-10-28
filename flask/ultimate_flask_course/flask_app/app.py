@@ -6,10 +6,12 @@ app.config['DEBUG'] = True
 app.config['TESTING'] = True
 app.config['SECRET_KEY'] = 'SSHH'
 
+x = 'Banker'
+
 #WORKS 10/26
 @app.route('/', methods=['GET','POST'])
 def index():
-	#session.pop('name', None)
+	session.pop('name', None)
 	return '<h1>This is the index page</h1>'
 #WORKS 10/26
 @app.route('/home', methods=['GET','POST'], defaults = {'name' : 'Defualt'})
