@@ -10,7 +10,6 @@ int x = 10;
 
 int &y = x;
 
-
 if (y == 10){
     cout << "Y is inded a referrenct to x!" << endl;
     cout << "X address: " << &x << endl; // address: 0x7ffeea7c5788

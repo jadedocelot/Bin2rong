@@ -388,19 +388,76 @@ A = | 2 | 4 | 6 | 8 | 10 |    <- (pointer) p = beginning of address A (array) 20
 
 
 
+# Memory Leak
+
+- Oh shit, you can eventually run out of memory. So be sure to delete all UNUSED pointers
+
+- say we create a new pointer linked to an array; 
+
+	int *p = new int[5];
+
+	- And say at some point that pointer is no longer needed, so we will need to delete said ponter and de-nitialize it;
+
+	 	delete []p;  <--- DELETE THAT BISH
+
+		 p = NULL;  <--- DE nitialize it
+
+
+
+# Dangling Pointer
+
+-  Say when we create a pointer within our main  but we delete at the end of a function, if  deleted within a function it will also delocate the pointer from our code entirely
 
 
 
 
 
 
+										______________________________________
 
+												 		Reference
+										______________________________________
 
+- Referece a powerful features in C++ which is also not included in any other language
 
+int x = 10;
+int &y = x;
 
+int a;
 
+ 
+R - value --> a = x  | <- DATA of X
+L - valie --> x = 25 | <- ADDRESS of X
 
+ 
+#include<iostream>
+#include<cmath>
+#include<string>
+using namespace std;
 
+int main(){
 
+int x = 10; <- L value
 
+int &y = x; <- R value
+// y is now referrence to x, it otherwords it is a NICKNAME to x. An alias 
 
+if (y == 10){
+    cout << "Y is inded a referrenct to x!" << endl;
+    cout << "X address: " << &x << endl; // address: 0x7ffeea7c5788
+    cout << "Y address: " << &y << endl;// address: 0x7ffeea7c5788
+    while (y > 0){
+        --y; 
+        // What is happening here is that we ve thrown a reference of x into a (while) loop 
+        // which will decrement the value of y(x)  
+        // At the end of the loop, the new value of x will be 0
+    }
+}
+else{
+    cout << "Do you even reference BRUH!" << endl;
+}
+cout << "The value of X is: " << x << endl; 
+// modifying our referrence will modify the original variable
+
+return 0;
+}
