@@ -15,9 +15,10 @@ c[0] = 12,c[1] = 65,c[2] = 55,c[3] = 4,c[4] = 32,c[5] = 2;
 
 for (int i = 0; i < 5;++i){
     cout << i << "." << c[i] << endl;
-    if (i > 25){
+    if (back_up[i] > 25){
         for(int k = 0;k < 3;++k){
-            back_up[k] = i;
+            back_up[k] = back_up[k] + i;
+            break;
         }
     }
     for (int j = 0;j < 6;++j){
