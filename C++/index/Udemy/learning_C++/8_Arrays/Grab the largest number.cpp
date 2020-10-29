@@ -29,7 +29,6 @@ cout << "\nTodays catch leaves you with the grand total of $" << dig_bucket << e
 return 0;
 }
 
-
 /*
 
 You just Caught: 422
@@ -51,12 +50,6 @@ Todays catch leaves you with the grand total of $1756
 
 
 
-
-
-
-
-
-å/////// PLAYGROUND
 
 /*
 for (dig_net = 0;dig_net < 15; dig_net++){

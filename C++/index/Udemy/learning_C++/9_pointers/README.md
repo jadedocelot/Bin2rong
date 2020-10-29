@@ -345,15 +345,46 @@ A = | 2 | 4 | 6 | 8 | 10 |    <- (pointer) p = beginning of address A (array) 20
 
 												 Problem With Pointers
 										______________________________________
+- Pointers can be very dangerous, pointers can actually cause systems to crash. Due to runtime error. At time of compile we may not get the error but at runtime we may get an error
+
+# Some ways POINTERS can totally fuck you over: 
+
+	1. Uninitialize a pointer
+	2. Memory Leak
+	3. Dangling Pointer
+
+- These are some of the main causes, due to the neglagence of a programmer
 
 
+# Uninitialized Pointer:
+
+	int * p; 
+		- above we have declared a pointer
+			BUT
+			- Invalid address, becuase it is not pointing anywhere, unknown location. How might we correct this? there are several methods;
+				1. Say we already have a variable like X;
+
+					int x = 10; 
+
+						We can assign our pointer to X
+
+							p = *X; 
+
+				2. You can initialize a pointer using an address with hexadecimal codes
+
+					p = (int *)ox5638;
+
+					- This method has to be type casted like some kind of integer pointer. Also we have to make sure that that address belongs to a program (Though note that this method is not comonly used, this is mostly used in systems programming)
+
+				3. Or you can assign it to the heap memory
+
+					p = new int[5]
 
 
+			- So if not using any of these methods once should NOT use the a pointer
 
-
-
-
-
+	* p = 25;
+		- And now we will store the value of 25 in our pointer
 
 
 
