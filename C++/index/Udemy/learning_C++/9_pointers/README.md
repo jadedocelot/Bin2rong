@@ -427,7 +427,7 @@ int a;
 
  
 R - value --> a = x  | <- DATA of X
-L - valie --> x = 25 | <- ADDRESS of X
+L - valie --> x = 25 | <- ADDRESS of X 
 
  
 #include<iostream>
@@ -439,7 +439,7 @@ int main(){
 
 int x = 10; <- L value
 
-int &y = x; <- R value
+int &y = x; <- R value 
 // y is now referrence to x, it otherwords it is a NICKNAME to x. An alias 
 
 if (y == 10){
@@ -461,3 +461,65 @@ cout << "The value of X is: " << x << endl;
 
 return 0;
 }
+
+# NOTE: You cannot refference a refference. And once that refernece is assigned to a variable it cannot be assigned to another variable
+
+
+
+
+
+										______________________________________
+
+												Pointer to a Function
+										______________________________________
+
+
+#include<iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+
+void dis_greeting(){
+    cout << "Hello World!" << endl;
+} 
+
+//function 1 which takes 2 int args which looks for the MAX of 2 integers
+int max (int x,int y){
+    return x > y?x:y;
+    // return x greater than y return(?) x otherwise(:) y
+    
+}
+
+//function 1 which takes 2 int args which looks for the MAX of 2 integers
+int min(int x,int y){
+    return x < y?x:y;
+    // return x less than y return(?) x otherwise(:) y
+}
+
+int main(){
+
+//void(*fp)();
+int(*fp)(int,int);
+# The above method is DECLARING a pointer to a function
+# The pointer must be within the brackets
+# The left you will include the functions written type (int)
+# to the right you will include any parameters within said function (int,int)
+# Now if we have multiple functions (with 2 parameters?) we can now assign our (fp) pointer to eiter function
+
+fp = max;
+# now we have initialized our pointer by assigning it a name the MAX function 
+
+#  Now we will be executing the function through the pointer that have been assigned to it 
+(*fp)(5,2);
+cout << (*fp)(5,2) << " :Max function is called" << endl;
+# 5 :Max function is called
+# Now we will be executing the function through the pointer that have been assigned to it 
+
+fp = min;
+# now we have initialized our pointer by assigning it a name the MIN function 
+cout << (*fp)(5,2) <<  " :Min function is called" << endl;
+# 2 :Max function is called
+return 0;
+} 
+
+# poylmorphism is ivol
