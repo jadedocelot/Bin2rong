@@ -568,7 +568,7 @@ em_01.display()
 
 
 # OUTPUT:
-
+ 
 Name Dan Age 20
 
 - The following methods can be defined to emulate numeric objects. Methods corresponding to operations that are not supported by the particular kind of number implemented (e.g., bitwise operations for non-integral numbers) should be left undefined.
