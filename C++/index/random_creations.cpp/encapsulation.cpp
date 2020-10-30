@@ -18,9 +18,7 @@ public:
 };
 
 int main(){
-int x;
-int stable_speed;
-int emergency_speed_reduction = 30;
+int x,stable_speed,emergency_speed_reduction = 30;
 
 carBackup speed_Monitoring;
 //speed_Monitoring.backupBrake(emergency_speed_reduction,x)
