@@ -25,7 +25,8 @@ while (l <= h)
 		cout << "Found at: " << mid << endl;
 		return 0; // <- This will end the program
 	 	else if (key < arr[mid]) h = mid - 1;
-	else l = mid + 1; 
+	else{
+		l = mid + 1; 
 	}
 
 

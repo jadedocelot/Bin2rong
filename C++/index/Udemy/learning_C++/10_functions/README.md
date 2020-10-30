@@ -107,6 +107,8 @@ return 0;
 #include <iostream>
 using namespace std;
 
+# NOTE: That && stands for "as well as" and || stands for "OR"
+
 int big_boi(int a,int b,int c) {
     if (a > b && a > c){
         return a;
@@ -136,3 +138,49 @@ cout << "And the one with the biggest dick in the room is: " << (fp)(x,y,z) << e
 
 return 0;
 }
+
+
+
+
+
+                                    _______________________________________
+
+                                             Functions Overload
+                                    _______________________________________
+
+- In C++ you have multiple functions with the same NAMES but with different arguments
+
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int add(int x,int y){
+    return x + y;
+}
+
+int add(int x,int y,int z){
+    return x + y + z;
+}
+
+int main(){
+int a = 10,b = 5,c,d;
+
+c = add(a,b);
+d = add(a,b,c);
+
+cout << "C add function presents this: " << c << endl;
+cout << "D add function presents this: " << d << endl; 
+
+return 0;
+}
+
+_________________________________________________
+
+  ->    int max(int,int)
+        float max(float,float)
+        int max(int,int,int)
+X ->    float max(int,int) 
+
+# just because the return type in the two above are different doesnt mean that the functions are different
+# Which means we have reached a name conflict  

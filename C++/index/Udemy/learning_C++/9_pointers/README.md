@@ -501,7 +501,7 @@ int main(){
 //void(*fp)();
 int(*fp)(int,int);
 # The above method is DECLARING a pointer to a function
-# The pointer must be within the brackets
+#  The pointer must be within the brackets
 # The left you will include the functions written type (int)
 # to the right you will include any parameters within said function (int,int)
 # Now if we have multiple functions (with 2 parameters?) we can now assign our (fp) pointer to eiter function
@@ -522,4 +522,7 @@ cout << (*fp)(5,2) <<  " :Min function is called" << endl;
 return 0;
 } 
 
-# poylmorphism is ivol
+# poylmorphism is involved
+
+
+
