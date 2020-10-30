@@ -3,28 +3,9 @@
 #include<string>
 #include<cmath>
 using namespace std;
-/*
-int max(int x,int y){
-    if(x > y){
-        return x;
-    }
-    else{
-        return y;
-    } 
-}
 
-float max(float x,float y){
-    if(x > y){
-        return x;
-    } 
-    else{
-        return y;
-    }
-}
-*/
-
-template<class cat>
-cat max(cat x,cat y){
+template<class t>
+t max(t x,t y){
     if (x > y){
         return x;
     }
@@ -46,4 +27,27 @@ cin >> y;
 cout << (fp)(x,y) << " is greater!" << endl;
 
 return 0;
+
+
+// We have compressed the two functions into one function template
+// See axamaple above
+/*
+int max(int x,int y){
+    if(x > y){
+        return x;
+    }
+    else{
+        return y;
+    } 
+}
+
+float max(float x,float y){
+    if(x > y){
+        return x;
+    } 
+    else{
+        return y;
+    }
+}
+*/
 }
