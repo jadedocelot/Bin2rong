@@ -184,3 +184,61 @@ X ->    float max(int,int)
 
 # just because the return type in the two above are different doesnt mean that the functions are different
 # Which means we have reached a name conflict  
+
+
+
+
+                                    _______________________________________
+
+                                             Functions Templates
+                                    _______________________________________   
+
+- Function templates are the functons that are generic, generalized, in terms of data types. Say we  have two functions which perform the same arguments but have two diffrent return types. Is there some way we can consolodate them into ONE generic functon? Well you can with with FUCKING function templates
+
+int max(int x,int y){
+    if(x > y){
+        return x;
+    }
+    else{
+        return y;
+    } 
+}
+
+float max(float x,float y){
+    if(x > y){
+        return x;
+    } 
+    else{
+        return y;
+    }
+}
+
+# We can use function templates to consolodate into one function
+
+# Now in order to define the return type ('t') we must add the following;
+# template<class t> which will allow us to create a function template, now note that we can name our return type anything and it does not have to 't', it can be anything your heart desires
+
+template<class t>
+t max(t x,t y){
+    if (x > y){
+        return x;
+    }
+    else{
+        return y;
+    } 
+}
+
+int main(){
+
+float x,y,(*fp)(float,float);
+fp = max;
+
+cout << "Enter a number for x" << endl;
+cin >> x;
+cout << "Enter a number for y" << endl;
+cin >> y;
+
+cout << (fp)(x,y) << " is greater!" << endl;
+
+return 0;
+}

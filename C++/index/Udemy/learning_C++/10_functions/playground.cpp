@@ -1,25 +1,49 @@
 
-#include <iostream>
-#include <string>
-#include <cmath>
+#include<iostream>
+#include<string>
+#include<cmath>
 using namespace std;
-
-int add(int x,int y){
-    return x + y;
+/*
+int max(int x,int y){
+    if(x > y){
+        return x;
+    }
+    else{
+        return y;
+    } 
 }
 
-int add(int x,int y,int z){
-    return x + y + z;
+float max(float x,float y){
+    if(x > y){
+        return x;
+    } 
+    else{
+        return y;
+    }
+}
+*/
+
+template<class cat>
+cat max(cat x,cat y){
+    if (x > y){
+        return x;
+    }
+    else{
+        return y;
+    } 
 }
 
 int main(){
-int a = 10,b = 5,c,d;
 
-c = add(a,b);
-d = add(a,b,c);
+float x,y,(*fp)(float,float);
+fp = max;
 
-cout << "C add function presents this: " << c << endl;
-cout << "D add function presents this: " << d << endl; 
+cout << "Enter a number for x" << endl;
+cin >> x;
+cout << "Enter a number for y" << endl;
+cin >> y;
+
+cout << (fp)(x,y) << " is greater!" << endl;
 
 return 0;
 }
