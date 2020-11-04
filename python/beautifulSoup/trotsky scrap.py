@@ -2,7 +2,6 @@
 # The code listed below scrapes the Wiki page on Leon Trotsky, to which all
 # data is save to a "text" file
 
-
 from bs4 import BeautifulSoup as BS
 import requests
 
