@@ -163,4 +163,8 @@ cropCat= Image.open('cat.png')
 catCopy = catIm2.copy()
 
 
-- So we opened the image and we copied the damn thing. Which now means that the two variables contain two seperate image objects
+- So we opened the image and we copied the damn thing. Which now means that the two variables contain two seperate image objects which have the same image in them 
+
+
+
+# LEFT OFF ON PAGE 394 automate-the-boring-with-python
