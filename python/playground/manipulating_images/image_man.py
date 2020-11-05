@@ -1,13 +1,13 @@
 from PIL  import Image,ImageEnhance,ImageMath
 
-#im = Image.open("277456.jpg")
-#im.rotate(45).show()
+im = Image.open("277456.jpg")
+im.rotate(45).show()
 
-im1 = Image.open("WBR-Series.jpg")
-im2 = Image.open("MV-MIM-Series.jpg")
+#im1 = Image.open("WBR-Series.jpg")
+#im2 = Image.open("MV-MIM-Series.jpg")
 
-out = ImageMath.eval("convert(min(a,b), 'L')", a=im1, b=im2)
-out.save("result.png")
+#out = ImageMath.eval("convert(min(a,b), 'L')", a=im1, b=im2)
+#out.save("result.png")
 
 
 # The PixelAccess class provides read and write access to PIL.Image data at a pixel level
