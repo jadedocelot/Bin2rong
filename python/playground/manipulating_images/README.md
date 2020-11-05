@@ -156,4 +156,11 @@ cropCat= Image.open('cat.png')
 
 - In this example we will be using the following; 
 
- catCopy2 = Image.open('croppedCat.png')
+ catIm2 = Image.open('croppedCat.png')
+
+- And in order to copy it 
+
+catCopy = catIm2.copy()
+
+
+- So we opened the image and we copied the damn thing. Which now means that the two variables contain two seperate image objects
