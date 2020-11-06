@@ -162,9 +162,48 @@ cropCat= Image.open('cat.png')
 
 catCopy = catIm2.copy()
 
-
 - So we opened the image and we copied the damn thing. Which now means that the two variables contain two seperate image objects which have the same image in them 
 
 
 
-# LEFT OFF ON PAGE 394 automate-the-boring-with-python
+- Now we will be pasting 'catIm2' several times on our "messy_cat.png" image which we have stored in a variable called "catTemplate"
+
+CatIm2 = Image.open("croppedCat.png")
+catTemplate = Image.open("messy_cat.png")
+
+catTemplate.paste(paws,(0,0))
+- Now we are pasting the image using the .paste() method which takes two arguments;
+    -  A 'source' Image object
+    -  A tuple of the X and Y coordinates (Where we are pasting it on the top left corner of the source image)
+catTemplate.paste(paws,(0,100))
+catTemplate.paste(paws,(0,200))
+catTemplate.paste(paws,(0,300))
+catTemplate.paste(paws,(0,400))
+catTemplate.paste(paws,(0,500))
+
+catTemplate.paste(paws,(800,0))
+catTemplate.paste(paws,(800,100))
+catTemplate.paste(paws,(800,200))
+catTemplate.paste(paws,(800,300))
+catTemplate.paste(paws,(800,400))
+catTemplate.paste(paws,(800,500))
+
+- Then once we have pasted the above on our template, we can then save it to a PNG file 
+
+ catTemplate.save("catgfreak.png")
+
+
+   #                                                  ______________________________________________________
+
+ #                                                             Making a Tilled image of Kitty paws
+#                                                    ______________________________________________________
+
+- First thing we need to do is create variables which open the images we want to use;
+
+paws = Image.open("croppedCat.png")
+catTemplate = Image.open("messy_cat.png")
+
+- Now we will store the WIDTH of HEIGHT of paws && catTemplate in catTempWidth/catTempHeight and pawsWidth/pawsHeight;
+
+catTempWidth, catTempHeight =  catTemplate.size
+pawsWidth, pawsHeight = paws.size
