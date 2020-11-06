@@ -1,4 +1,5 @@
 
+
 #                                                    ______________________________________________________
 
  #                                                                   Manipulating Images
@@ -218,6 +219,18 @@ for top in range(0, catTempWidth,pawsWidth):
     print(left,top)
     catTemplate.paste(paws, (left,top))
 
+
+
+
+
+
+print(catTempWidth) #976
+print(catTempHeight) #549
+
+print(pawsWidth) #230
+print(pawsHeight) #215
+------------------------------------------
+
 # OUTPUT
 '''
 0 0 <-- OUTER FOR LOOP - -LEFT
@@ -241,15 +254,47 @@ for top in range(0, catTempWidth,pawsWidth):
 920 430 <-- INNER FOR LOOP
 
 '''
+------------------------------------------
 
 
 
 
 
+  #                                                  ______________________________________________________
+
+ #                                                                     Resizing Images
+#                                                    ______________________________________________________
+
+- The resize() method is called on an IMage object and returns a new Image object of the specified width and height 
+
+- It accepts a two-integer tuple argument, representing the new width and height
+
+catIm = Image.open("cat.png")
+
+ width,height = catIm.size
+### print(catIm.size) <--- (976, 549)
+### when size of catIm is printed, we  will receive a tuple of two arguments
+### Since catIm.size provides 2 arguments (in tuples) we will need two variables (and order DOES matter 
+### (width,height) <- (976, 549)
+
+ sqtrIm = catIm.resize((int(width/2),int(height/2)))
+### width = 488
+### height =  274
+### qtrIm.size = (488,274)
+### We will store catIm.resize() method within 'qtrIm'
+ qtrIm.save('qtr_size_cat.png')
+### We will then save the value of "qtrIm" into a new PNG file
+
+svelteIm = catIm.resize((width,height + 300))
+### "svelteIm" value is the resize of "catIm"
+### width stays as is (976)
+### height + 300 = 849
+### NEW catIm.resize(976,849)
+ svelteIm.save('lteCat.png')
 
 
-print(catTempWidth) #976
-print(catTempHeight) #549
+  #                                                  ______________________________________________________
 
-print(pawsWidth) #230
-print(pawsHeight) #215
+ #                                                                     Changing Individual Pixels
+#                                                    ______________________________________________________
+

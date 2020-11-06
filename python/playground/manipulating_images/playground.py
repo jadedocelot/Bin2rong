@@ -1,13 +1,10 @@
 from PIL import Image
 
-paws = Image.open("croppedCat.png")
-catTemplate = Image.open("messy_cat.png")
+catIm = Image.open("cat.png")
+width,height = catIm.size
+qtrIm = catIm.resize((int(width/2),int(height/2)))
+# svelteIm = catIm.resize((width + 300,height + 300))
 
-catTempWidth, catTempHeight =  catTemplate.size
-pawsWidth, pawsHeight = paws.size
+print("OG size: ", catIm.size)
+print("Cat Resize: ", qtrIm.size)
 
-print(catTempWidth) #976
-print(catTempHeight) #549
-
-print(pawsWidth) #230
-print(pawsHeight) #215
