@@ -23,4 +23,4 @@ svelteIm = catIm.resize((width,height + 300))
 # NEW catIm.resize(976,849)
 svelteIm.save('lteCat.png')
 
-# NOTEsee CHAPTER README for  
+# NOTE see CHAPTER README for  
