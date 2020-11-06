@@ -6,8 +6,8 @@ catTemplate = Image.open("messy_cat.png")
 catTempWidth, catTempHeight =  catTemplate.size
 pawsWidth, pawsHeight = paws.size
 
-for left in range(0, catTempWidth,pawsWidth):
-    for top in range(0, catTempWidth,pawsWidth):
-        print(left,top)
-        catTemplate.paste(paws, (left,top))
+print(catTempWidth) #976
+print(catTempHeight) #549
 
+print(pawsWidth) #230
+print(pawsHeight) #215

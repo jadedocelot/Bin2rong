@@ -7,7 +7,7 @@ catTempWidth, catTempHeight =  catTemplate.size
 pawsWidth, pawsHeight = paws.size
 
 for left in range(0, catTempWidth,pawsWidth):
-    for top in range(0, catTempWidth,pawsWidth):
+    for top in range(0, catTempHeight,pawsHeight):
         print(left,top)
         catTemplate.paste(paws, (left,top))
 
@@ -19,39 +19,24 @@ openIm.rotate(0).show()
 
 # OUTPUT
 '''
+0 0 <-- OUTER FOR LOOP - -LEFT
+0 215 <-- INNER FOR LOOP
+0 430 <-- INNER FOR LOOP
 
-# ROW 1
-0 0
-0 230
-0 460
-0 690
-0 920
+230 0 <-- OUTER FOR LOOP - -LEFT
+230 215 <-- INNER FOR LOOP
+230 430 <-- INNER FOR LOOP
 
-# ROW 2
-230 0
-230 230
-230 460
-230 690
-230 920
+460 0 <-- OUTER FOR LOOP - -LEFT
+460 215 <-- INNER FOR LOOP
+460 430 <-- INNER FOR LOOP
 
-# ROW 3
-460 0
-460 230
-460 460
-460 690
-460 920
+690 0 <-- OUTER FOR LOOP - -LEFT
+690 215 <-- INNER FOR LOOP
+690 430 <-- INNER FOR LOOP
 
-# ROW 4
-690 0
-690 230
-690 460
-690 690
-690 920
+920 0 <-- OUTER FOR LOOP - -LEFT
+920 215 <-- INNER FOR LOOP
+920 430 <-- INNER FOR LOOP
 
-# ROW 5
-920 0
-920 230
-920 460
-920 690
-920 920
 '''

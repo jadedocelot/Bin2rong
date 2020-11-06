@@ -207,3 +207,49 @@ catTemplate = Image.open("messy_cat.png")
 
 catTempWidth, catTempHeight =  catTemplate.size
 pawsWidth, pawsHeight = paws.size
+
+- The outer FOR loops left variable starts at 0 and increases by 'pawsWidth'
+
+for left in range(0, catTempWidth,pawsWidth):
+
+- The NESTED for loops produce values for left and top to paste a grid of 'paws' over the 'catTemplate' object
+
+for top in range(0, catTempWidth,pawsWidth):
+    print(left,top)
+    catTemplate.paste(paws, (left,top))
+
+# OUTPUT
+'''
+0 0 <-- OUTER FOR LOOP - -LEFT
+0 215 <-- INNER FOR LOOP
+0 430 <-- INNER FOR LOOP
+
+230 0 <-- OUTER FOR LOOP - -LEFT
+230 215 <-- INNER FOR LOOP
+230 430 <-- INNER FOR LOOP
+
+460 0 <-- OUTER FOR LOOP - -LEFT
+460 215 <-- INNER FOR LOOP
+460 430 <-- INNER FOR LOOP
+
+690 0 <-- OUTER FOR LOOP - -LEFT
+690 215 <-- INNER FOR LOOP
+690 430 <-- INNER FOR LOOP
+
+920 0 <-- OUTER FOR LOOP - -LEFT
+920 215 <-- INNER FOR LOOP
+920 430 <-- INNER FOR LOOP
+
+'''
+
+
+
+
+
+
+
+print(catTempWidth) #976
+print(catTempHeight) #549
+
+print(pawsWidth) #230
+print(pawsHeight) #215
