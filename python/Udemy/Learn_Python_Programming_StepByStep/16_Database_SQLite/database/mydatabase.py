@@ -4,6 +4,9 @@ import sqlite3
 conec = sqlite3.connect("mydatabase.db")
 # student = ("Sara",22,88.3)
 students = [("Dan",322,51.4),("Monica",311,87.0),("Edgar",1821,90.2)] 
+#  Students is for entering data for several students int DB browser
+print("Greetings new student! For our records please enter the following information for our recurds.\n")
+
 
 try:
     cur = conec.cursor()
