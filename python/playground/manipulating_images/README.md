@@ -303,3 +303,31 @@ svelteIm = catIm.resize((width,height + 300))
 
 - The  putpixel method also takes an additional tuple argument for the color of the pixel
 - The color argument is a four integer RGBA tuple or a three integer RGB tuple. Enter the following into the interactive shell
+
+from PIL import Image, ImageColor
+
+im = Image.new('RGBA',(100,100))
+### We are basicaly creating 'frame' for an image that 100 x 100
+### And storing it into "im" variable
+im.getpixel((0,0))
+### Calling getpixel() on some coordinates in this image returns (0,0,0,0) because the image is transparent
+
+for x in range(100):
+    for y in range(50):
+### To color pixels in the image, we can use the nested (FOR) loop to go through all the pixels in the TOP  half of the image
+        im.putpixel((x,y),(210,210,210))
+### putpixel((x,y),(210,210,210)) is taking in arguments for the color which is "Light Grey" and putting color in each pixel
+### which will be placed along the x and y coordinates 
+### im.putpixel((x,y),ImageColor.getcolor('pink','RGBA'))
+
+for x in range(100):
+    for y in range (50,100):
+        im.putpixel((x,y),ImageColor.getcolor('darkgray','RGBA'))
+### putpixel((x,y),() is taking in arguments for the color which is "Dark Grey"
+### Though say we dont know the RGB TUPLE for Dark Grey
+### The .putpixel() method doesnt accept a standard color name (dark gray)
+### so we have to use the ImageColor.getcolor(), NOTE: We have to import ImageColor
+
+
+
+# ANCHOR Automating BORING stuff with python --- PG. 406 -- Drawing Shapes
