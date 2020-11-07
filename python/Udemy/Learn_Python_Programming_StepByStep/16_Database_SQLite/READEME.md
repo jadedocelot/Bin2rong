@@ -134,10 +134,10 @@ try:
 
 
 
-                                                    ______________________________________________________
+#                                                    ______________________________________________________
 
-                                                                    Insert Multiple Records
-                                                    ______________________________________________________
+#                                                                    Insert Multiple Records
+#                                                    ______________________________________________________
 
 students = [("Dan",322,51.4),("Monica",311,87.0),("Edgar",1821,90.2)] 
 # In the example above we create a variable ("students") which will inject multiple records 
@@ -154,3 +154,55 @@ students = [("Dan",322,51.4),("Monica",311,87.0),("Edgar",1821,90.2)]
  
 # cur.execute("insert into student values('Lucy',27,69.4 )")
 # This isnt really the proper (safest) way to inject data into a table
+
+
+
+#                                                    ______________________________________________________
+
+#                                                                          Select Record
+#                                                    ______________________________________________________
+
+
+    import sqlite3
+
+    conct = sqlite3.connect("database/mydatabase.db")
+
+ ## NOTE: that we need to connect to our database, if .db does exist it will be created 
+
+    try:
+        cur = cont.cursor()
+# We place our 'conct' variable within 'cur' which is our cursor object
+
+    for records in cur.execute("SELECT * FROM student"):
+        print(records)
+## We use the for loop to print out the data of our 'student' table 
+## 'records' will SELECT everything(*) FROM our 'student' table
+## We will then print out all the data within 'student'
+## NOTE: (*) Means SELECT ALL
+
+    OUTPUT:
+        ('Lucy', 27, 69.4)
+        ('Sara', 22, 88.3)
+        ('Dan', 322, 51.4)
+        ('Monica', 311, 87.0)
+        ('Edgar', 1821, 90.2)
+        ('Alex', 3244, 98.2)
+
+## NOTE: The aboe method is the best method to access data
+
+## ANCHOR: Below are some other methods of pulling records
+
+    cur.execute("SELECT name FROM student")We 
+## We will be focus(SELECT) on "name" (row) from the "student" table
+
+    print(cur.fetchmany(3))
+## .fetchmany takes an integer argument to specify the number of results youd like to fetch and print
+    print(cur.fetchall())
+## .fetchall will collect all the results and print
+    print(cur.fetchone())
+## .fetchone will print the ONE fetched record
+        except Exception as err:
+            print(err)
+        finally:
+            conct.close()
+## Remember to always close your "connection"
