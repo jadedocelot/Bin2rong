@@ -228,3 +228,40 @@ OUTPUT:
     ('Monica', 311, 87.0)
     ('Edgar', 1821, 90.2)
     ('Alex', 3244, 98.2)
+
+
+#                                                    ______________________________________________________
+
+#                                                                          Order By
+#                                                    ______________________________________________________
+
+# This is actually very helpful for eccommerce sites
+
+ # We will be using ORDER BY to order our fetched/printed data alphebetically
+   
+    import sqlite3
+
+    conct = sqlite3.connect("database/mydatabase.db")
+
+    try:
+        cur = conct.cursor()
+
+    for records in cur.execute("SELECT * FROM student order by name"):
+### Say we want to order our print by NAME (alphebetical)
+### This will (...order by <column names>)
+        print(records)
+
+    except Exception as err:
+        print(err)
+    finally:
+        conct.close()
+
+
+
+
+#                                                    ______________________________________________________
+
+#                                                                           SQL Functions
+#                                                    ______________________________________________________
+
+- The first function we are going to use will locate the MIN or the MAX
