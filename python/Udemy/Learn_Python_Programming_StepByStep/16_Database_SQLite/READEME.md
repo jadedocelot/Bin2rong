@@ -206,3 +206,25 @@ students = [("Dan",322,51.4),("Monica",311,87.0),("Edgar",1821,90.2)]
         finally:
             conct.close()
 ## Remember to always close your "connection"
+
+
+
+
+#                                                    ______________________________________________________
+
+#                                                                          Where Clause
+#                                                    ______________________________________________________
+
+
+# # Say we want to only pull records with an 'average' that surpasses 80.0
+# This is where the (WHERE) comes in handy
+
+    for records in cur.execute("SELECT * FROM student WHERE average > 80.0"):
+        print(records)
+
+OUTPUT:
+
+    ('Sara', 22, 88.3)
+    ('Monica', 311, 87.0)
+    ('Edgar', 1821, 90.2)
+    ('Alex', 3244, 98.2)
