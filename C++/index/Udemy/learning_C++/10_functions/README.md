@@ -253,5 +253,90 @@ return 0;
 
                                     _______________________________________
 
-                                             Functions Overload
-                                    _______________________________________
+                                               Default Arguments
+                                    _______________________________________  
+
+- Say we have the two following function;
+
+
+- [Funnction 1] 
+   
+        int add(int x, int y){
+            return x + y;
+        }
+
+- [Funnction 2]
+
+        int add (int x ,int y,int z){
+            return x + y + z;
+        }
+
+- And we execute the following;
+
+        add(2,3); // passing these two arguments will activate function 1 
+        add(10,2,32; // passing these two arguments will activate function 2
+
+- Now in the example below, say we pass 0 as an argmument. The user would imagine that function 2 would be acitvated but in fact it is function 1 that is activated since zero takes no value.
+
+        add(20,1,0) 
+
+- So instead of having two seperate functions we can acctually combine them so that it may take in 2 or 3 arguments or even an empty argument like zero 
+
+
+        int add(int x,int y,in z=0) {
+            return x + y + z;
+        }
+
+- Since z = 0, it may accept "blank" values and integegers. In other words, it will allow the user to pass in 2 or 3 arguments and we will no longer need two seperate functions
+
+- Using default arguments may take in the following;
+
+
+## In the bottom example we use [default argument] within a [function template]
+
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+### z(0) becomes optional
+template<class t>
+t add(t x, t y, t z = 0){
+    return x + y + z;
+}
+
+int main(){
+
+float a = add(32.3,2.32);
+float b = add(32.33,32.4,32.9);
+int c = add(32,9,0);
+
+cout << a << endl;
+
+### 34.62
+
+cout << b << endl;
+
+### 97.63
+
+cout << c << endl;
+
+### 41
+
+return 0;
+}
+
+
+                                     _______________________________________
+
+                                            Parameter Passing Methods
+                                    _______________________________________  
+
+There are 3 methods a function can take parameters?
+
+1. Pass the value 
+    * "Call by value"
+2. Pass the address
+    * "Call by address" 
+3. Pass the reference
+    * "Call by reference"
