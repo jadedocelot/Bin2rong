@@ -3,8 +3,10 @@
 #include<cmath>
 using namespace std;
 
+// Actual parameters are passed as reference
 // for the Formal Parameters we call teh address (&)
-// This method is similar to CALL BY ADDRESS
+// This method is similar to CALL BY ADDRESS for it actually modifires the actual parameters
+// for a and b are now references of x and y
 void swap(int &a, int &b) // FORMAL PARAMETERS
 {
     int temp;
@@ -16,7 +18,7 @@ void swap(int &a, int &b) // FORMAL PARAMETERS
 
 }
 
-int main(){
+int main(){ 
 
 int x = 10,y = 20;
 

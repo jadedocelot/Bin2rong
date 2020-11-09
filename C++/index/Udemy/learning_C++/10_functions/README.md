@@ -410,6 +410,8 @@ using namespace std;
 ## The parameters of the 'swap' function must be POINTERS 
 void swap(int *a, int *b)
 {
+
+## Formal parameters must be pointers
     int temp;
     temp = *a;
 ## temp = 200 (x address)
@@ -426,6 +428,7 @@ void swap(int *a, int *b)
 
 int main(){
 
+## Using the (&) in the above function, x now references a and y references b 
 int x = 10, y = 20;
 
 ##  x addrees = 200 
@@ -433,14 +436,19 @@ int x = 10, y = 20;
 
 swap(x,y);
 ## We will pass the addesses of x and y to 'swap' function
+## The machine code within SWAP function will be put in place of of the CALL of swap
+## in otherwords the code from the function is copied here
 cout << x << " " << y << endl;
+## OUTPUT: 20 10
+
+## As appose to the pass by method where the main parameters arent affected
 
 return 0;
 }
 
 
 ## If you want the funtion to modify the actual parameters, then we will need to use the address mechanism
-
+## References dont take any extra memory
 
 
 
@@ -448,7 +456,8 @@ return 0;
 
 ____________________
 
-# Pass-By-Address
+# Pass-By-Reference 
 ____________________
 
 
+ 
