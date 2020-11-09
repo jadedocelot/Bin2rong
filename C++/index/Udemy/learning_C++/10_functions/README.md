@@ -340,3 +340,103 @@ There are 3 methods a function can take parameters?
     * "Call by address" 
 3. Pass the reference
     * "Call by reference"
+
+
+____________________
+
+# Pass-By-Value
+
+____________________
+
+-  You use this when you want the function to TAKE in values, perform actions, then return the result
+
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+### The below example is refered to as the VALUE METHOD
+### SWAP FUNCTION 
+void swap(int a, int b) 
+### FORMAL PARAMETERS
+{
+    int temp;
+    temp = a; // temp = 10
+    a = b; // a = 20
+    b = temp; // b = 10
+### When function is called upon, and aguments from main func have been passed through, memory is handled within the STACK memory
+### Once we are through with the function then STACK memory is dumped, results are NOT passed back to main func
+
+### cout << a << " " << b << endl; 
+### OUTPUT: 20 10
+
+}
+
+int main(){
+
+int x = 10,y = 20;
+
+swap(x,y); 
+## ACTION PARAMETERS
+
+cout << x << " " << y << endl;
+### OUTPUT 10 20
+
+}
+### If any changes done to formal parameters in function, they will not modify actual parameters
+### In value method, the value of a parameter is passed to a function
+### values of actual parameters are passed to formal parameters. Actual parameters cannot be modified by function
+
+
+
+
+____________________
+
+# Pass-By-Address
+____________________
+
+
+
+
+
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+## In order to pass in an ADDRESS as an argument into a function, we need to make sure  the parameters of said function are POINTERS
+## Address pf actual parameters are passed
+## The parameters of the 'swap' function must be POINTERS 
+void swap(int *a, int *b)
+{
+    int temp;
+    temp = *a;
+## temp = 200 (x address)
+    *a = *b;
+## a = 210 (y address)
+    *b = temp;
+## b = 200 (x address)
+
+    cout << a << " " << b << endl;
+
+## This function is now accessing the variables of main function through the pointers
+## THE POWER OF POINTERS!
+}
+
+int main(){
+
+int x = 10, y = 20;
+
+##  x addrees = 200 
+## y address = 210
+
+swap(x,y);
+## We will pass the addesses of x and y to 'swap' function
+cout << x << " " << y << endl;
+
+return 0;
+}
+
+
+## If you want the funtion to modify the actual parameters, then we will need to use the address mechanism
