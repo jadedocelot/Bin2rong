@@ -148,7 +148,7 @@ return 0;
                                              Functions Overload
                                     _______________________________________
 
-- In C++ you have multiple functions with the same NAMES but with different arguments
+- In C++ you have multiple functions with the same NAMES but with different arguments (types) or number of arguments  
 
 #include <iostream>
 #include <string>
@@ -212,12 +212,14 @@ float max(float x,float y){
         return y;
     }
 }
-
+  
 # We can use function templates to consolodate into one function
+# for funtion templates may accept any data type
 
 # Now in order to define the return type ('t') we must add the following;
-# template<class t> which will allow us to create a function template, now note that we can name our return type anything and it does not have to 't', it can be anything your heart desires
+# template<class t> which will allow us to create a function template, now note that we can name our return type anything and it does not have to be 't', it can be anything your heart desires
 
+# Function template are used for defining generic functions
 template<class t>
 t max(t x,t y){
     if (x > y){
@@ -237,8 +239,19 @@ cout << "Enter a number for x" << endl;
 cin >> x;
 cout << "Enter a number for y" << endl;
 cin >> y;
+# Datatype is decided based on the type of value passed
+# function can have multiple template variables
+
 
 cout << (fp)(x,y) << " is greater!" << endl;
 
 return 0;
 }
+
+
+
+
+                                    _______________________________________
+
+                                             Functions Overload
+                                    _______________________________________
