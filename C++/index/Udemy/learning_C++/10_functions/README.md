@@ -437,7 +437,7 @@ int x = 10, y = 20;
 swap(x,y);
 ## We will pass the addesses of x and y to 'swap' function
 ## The machine code within SWAP function will be put in place of of the CALL of swap
-## in otherwords the code from the function is copied here
+## in otherwords the code from the function is copied here 
 cout << x << " " << y << endl;
 ## OUTPUT: 20 10
 
@@ -460,4 +460,48 @@ ____________________
 ____________________
 
 
- 
+ #include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+### Actual parameters are passed as reference
+### for the Formal Parameters we call teh address (&)
+### This method is similar to CALL BY ADDRESS for it actually modifires the actual parameters
+### for a and b are now references of x and y
+void swap(int &a, int &b) // FORMAL PARAMETERS
+{
+    int temp;
+    temp = a; // temp = 10
+    a = b; // a = 20
+    b = temp; // b = 10
+### cout << a << " " << b << endl; 
+### OUTPUT: 20 10
+
+}
+
+int main(){ 
+
+int x = 10,y = 20;
+
+swap(x,y);
+### The above function
+
+cout << x << " " << y << endl;
+
+}
+
+
+
+
+   int grid[size][size] = {
+                    {6, 5, 3 ,1, 2, 8, 7, 9, 4},
+                    {1, 7, 4, 3, 5, 9, 6, 8, 2},
+                    {9, 2, 8, 4, 6, 7, 5, 3, 1},
+                    {2, 8, 6, 5, 1, 4, 3, 7, 9},
+                    {3, 9, 1, 7, 8, 2, 4, 5, 6},
+                    {5, 4, 7, 6, 9, 3, 2, 1, 8},
+                    {8, 6, 5, 2, 3, 1, 9, 4 ,7},
+                    {4, 1, 2, 9, 7, 5, 8, 6, 3},
+                    {7, 3, 9, 8, 4, 6, 1, 2, 5}
+                 }; 

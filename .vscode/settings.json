@@ -17,6 +17,7 @@
         "*.HLA*": "hlasm",
         "ostream": "cpp",
         "iostream": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "string": "cpp"
     }
 }
