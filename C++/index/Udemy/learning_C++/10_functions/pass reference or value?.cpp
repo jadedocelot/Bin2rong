@@ -43,15 +43,14 @@ cout << "What is your second number: " << endl;
     cin >> user_inputTwo;
 
 
-if (user_inputOne < user_inputTwo)
-{
-    swap(user_inputOne,user_inputTwo);
-}
-else
-{
-    (fp)(user_inputOne,user_inputTwo);
-}
-
+    if (user_inputOne < user_inputTwo)
+    {
+        swap(user_inputOne,user_inputTwo);
+    }
+    else
+    {
+        (fp)(user_inputOne,user_inputTwo);
+    }
 
 cout << user_inputOne << " " << user_inputTwo << endl;
 
