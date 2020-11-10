@@ -493,8 +493,77 @@ cout << x << " " << y << endl;
 
 
 
-
                                      _______________________________________
 
-                                                Return by Address
+                                                 Return by Address
                                     _______________________________________  
+
+- Functions may not only take in address but may also pass an address itself 
+
+
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+### This is pointer of type int( int *)
+###  NOTE: That within a function, you cannot return the address of a local variable, for once a function has ended, memory is then wiped
+### In other words, int num = 5; will not work
+    int * fun()
+    {
+    int * p = new int[5];
+### p(pointer) is creating an array in HEAP memory of 5 integers
+## NOTE: THAT THE POINTER (*) is REQUIRED! FOR LOCAL VARs will be DELETED
+### FOR It can return address of memory allocated in heap
+    for (int i = 0;i < 5;i++)
+    {
+        // cout << "p address: " << p << endl;
+        p[i] = i * 5;
+    }
+        return p;
+    }
+
+    int main(){
+
+### Now the memory of P in "fun" will be stored in our pointer "ptr"
+    int * ptr = fun();
+
+    for(int i = 0;i<5;i++)
+    {
+### cout << "prt address: " << ptr << endl;
+### Cout will print out the address of p within fun function 
+    cout << ptr[i] << endl;
+    }
+
+    return 0;
+    }
+
+## So im dum dum language, we are borrowing and address from the function(heap memory) rather than that memoring being borrowed from the main func
+
+________________________________________________________________________________________________________________
+
+### AND again the return by reference mechanic for a func borrowing memory from main func is;
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std; 
+### This function will return a reference
+### As you can see the parameter will take in a
+### So x of 'fun' will be referencing the x of MAIN func
+    
+    int &fun(int &x){
+    return x;
+    
+    }
+    
+    int main(){
+    
+    int x = 10;
+    fun(x);
+    
+    cout << "x address of 'main' is: " << &x << endl; 
+    
+    return 0; 
+    }
