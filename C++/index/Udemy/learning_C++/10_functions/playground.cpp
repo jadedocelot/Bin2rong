@@ -1,21 +1,23 @@
-#include<iostream>
-#include<string>
-#include<cmath>
-using namespace std; 
-// This function will return a reference
-// As you can see the parameter will take in a
-// So x of 'fun' will be referencing the x of MAIN func
-int &fun(int &x){
-return x;
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
 
+int & func(int &a)
+{
+	a = a + 1;
+	return a;
+  cout << a << endl;
+  cout << &a << endl;
 }
 
-int main(){
+int main()
+{
+  int x = 10;
 
-int x = 10;
-fun(x);
+  func(x);
 
-cout << "x address of 'main' is: " << &x << endl; 
+  cout << "This address belongs to x: " << &x << endl;
+  cout << x << endl;
 
-return 0; 
 }

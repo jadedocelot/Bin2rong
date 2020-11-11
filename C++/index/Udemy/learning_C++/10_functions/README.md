@@ -567,3 +567,37 @@ using namespace std;
     
     return 0; 
     }
+
+
+
+                                    ____________________________________
+
+                                                 Return by Address
+                                    _______________________________________  
+
+
+## So we referencing x from our main funcntion in our "func" function, and by referncing x we can then modify the parameters within main function
+
+
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int & func(int &a)
+{
+    a = a + 1;
+    // return a;
+
+}
+
+int main()
+{
+  int x = 10;
+
+  func(x);
+
+  cout << "This address belongs to x: " << &x << endl;
+  cout << x << endl;
+
+}
