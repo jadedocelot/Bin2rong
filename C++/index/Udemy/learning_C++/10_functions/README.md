@@ -518,6 +518,7 @@ using namespace std;
 ### p(pointer) is creating an array in HEAP memory of 5 integers
 ## NOTE: THAT THE POINTER (*) is REQUIRED! FOR LOCAL VARs will be DELETED
 ### FOR It can return address of memory allocated in heap
+    
     for (int i = 0;i < 5;i++)
     {
         // cout << "p address: " << p << endl;
@@ -702,3 +703,116 @@ return 0;
 
 ## New value of sum should 100708000
 ## So theres no need to create a poniter for x since it is a global variable
+
+
+
+
+
+                        ____________________________________
+
+                                    Scoping Rules                
+                        _______________________________________
+
+
+- In C++ has a number of levels of scopes that it supports
+
+    - Global Variabls
+    - Local Variables
+    - Local Variables within block
+
+
+
+
+// Below I was attempting to access varaible from different functions
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+
+
+int g = 20;
+
+int func(){
+
+ int g = 10;
+    
+    {       
+##  What we are doing is using scope resolution to access our global
+##  varianble from our from a nested block within our function
+##  So the value of f is 20
+        int f = ::g;
+        cout << f << endl;
+    }
+        cout << g << endl;
+ }
+
+
+int func_two(){
+    int g = 5;
+    cout << "This belongs to func_two: " << g << endl;
+}
+
+
+// our main function
+int main(){
+
+func();
+
+return 0;
+} 
+
+
+
+
+
+
+
+                        ____________________________________
+
+                                    Static Variables                
+                        _______________________________________
+
+
+
+
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+## 'v' is a global variable
+## int v = 3 ;
+
+void func()
+{
+## Static variable 
+## static is similar to global, only difference is that 
+## global can be accessed through any function
+## static can only be be accessed through function it was called through
+        // The scope of a static variable is only limited to this function
+    int static v = 3;
+## local variable for func function
+    int a = 5;
+    v--;
+## v++;
+    cout << a << " " << v << endl;
+}
+
+
+int main()
+{
+    func();
+    func();
+    func();
+
+return 0;
+}
+
+## static variables are very useful in procedural programming 
+
+
+
+

@@ -16,6 +16,7 @@ int x = 0;
 // "func" function goes into sub section of stack memory
 int func(){
 	// Local variable
+	// remember that local variables cannot be accessed outside of its designated functions
 	int a =10;
 	x = x + a;
 	for (int i = 0; i < 10;i++){
