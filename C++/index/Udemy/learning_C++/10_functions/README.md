@@ -679,7 +679,7 @@ int x = 0;
 ## local variables withing subfuncntions
 ## Sub function
 int func(){
-    int a =10;
+    int a = 10;
     x = x + a;
     for (int i = 0; i < 10;i++){
         x = (x + i) * 5; 
@@ -816,3 +816,59 @@ return 0;
 
 
 
+
+
+
+                        ____________________________________
+
+                                    Recursive Functions                 
+                        _______________________________________
+
+## The term recursion is used to describe what happens when a function calls itself
+
+
+## NOTE: in regards to infinite recursion, it will in fact terminate after a short while when the computer runs out of memory to hold the "never-ending code" sequence of calls
+
+## Recursive functions are similar than loops but are more powerful
+
+
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+void fun(int n){
+
+## if the MAIN function argument(n) is LESS than 0, decrement down by 1
+## The if loop will be entered if the coduition is true
+if (n > 0){
+## print out n
+
+    cout << n << endl;
+
+## Whats occuring below is a recursive function
+## 'fun' calls itself
+## and takes in argument to decrement 'fun' parameter by 1 until n is less 
+## tha zero
+## onece the if codition is FALSE then it will no longer print or decrement
+## from n
+
+    fun(n-1);
+    }
+
+}
+
+
+
+
+int main(){
+
+    int x = 10;
+    fun(x);
+
+
+
+
+return 0;
+}

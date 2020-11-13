@@ -5,7 +5,7 @@
 #include<cmath>
 using namespace std; 
 
-
+//
 int linear_func(int ar[],int key)
 {
 	for (int i = 0;i < 6;i++)

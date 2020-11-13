@@ -15,6 +15,10 @@ except Exception as err:
 finally:
     conct.close()
 
+print(dataBase)
+
+
+'''
 user_search = input("Who are you looking for? ")
 
 for x in dataBase:
@@ -27,7 +31,7 @@ for x in dataBase:
 
 print("Zero matches")
 #for records in cur.execute("SELECT * FROM student"): 
-
+'''
 
 
     # if cur.execute("SELECT * FROM student WHERE name = '{}'".format(user_search)):
