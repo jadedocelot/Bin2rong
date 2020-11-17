@@ -8,8 +8,24 @@
 	<!-- {{name}} template variable -- which may be located app.py-->
 	<!-- The bottom HTML will appear on (/home)-->
 <h1>Welcome {{ name }}! You Are Now an Art Fag! This is the home page</h1>
-<style type="text/css" media="screen">
-	body {background-color: powderblue;}
-</style>
+
+<!-- START of  conditional IF/ELSE statements -->
+{% if display %}
+<h2>Display is ON</h2>
+<!-- If display is ON,background color will be 'powderblue' -->
+	<style type="text/css" media="screen">
+		body {background-color: powderblue;}
+	</style>
+<!-- ELSE statement -->
+{% else %}
+<h2>Display is OFF</h2>
+<!-- If display is ON,background color will be 'RED' -->
+	<style type="text/css" media="screen">
+		body {background-color: red;}
+	</style>
+{%endif%}
+<!--END OF conditional IF/ELSE statements -->
+
+
 </body>
 </html>

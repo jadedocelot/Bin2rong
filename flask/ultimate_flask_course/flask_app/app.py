@@ -20,9 +20,9 @@ def index():
 @app.route('/home/<string:name>', methods=['GET','POST'])
 def home(name):
 	session['name'] = name
-	return render_template('info.html', name=name)
+	return render_template('info.html', name=name, display=False)
 
-## This should be the users starting position
+## This should be the users starting positio 
 @app.route('/theform', methods=['POST','GET'])
 def theform():
 	if request.method == 'GET':
@@ -37,7 +37,7 @@ def info():
 	if 'name' in session:	
 		name = session['name']
 	else:
-		name = '(Wait...who are you?)'
+		name = '(Wait...who are you?)' 
 	return '<h1>Greetings {}, you have landed on the query page</h1>'.format(name)
 
 #WORKS 10/26
