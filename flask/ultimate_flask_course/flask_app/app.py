@@ -13,13 +13,16 @@ x = 'Banker'
 def index():
 	session.pop('name', None)
 	return '<h1>This is the index page</h1>'
+
 #WORKS 10/26
+# Template variable
 @app.route('/home', methods=['GET','POST'], defaults = {'name' : 'Defualt'})
 @app.route('/home/<string:name>', methods=['GET','POST'])
 def home(name):
 	session['name'] = name
 	return render_template('info.html', name=name)
 
+## This should be the users starting position
 @app.route('/theform', methods=['POST','GET'])
 def theform():
 	if request.method == 'GET':
