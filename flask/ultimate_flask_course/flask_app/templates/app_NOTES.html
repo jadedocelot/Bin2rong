@@ -3,6 +3,8 @@
 <title>Bin2rong</title>
 </head>
     
+<!---NOTE: I need to figure out how to link an external CSS file-->
+
     
 <body>  
 	<!-- {{name}} template variable -- which may be located app.py-->
@@ -13,6 +15,7 @@
 {% if display %}
 <h2>Display is ON</h2>
 <!-- If display is ON,background color will be 'powderblue' -->
+	<!-- STYLE indicates the CSS -->
 	<style type="text/css" media="screen">
 		body {background-color: powderblue;}
 	</style>
@@ -26,6 +29,11 @@
 {%endif%}
 <!--END OF conditional IF/ELSE statements -->
 
+<!-- FOR loop -->
+{%for x in myList%}
+	<h3> {{ x }} </h3>
+{% endfor %}
+<!-- endfor -->
 
 </body>
 </html>
