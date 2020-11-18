@@ -1,14 +1,10 @@
 <!-- SEE app_NOTES.HTML for notes on the following code -->
-  
-<html>
-<head>
-	<title>Bin2rong</title>
-</head>
+{% extends 'base.html'%} 
 
+{% block title%}Bin2rong{%endblock%} 
 
-<body>  
+{% block content %}
 <h1>Welcome {{ name }}! You Are Now an Art Fag! This is the home page</h1>
-
 
 {% if display %}
  <h2>Display is ON</h2>
@@ -17,7 +13,8 @@
 		<!--<h1> {{ x.name }} </h1>
 	<!--{% endfor %} -->
 	{%for y in myList%}
-			<h1>{{y}}</h1>
+		<h1>{{y}}</h1>
+	{% include 'test.html'%}
 	{%endfor%}
 <style type="text/css" media="screen">
 	body {background-color: powderblue;}
@@ -30,5 +27,4 @@
 		</style>
 {%endif%}
 
-</body>
-</html>
+{% endblock%}

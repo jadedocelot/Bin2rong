@@ -5,8 +5,10 @@
 </head>
 
 <body>
-  <h1>Base Template</h1>
-  {% block content %}{% endblock %}
+  {% block content %}
+  	<!-- This display on whatever template contains {{super()}} -->
+  	<!--<h1>SUPER helped me get here</h1>-->
+  {% endblock %}
 </body>
 </html
 

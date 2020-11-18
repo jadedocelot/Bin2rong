@@ -1,14 +1,12 @@
-<html>
-<head>
-<title>Bin2rong</title>
-</head>
-    
-    
-<body> 
+{% extends 'base.html'%}
+
+{%block title%}Bin2rong Form{%endblock%}
+
+
+{%block content%}
 <h1>Please enter your name</h1>
 <form method="POST" action="/theform">
     <input type="text" name="name">
     <input type="submit" value="submit">
 </form
-</body>
-</html>
+{%endblock%}
