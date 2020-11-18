@@ -14,6 +14,14 @@
 <!-- START of  conditional IF/ELSE statements -->
 {% if display %}
 <h2>Display is ON</h2>
+	<!--{%for x in myList%}
+		<h1> {{ x }} </h1>
+	{% endfor %} -->
+	{%for y in myHarwdware%}
+		<!--Since its a DICT, we need to include .name, for without it we -->
+		<!--would get the whole dictionary, we need .name to get the value-->
+			<h1> {{y.name}} </h1>
+	{%endfor%}
 <!-- If display is ON,background color will be 'powderblue' -->
 	<!-- STYLE indicates the CSS -->
 	<style type="text/css" media="screen">
@@ -37,3 +45,16 @@
 
 </body>
 </html>
+
+
+
+
+ <h2>Display is ON</h2>
+ 	<!--{%for x in myList%}
+		<h1> {{ x }} </h1>
+	{% endfor %} -->
+	{%for y in myHarwdware%}
+		<!--Since its a DICT, we need to include .name, for without it we -->
+		<!--would get the whole dictionary, we need .name to get the value-->
+			<h1> {{y.name}} </h1>
+	{%endfor%}

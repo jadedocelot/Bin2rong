@@ -12,25 +12,23 @@
 
 {% if display %}
  <h2>Display is ON</h2>
- 	{%for x in myList%}
-		<h1> {{ x }} </h1>
-	{% endfor %}
-	{%for y in myHardware%}
-		<h1> {{y}} </h1>
+ <!-- We are printing out myList not our DICT 'myHardware' -->
+ 	<!--{%for x in myHardware%}-->
+		<!--<h1> {{ x.name }} </h1>
+	<!--{% endfor %} -->
+	{%for y in myList%}
+			<h1>{{y}}</h1>
 	{%endfor%}
 <style type="text/css" media="screen">
 	body {background-color: powderblue;}
 </style>
 {% else %}
-<h2>Display is OFF</h2>
-	<style type="text/css" media="screen">
-		body{background-color: red;}
-	</style>
+<h2>Display is OFF</h2> 
+	<img src= "{{ url_for('static',filename='images/redman.png')}}">
+		<style type="text/css" media="screen">
+			body{background-color: red;}
+		</style>
 {%endif%}
-
-
 
 </body>
 </html>
-<!-- Remember, we have to use double curly brackets cause the 'x' variable --> 
-<!-- isnt pure HTML --> 

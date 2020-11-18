@@ -31,7 +31,7 @@ class shitHead:
 		print("\nName: {}\nRollno: {}\nclass: {}\n".format(self.name,self.rollno,self.std))
 
 	def display_student_grade(self):
-		print("Total marks: {} | Average:{} | Grade:{}".format(total,avg,grade)
+		print("Total marks: {} | Average:{} | Grade:{}".format(total,avg,grade))
 
 
 name = input("What Is your name? ")

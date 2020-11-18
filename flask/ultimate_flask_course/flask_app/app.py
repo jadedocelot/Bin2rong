@@ -20,7 +20,7 @@ def index():
 @app.route('/home/<string:name>', methods=['GET','POST'])
 def home(name):
 	session['name'] = name
-	return render_template('app.html', name=name, display= True, myList=['one','two','three','four'],myHarwdware=[{'name': 'Edgar','OS':'Mac','Terminal' : 'Xterm2','IDE':'Sublime'}])	 
+	return render_template('app.html', name=name, display= False, myList=['one','two','three','four'],myHarwdware=[{'name': 'Edgar','OS':'Mac','Terminal' : 'Xterm2','IDE':'Sublime'}])	 
 
 ## This should be the users starting positio 
 @app.route('/theform', methods=['POST','GET'])
