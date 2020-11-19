@@ -1,0 +1,58 @@
+
+html{background-color: #DDDDDD}
+
+#head1{
+	color: #f1f1f1;
+	text-align:center;
+	font-family: 'Raleway Dots', cursive;
+}
+
+#head2{
+	color:#eeeeee;
+	text-align:center;
+	font-family: 'Raleway Dots', cursive;
+}
+
+#head3{
+	color: #f4f4f4;
+	text-align:center;
+	font-family: 'Raleway Dots', cursive;
+}
+
+#head4{
+	color:#f8ad9c;
+	text-align:center;
+	font-family: 'Raleway Dots', cursive;
+}
+
+.article_image{
+	display: block;
+  	margin-left: auto;
+ 	margin-right: auto;
+  	width: 38%;
+}
+
+.articles{
+	text-align: center;
+    display: block;
+    margin: 0 auto;
+ }
+
+.list,li,ul{
+	text-align: center;
+    display: block;
+    margin: 0 auto;
+    list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+}
+
+a:link, a:visited {
+  color: #c8f9f9;	
+  text-decoration: none;
+}
+
+
+
+/*table{}*/
+/*Need to figure out how to adjust my table*/

@@ -24,11 +24,14 @@ class temp_system:
 	# convert from cesius to faranheight
 	def __init__(self,ic):
 		self.temp_total = (ic * 1/5) + 32
-	# Check the temp
-	#def tempCheck(self,x,y):
-		#sum_check = x + y
-		#return sum_check
+	
 
+
+	# Check the temp.  ************************* WORKING ON THIS **************
+	def tempCheck(self):
+    	if self.temp_total > 50:
+			X = "You have reached concerning levels!"
+        	return X
 	# Will send warning if tempCheck surpasses the warninh mark
 	#def tempWarning(self,sum_check,cur_temp):  
 		#if sum_check >= cur_temp:
@@ -39,10 +42,11 @@ class temp_system:
 		#if emrgShutOff <= x
 
 		#system_shutoff = True
-		#return system
+		#return system\
 
 	def display(self):
-		print("You current temp is: {}˚F".format(self.temp_total))
+	    print("You current temp is: {}˚F | {}".format(self.temp_total,X))
+        #print(x)
 
 # MAIN CODE
 # WHILE loop will be needed for the emgergency shut off
