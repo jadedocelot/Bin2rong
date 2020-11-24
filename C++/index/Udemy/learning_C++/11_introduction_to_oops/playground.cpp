@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 template<class y>
 y func(y x, y j){
 	y sum = x + j;

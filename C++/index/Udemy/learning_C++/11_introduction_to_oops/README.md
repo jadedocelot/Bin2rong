@@ -74,7 +74,11 @@ ____________________________
 			______________________________________________
 
 
-1. Abstraction
+SET OF PRINCIPLES:
+
+
+
+1. Abstraction	 
 
 
 2. Ecapsulation
@@ -86,3 +90,41 @@ ____________________________
 
 
 4.Polymorphism
+
+
+
+
+- There are TWO elements of programming:
+	 
+	 1. Data
+
+	 2. Functions()
+
+
+  
+
+class myClass
+{
+	private:
+	 	1. Data
+
+	public: 	
+		2. Functions	
+
+}
+
+
+- The only user of a class is programmer (for an outside user does not need to know how the said item works only its functions) 
+
+- When a class helps the class keep the function and the data together that is encapsulation
+
+
+
+
+			______________________________________________
+
+						 	Class vs Object 
+			______________________________________________
+
+
+			
