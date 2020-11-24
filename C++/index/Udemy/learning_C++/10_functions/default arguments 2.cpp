@@ -5,7 +5,7 @@ using namespace std;
 
 int max(int a,int b,int c){
     return a > b && a > c ? a:(a>c?b:c);
-     // Whats happening above (psuedo code)?
+    // Whats happening above (psuedo code)?
     // (if) a is greater(>) than b and(&&) a is greater(>) than c return(?) a otherwise(:) if b > c return(?) b;
     // conditional statement: a > b && a > c
     // if (statement): ? a

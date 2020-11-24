@@ -1,24 +1,23 @@
-#include <iostream>
+#include<iostream>
+#include<string>
+#include<cmath>
 using namespace std;
 
-int func(int n){
+void fun(int n){
 
-if (n <= 1)
-	return 1;
-else
-	return n * func(n-1);
+
+if (n > 0){
+//print out n
+    cout << n << endl;
+    fun(n-1);
+    }
 
 }
 
-
 int main(){
 
-int num;
-
-cout << "Enter a number:" << endl;
-cin >> num;
-
-cout <<  "Factorial of entered number: " << f(num) << endl;
+int x = 10;
+fun(x);
 
 
 return 0;
