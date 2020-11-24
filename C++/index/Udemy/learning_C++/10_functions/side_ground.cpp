@@ -6,34 +6,22 @@
 #include<cmath>
 using namespace std;
 
-
-   int g = 20;
-
+int g = 20;
 
 int func(){
+	int g = 10;
+	int x = ::g + 5;
 
- int g = 10;
-	
-	{	
-		//func_two();		
-		::g++;
-		//int *g;
-		//g = &g + 4;
-		cout << g << endl;
-	}
-		cout << g << endl;
+	cout << x << endl;
+
+return 0;	
 }
 
-
-int func_two(){
-	int g = 5;
-	cout << "This belongs to func_two: " << g << endl;
-}
 
 // our main function
 int main(){
 
-func();
+	func();
 
 return 0;
 } 

@@ -872,3 +872,21 @@ int main(){
 
 return 0;
 }
+
+
+
+
+
+
+int func(){
+int g = 10; 
+    {   
+        //func_two();       
+        g++;
+        //int *g;
+        //g = &g + 4;
+        cout << g << endl;
+    }
+        return g;
+        //cout << g << endl;
+}

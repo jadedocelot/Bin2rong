@@ -10,7 +10,8 @@ void swap(int a, int b) // FORMAL PARAMETERS
     temp = a; // temp = 10
     a = b; // a = 20
     b = temp; // b = 10
-    //cout << a << " " << b << endl; 
+    cout << "This is within the temp function: ";
+    cout << a << " " << b << endl; 
     // OUTPUT: 20 10
 
 }

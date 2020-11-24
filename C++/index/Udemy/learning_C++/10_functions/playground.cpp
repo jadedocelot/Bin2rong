@@ -11,9 +11,7 @@ int linear_func(int ar[],int key)
 	for (int i = 0;i < 6;i++)
 		if(key == ar[i])
 			return i;	
-	return 404;
-		
-	
+	return 404;	
 }
 
 int main(){

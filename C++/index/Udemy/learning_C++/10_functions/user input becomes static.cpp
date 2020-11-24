@@ -1,15 +1,12 @@
 
-
 #include <iostream>
 #include <cmath>
 #include <string>
 using namespace std;
 
-
 //template<class ndt>
 int &funcOne(int &x){
-
-int static j = x;
+	int static j = x;
 
 	{
 		j++;

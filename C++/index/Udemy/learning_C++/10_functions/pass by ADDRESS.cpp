@@ -14,8 +14,7 @@ void swap(int *a, int *b)
 
 int main(){
 
-int x = 10, y = 20;
-
+int x = 11, y = 12;
 
 swap(x,y);
 
