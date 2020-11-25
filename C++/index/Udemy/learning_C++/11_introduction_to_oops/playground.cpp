@@ -1,13 +1,18 @@
 #include <iostream>
 using namespace std;
 
+class playground
+{
+public:
+	playground();
+	~playground();
 
-template<class y>
-y func(y x, y j){
-	y sum = x + j;
-	return sum;
-}
+public
+	
+};
 
+
+// MAIN FUNCTION BITCH!
 int main(){
 
 int x;
