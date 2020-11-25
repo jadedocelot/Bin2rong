@@ -17,6 +17,7 @@ public:
 	}
 };
 
+
 int main(){
 int x,stable_speed,emergency_speed_reduction = 30;
 

@@ -126,5 +126,174 @@ class myClass
 						 	Class vs Object 
 			______________________________________________
 
+- class is coming from classification
 
-			
+- Objects belong to cars
+
+- So classes contain data (which are properties) and functions
+
+
+
+
+			______________________________________________
+
+						 	Writing a class
+			______________________________________________
+
+
+#include <iostream>
+using namespace std;
+
+// by Defualt all the functions within the class will be labeld as PRIVATE
+class rectangle
+{
+
+public:
+
+	int length; // 2 bytes
+	int breadth; // 2 bytes
+	
+	int area() // functions occupy zero memory space
+	{
+		return length * breadth;
+	}
+
+	
+	int perimeter()
+	{
+		return 2 * (length + breadth);
+	}
+};
+
+
+int main()
+{
+
+// creating our object
+rectangle r1,r2;
+int x,y;
+
+cout << "Please enter the dimensions: " << endl;
+cin >> x >> y;
+
+// We ve assigned the user input (x,y) to .length and .breadth of r2
+// which r2 is the object of rectangle(class)
+r2.length = x;
+r2.breadth = y;
+
+// We got to use dot operators to access the members
+r1.length = 10;
+r1.breadth = 5;
+
+cout << "The area of R1 is: " << r1.area() << endl; 
+cout << "The parimeter of R1 is: " << r1.perimeter() << endl; 
+
+cout << "The area of R2 is: " << r2.area() << endl; 
+cout << "The parimeter of R2 is: " << r2.perimeter() << endl; 
+
+
+
+return 0;
+}
+
+
+// r1 and r2 will  both  consist of 4 bytes of memory
+
+
+
+
+
+
+			******** MEMORY ********
+
+
+
+
+	HEAP:
+
+
+
+
+	STACK:
+		 r1 -- 10,5
+		 r2 -- 15,10
+
+
+	CODE:
+
+		AREA, PERIMETER, MAIN()
+
+
+
+
+
+
+
+
+
+
+
+			______________________________________________
+
+						  Pointer to Object
+			______________________________________________
+
+
+
+  // See chapter README.md for NOTES
+#include <iostream>
+using namespace std;
+
+
+class rectangle
+{
+
+public:
+
+	int length; 
+	int breadth;
+	
+	int area()
+	{
+		return length * breadth;
+	}
+	
+	int perimeter()
+	{
+		return 2 * (length + breadth);
+	}
+};
+
+
+int main()
+{
+
+// r is consuming 4 bytes (for length(2 bytes) and perimeters(2 bytes) within rectangle)
+// This object is created in stack 
+rectangle r;
+
+// Creating a pointer 
+rectangle *p;
+// assigning the address of r to our p pointer
+//p = &r;
+
+// This will put object in HEAP memory
+p = new rectangle;
+
+// A pointer called 'q' which has created another object in the heap memory
+// Though there is currently no name to said pointer
+rectangle *q = new rectangle(); 
+
+// we can now use our pointer to access our class memebers 
+// arrow operator or a dereferencing operator 
+// This is used to access the memory 
+p -> length = 15;
+p -> breadth = 10;
+
+// Our pointer will now access the functions within the 'rectangle' class
+cout << p -> area() << endl;
+cout << p -> perimeter() << endl;
+
+return 0;
+}
+
