@@ -227,12 +227,6 @@ return 0;
 
 
 
-
-
-
-
-
-
 			______________________________________________
 
 						  Pointer to Object
@@ -297,3 +291,26 @@ cout << p -> perimeter() << endl;
 return 0;
 }
 
+
+
+			______________________________________________
+
+					Philosophy Behind Data Hiding
+			______________________________________________
+
+
+- Data hiding is related to encapsulation 
+
+- DATA within classes should not be punblic, for data may be mishandled outside of the class
+
+
+
+
+			______________________________________________
+
+						Data Hiding in C++
+			______________________________________________
+
+
+
+			
