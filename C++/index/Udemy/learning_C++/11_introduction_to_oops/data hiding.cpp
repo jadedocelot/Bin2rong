@@ -19,13 +19,11 @@ public:
 	{	
 		// here length will take in an argument
 		if(l >= 10)
-		{
-			length = l;
+ 			   length = l;
 		}
 		else if(l < 10)
 		{
-			cout << "You suck!" << endl;
-		}	
+ 		}	
 	}
 	// Here we create a void function called 'setLeng'
 	// which takes 1 int parameter called 'l' 
@@ -63,12 +61,10 @@ rectangle r;
 
 // Now implementing 
 // Instead of initializing we are passing in an argument
-r.setLeng(8);
+r.setLeng(11);
 r.setBread(10);
 
-
-	//cout << r.perimeter() << endl;
-
+	cout << r.perimeter() << endl;
 
 return 0;	
 }

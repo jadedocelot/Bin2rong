@@ -43,7 +43,7 @@ if access_acct_points == 1821:
 		print("Your current balance is: ",el.check_balance())
 		el.acct_hours()
 	elif user_dec == 2:
-		deposit = int(input("Please enter the amount you would like to deposit: "))
+		deposit = int(input("Please enter the amount you would like to   deposit: "))
 		el.emp_pnts(deposit)
 		print(el.check_balance())
 		el.acct_hours()

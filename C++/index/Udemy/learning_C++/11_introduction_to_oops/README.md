@@ -252,10 +252,7 @@ public:
 		return length * breadth;
 	}
 	
-	int perimeter()
-	{
-		return 2 * (length + breadth);
-	}
+`
 };
 
 
@@ -291,8 +288,6 @@ cout << p -> perimeter() << endl;
 return 0;
 }
 
-
-
 			______________________________________________
 
 					Philosophy Behind Data Hiding
@@ -304,13 +299,47 @@ return 0;
 - DATA within classes should not be punblic, for data may be mishandled outside of the class
 
 
-
-
 			______________________________________________
 
 						Data Hiding in C++
 			______________________________________________
 
+# Property Function
 
+public:
 
-			
+# SET... / Considered an ACCESSOR
+	void setLeng(int l)
+	{	
+
+		if(l >= 10)
+ 			length = l;
+		}
+		else if(l < 10)
+		{
+			cout << "You suck!" << endl;
+		}	
+	}
+
+	void setBread(int b)
+	{	
+		// here length will take in an argument
+		breadth = b;
+	}
+
+# GET... / Considered MUTATOR
+	int getLeng()
+	{
+		return length;
+	}
+
+	int getBread()
+	{
+		return breadth; 
+	}
+
+	int perimeter()
+	{
+		return 2 * (length + breadth);
+	}
+}; 
