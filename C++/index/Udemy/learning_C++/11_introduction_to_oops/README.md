@@ -343,3 +343,223 @@ public:
 		return 2 * (length + breadth);
 	}
 }; 
+
+
+			______________________________________________
+
+					  Philosophy Behind Constructors
+			______________________________________________
+
+
+
+# That the following are considered overloader constructors
+# Examples below will be linked to the class within 
+# getting the room dimensions.cpp
+
+- Object orientation is more philsophy
+
+
+
+CONSTRUCTORS: 
+
+# Default Constructor:
+	
+		roomDim r1; 
+
+// Building constructor
+// This creating the an object witin your main func. This will include the  
+// variables within said function but will only include junk values
+
+
+# Non-parameterized Constructor:
+
+		class roomDim
+		{
+			private:
+				int length;
+				int breadth;
+
+			public:
+
+			roomDim()
+			{
+				length = 0;
+				breadth = 0;
+			}	
+		}
+
+		// Here when called, you will not get get garbage values but valid 
+		// values
+
+# Parameterized Constructor:
+
+		class roomDim
+		{
+			private:
+				int length;
+				int breadth;
+
+			public:
+
+			roomDim(int l,int b)
+			{
+				length = l;
+				breadth = b;
+			}	
+
+
+
+# Copy Constructor:
+
+		class roomDim
+		{
+			private:
+				int length;
+				int breadth;
+
+			public:
+
+
+# We have made a function that consists of the values of one object within in 
+# your main function, and may be assigned to a new object    
+			roomDim(roomDim &r)
+			{
+				length = r.length;
+				breadth = r.breadth;
+			}	
+
+
+
+		int main(){
+
+
+
+
+
+# Parameterized Constructor
+		roomDim r1(15,10);
+
+## Copied constructor
+## This will copy the values of r1 though will as its own(new) object
+		roomDim r2(r1);  
+
+
+		return 0;	
+		} 
+
+
+
+
+			______________________________________________
+
+							Deep Copy Constructor
+			______________________________________________
+
+
+
+
+#include<string>
+#include<cmath>
+using namespace std;
+
+
+class test{
+
+int a;
+int *p;
+
+test(int x)
+{
+	a = x;
+# Dynamic memory
+	p = new int[a]	
+}
+
+test(test &t)
+
+	a = t * a;
+# p = t * p; <- Need to create a new array
+# Dynamic memory	
+	p = new int[a];
+}
+
+
+}; 
+
+
+int main()
+{
+
+return 0;
+}
+
+
+			______________________________________________
+
+					Types of Functuions in a Class
+			______________________________________________
+
+
+class rectangle{
+private:
+	int length;
+	int breadth;
+
+public:
+
+### constructs
+	
+# Non parameterized constructor
+	rectangle();
+
+# Parameterized constructor
+	rectangle(int l); 
+
+# Copy constructor
+	rectangle(rectangle &r);
+
+# Mutators method
+	void setLength(int l);
+
+# Accessor method
+	void getLength(int l);
+
+# Facilitators
+	int area();
+	int perimeter();
+
+# Deconstructor function
+	~rectangle();
+
+};
+
+
+
+
+			______________________________________________
+
+						Scope Resolution Operator
+			______________________________________________
+
+
+			class rectangle
+			{	
+			private:
+				int length;
+				int breadth;
+			
+			public;
+				int area()
+				{
+					return length * breadth;
+				}   
+				int perimeter();
+
+			 	
+			}; 
+				
+				
+				int rectangle
+				{
+					return 2 * (length + breadth);
+				}
