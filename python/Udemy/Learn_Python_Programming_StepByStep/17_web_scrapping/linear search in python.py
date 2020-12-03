@@ -8,7 +8,6 @@ def linear_func(array,key):
 
 print(locked_code)
 
-usrInput = input("What are looking for? ")
-myNum = int(usrInput)
+usrInput = int(input("What are looking for? "))
 
-linear_func(locked_code,myNum)
+linear_func(locked_code,usrInput)
