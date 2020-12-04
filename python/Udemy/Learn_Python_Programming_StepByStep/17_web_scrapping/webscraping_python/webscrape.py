@@ -37,6 +37,5 @@ with open("index.html") as mypage:
 # .find_all will locate all the h1 tags
 # print(soup.find_all('h1'))
 # The for loop will print out all the H1 tags in order, h.text will eliminate the tags only presenting text
-#for h in soup.find_all('h1'):
 #    print(h.text)
-
+#for h in soup.find_all('h1'):

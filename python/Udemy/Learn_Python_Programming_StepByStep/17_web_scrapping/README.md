@@ -350,7 +350,6 @@ import requests, lxml
 # .h1.text will only grab the h1 text
     print(soup.h1.text)
 
-
  						  		___________________________
 
 									 Access Attributes
@@ -375,3 +374,18 @@ import requests, lxml
   						  		___________________________
 
 
+# The following will read the html file and print it out  
+with open("index.html") as mypage:
+    soup = BeautifulSoup(mypage, features="lxml") 
+    # loc_soup = soup.find('h1',attrs={'id':'hid1'})
+    loc_soup = soup.find('h1', attrs={'id':'hid1'})
+     #print(soup.text)
+    print(loc_soup.find_all_next('p'))
+
+
+								
+								
+								___________________________
+
+									 External Website	
+ 						  		___________________________
