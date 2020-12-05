@@ -19,7 +19,7 @@ class admin(employee): # admin class will now access our sub class (employee)
 		self.team = team
 		self.project_name = project_name
 	def display(self):
-		super().display() # method override of our employee sub class
+		super().display() # 	 override of our employee sub class
 		print("Admin is Activated for Team {}, project {}".format(self.team,self.project_name))
 
 emp = admin("Hans",32,21223,3400,"Youth","Levis Re-sort")
