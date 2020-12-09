@@ -77,6 +77,14 @@
 
 
 - To locate the square root of an array, we can do the following:
+    
     print(np.sqrt(myAr))
 
 # OUTPUT: [ 3.46410162  9.2736185   1.73205081 18.27566688  4.69041576  3.46410162]
+
+
+
+                                            _________________________________
+
+                                                        MatPlotLib
+                                            _________________________________   

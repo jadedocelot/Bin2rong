@@ -6,7 +6,7 @@ class person:
 		print("Name:{} and Age{}".format(self.name,self.age))
 
 class employee(person):
-	def __init__(self,name,age,emp_id,salary):
+	def __init__(self,name, ,emp_id,salary):
 		super().__init__(name,age) # Now accessing SUPER CLASS properties
 		self.emp_id = emp_id
 		self.salary = salary
