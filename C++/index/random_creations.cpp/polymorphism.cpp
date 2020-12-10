@@ -5,16 +5,16 @@
 
 - How Inheritences were explained in the last chapter, inheritence allow us to inherit methods from another class
 
-- Polymorphism allows us to use those methods to perform different tasks. 
+//- Polymorphism allows us to use those methods to perform different tasks. 
 	
-		* This allows the users to perform a single action in different ways
+	//	* This allows the users to perform a single action in different ways
 
 	// FOR EXAMPLE:
 
-		- Think of a (BASE) called "animal" that has a method called animalSound()
+	//	- Think of a (BASE) called "animal" that has a method called animalSound()
 
 
-			* Derived classes of Animals could be Pigs, Cats, Dogs, Birds - and they  a;so have their own implementation of animals sound (pig oink, and the cat meows, etc)
+	//		* Derived classes of Animals could be Pigs, Cats, Dogs, Birds - and they  a;so have their own implementation of animals sound (pig oink, and the cat meows, etc)
 
 // Example
 
