@@ -1,4 +1,4 @@
-from PIL  import Image,ImageEnhance,ImageMath
+from PIL import Image,ImageEnhance,ImageMath
 
 im = Image.open("277456.jpg")
 im.rotate(45).show()
