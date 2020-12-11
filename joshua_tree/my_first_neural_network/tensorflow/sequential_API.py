@@ -66,3 +66,29 @@ __________________________________________
 None
 __________________________________________
 '''
+
+loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+
+
+print("Loss:")
+print("__________________________________________\n")
+print(loss_fn(y_train[:1], mod_predictions).numpy())
+print("__________________________________________\n")
+print("\n\n")
+
+model.compile(optimizer='adam',
+    loss=loss_fn,
+    metrics=['accuracy']
+)
+
+model.fit(x_train, y_train, epochs=5)
+
+
+
+mod_eval = model.evaluate(x_test, y_test, verbose=2)
+
+print("\nModel Performance:")
+print("__________________________________________\n")
+print(mod_eval)
+print("__________________________________________\n")
+print("\n\n")
