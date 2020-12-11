@@ -40,7 +40,7 @@ print("__________________________________________\n")
 
 print("Model Probabilities:")
 print("__________________________________________\n")
-print(print(mod_Probabilities.reshape(5,2)))
+print(mod_Probabilities.reshape(5,2))
 print("__________________________________________\n")
 print("\n\n")
 
@@ -81,14 +81,28 @@ model.compile(optimizer='adam',
     metrics=['accuracy']
 )
 
-model.fit(x_train, y_train, epochs=5)
+model.fit(x_train, y_train, epochs=1)
 
 
 
 mod_eval = model.evaluate(x_test, y_test, verbose=2)
 
-print("\nModel Performance:")
+print("\n\nModel Performance:")
 print("__________________________________________\n")
 print(mod_eval)
 print("__________________________________________\n")
-print("\n\n")
+print("\n")
+
+Probability_model = tf.keras.Sequential([
+    model,
+    tf.keras.layers.Softmax()
+])
+
+print("\n")
+
+mod_probFinal = Probability_model(x_test[:5])
+
+print(mod_probFinal)
+# print(mod_Probabilities.reshape(5,2))
+
+print("\n")
