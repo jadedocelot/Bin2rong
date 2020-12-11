@@ -1,5 +1,11 @@
+# User-Friendly Sequential API
+
+
+
 # The Functional API
 https://keras.io/guides/functional_api/
+
+
 
 # Training & evaluation with the built-in methods
 https://keras.io/guides/training_with_built_in_methods/
