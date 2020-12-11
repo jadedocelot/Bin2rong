@@ -56,7 +56,7 @@ test_scores = model.evaluate(x_test, y_test, verbose=2)
 print("Test loss:", test_scores[0])
 print("Test accuracy:", test_scores[1])
 
-
+cd
 '''
 2020-12-09 23:03:13.703379: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f7f47eb8a80 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
 2020-12-09 23:03:13.703410: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version

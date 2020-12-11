@@ -10,6 +10,14 @@
         - Sequential: Groups a linear stack of layers into a tf.keras.Model
             - Sequential provides training and inference features on this model
 
+- LOGITS:
+    The Vector of raw (non-normalized) predictions that a classification model generates, which is ordinarily then passed tp a normalization function. If the 
+
+'''
+2020-12-10 18:46:12.509037: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7feb32cce840 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-12-10 18:46:12.509093: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+'''
+
 
 # The Functional API
 https://keras.io/guides/functional_api/
