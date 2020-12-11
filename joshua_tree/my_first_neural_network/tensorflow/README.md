@@ -1,5 +1,14 @@
 # User-Friendly Sequential API
 
+ - When to use  a sequential model:
+    A sequential API allows you to create models layer-by-layer for most problems. It is limited in that it does not allow you to create models that share layers or have multiple input or outputs
+
+   - KERAS Sequential class
+    
+        - .keras.Sequential(layers=Non, name=None)
+
+        - Sequential: Groups a linear stack of layers into a tf.keras.Model
+            - Sequential provides training and inference features on this model
 
 
 # The Functional API
