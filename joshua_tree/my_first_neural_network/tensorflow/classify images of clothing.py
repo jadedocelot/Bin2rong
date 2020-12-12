@@ -20,6 +20,23 @@ fashion_mnist = tf.keras.datasets.fashion_mnist
 class_names = [ 'T-shirt/top','Trouser','Pullover','Dress','Coat',
                     'Sandal','Shirt','Sneaker','Bag','Ankle Boot']
 
-print(train_images.shape)
+# The format of the database: The following will show that there are 60,000 images in the traning set, with each image represented in as 28 x 28 pixels: 
+# print(train_images.shape)
 # (60000, 28, 28)
-print(test_labels)
+
+# likewise, there are 60,000 labels in the training set:
+print(len(train_labels))
+
+# Each label is an integer bewtween 0 and 9, NOTE: printing out within a FOR loop will print out each int
+print(train_labels)
+
+#Preprocess the data
+# The data must be preprocessed before training the network. If you inspect the first image in the training set, you will see that the pixel values fall in the range of 0 to 255:
+plt.figure()
+plt.imshow(train_images[0])
+plt.colorbar()
+plt.grid(False)
+plt.show()
+
+
+# ANCHOR https://www.tensorflow.org/tutorials/keras/classification

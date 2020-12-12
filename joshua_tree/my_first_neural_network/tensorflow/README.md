@@ -118,14 +118,29 @@ Epoch 25/25
 1875/1875 [==============================] - 2s 1ms/step - loss: 0.0231 - accuracy: 0.9920
 
 
+
+
 # Basic classification: Classify images of clothing
 
 - Fashion MNIST is intended as a drop-in replacement for the classic MNIST dataset—often used as the "Hello, World" of machine learning programs for computer vision. The MNIST dataset contains images of handwritten digits (0, 1, 2, etc.) in a format identical to that of the articles of clothing you'll use here.
 
 This guide uses Fashion MNIST for variety, and because it's a slightly more challenging problem than regular MNIST. Both datasets are relatively small and are used to verify that an algorithm works as expected. They're good starting points to test and debug code
 
+The images are 28x28 NumPy arrays, with pixel values ranging from 0 to 255. The labels are an array of integers, ranging from 0 to 9. These correspond to the class of clothing the image represents:
+----------------------------------------
+Label	                Class
 
-
+0	                T-shirt/top
+1	                   Trouser
+2	                  Pullover
+3	                    Dress
+4	                    Coat
+5	                   Sandal
+6	                   Shirt
+7	                  Sneaker 
+8	                    Bag
+9	                Ankle boot
+----------------------------------------
 
 # The Functional API
 https://keras.io/guides/functional_api/
