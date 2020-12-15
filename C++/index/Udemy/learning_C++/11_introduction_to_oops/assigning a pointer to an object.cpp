@@ -5,9 +5,7 @@ using namespace std;
 
 class rectangle
 {
-
 public:
-
 	int length; 
 	int breadth;
 	

@@ -35,7 +35,6 @@ class rectangle
 int main(){
 
 
-
 rectangle r(10,5);
 
 cout << r.area() << endl;
