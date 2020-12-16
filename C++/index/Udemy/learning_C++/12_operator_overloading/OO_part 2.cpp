@@ -15,7 +15,7 @@ class complex
         img = i;
     }
 
-    complex add(complex x)
+    complex poop(complex x)
     {
         complex temp;
         temp.real = real + x.real;
@@ -34,7 +34,8 @@ cin >> c1.real >> c2.real;
 cout << "Please enter 2 imaginary numbers: " << endl;
 cin >> c1.img >> c2.img;
 
-c3 = c1.add(c2);
+// we call the function of "complex" to add c1 and c2 (example: c1.<complex function name>(c2))
+c3 = c1.poop(c2);
 
 cout << c3.real << " + i" << c3.img << endl;
 
