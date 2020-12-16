@@ -21,5 +21,5 @@ c3 = c1 + c2 :    7 + 16 i
 
 In order to learn operator overloading; 
 
-    1. How to write a function
+     1. How to write a function
     2. What should be a signature of a function
