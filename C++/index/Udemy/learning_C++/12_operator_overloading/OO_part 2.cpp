@@ -18,7 +18,7 @@ class complex
     complex poop(complex x)
     {
         complex temp;
-        temp.real = real + x.real;
+        temp.real = real * x.real;
         temp.img =  img + x.img;        
         return temp;  
     }
