@@ -31,10 +31,28 @@ print(train_labels)
 
 #Preprocess the data
 # The data must be preprocessed before training the network. If you inspect the first image in the training set, you will see that the pixel values fall in the range of 0 to 255:
+
+# Will present one *specified* item of clothing
+'''
 plt.figure()
-plt.imshow(train_images[3])
+plt.imshow(train_images[9])
 plt.colorbar()
-plt.grid(False)
+plt.grid(True)
+plt.show()
+'''
+train_images = train_images / 255.00
+test_images = test_images / 255.00
+
+# To verify that the data is in the correct format and that youre ready to build and train the network, lets display the first 25 images from the training set  and display the class name below each image
+plt.figure(figsize=(10,10))
+for i in range (25):
+    plt.subplot(5,5,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    plt.grid(False)
+    plt.imshow(train_images[i], cmap='gray')
+    plt.imshow(train_images[i])
+    plt.xlabel(class_names[train_labels[i]])
 plt.show()
 
 
