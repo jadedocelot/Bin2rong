@@ -83,4 +83,107 @@ return 0;
                                             _ _ _ _ _ _ _ __  __ _ __ _ _
                                              
                                              Friend Operator Overloading
-                                             _ _ _ _ _ _ _ __  __ _ __ _ _
+                                              _ _ _ _ _ _ _ __  __ _ __ _ _
+     
+#include<iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+
+class complex
+{
+private:
+    int real;
+    int img;
+
+public:
+# FFFFRRRIIIEEENNNDDDSSS 
+# The parameters must = 0 for c3 will not be passing in any values so a default value must be assigned , which is 0
+    complex(int r=0,int i=0)
+    {
+        real = r;
+        img = i;
+    }
+    
+    void display()
+    {
+        cout << real << " + i" << img;
+    }
+
+# The executions included in the outside complex function are also linked to this function
+    friend complex operator+(complex c1,complex c2);
+};
+# This acts as an independent function.
+# So this does not belong the class above but is a "friend" of it
+# Global Function
+    complex operator+(complex c1,complex c2)
+    {
+        complex t;
+        t.real = c1.real + c2.real;
+        t.img = c1.img + c2.img;
+        return t;
+    }
+
+
+int main()  
+{
+
+complex c1(13,5), c2(10,5),c3;
+c3 = operator+(c1,c2);
+
+c3.display();
+
+return 0;   
+}
+
+
+                                            _ _ _ _ _ _ _ __  __ _ __ _ _
+                                             
+                                            insertion Operator Overloading
+                                            _ _ _ _ _ _ _ __  __ _ __ _ _
+
+
+
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std; 
+
+class complex
+{
+ private:
+    int real;
+    int img;
+
+ public:
+    complex(int r=0,int i=0)
+    {
+        real = r;
+        img = i;
+    }
+ 
+    friend ostream & operator<<(ostream &o, complex &c1);
+
+};
+
+ostream & operator<<(ostream &o,complex &c1)
+{
+    o << c1.real << " + i" << c1.img << endl;
+    return o;
+} 
+
+
+int main()
+{
+
+complex c1(50,2);
+
+   cout << c1 << endl;
+# The bottom execution is the same as the above COUT
+# operator<<(coutr,c);
+
+return 0;
+}
+
+# OUTPUT:
+# 50 + i2d
