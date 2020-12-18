@@ -1,4 +1,8 @@
+# ANCHOR https://www.tensorflow.org/tutorials/keras/classification
 # Basic classification: Classify images of clothing
+# The code below it to train a neural network model to classify images of clothing
+
+# This guide uses tf.keras, a high-level API to build and train models in TensorFlow.
 
 import tensorflow as tf
 import numpy as np 
@@ -40,20 +44,20 @@ plt.colorbar()
 plt.grid(True)
 plt.show()
 '''
+
+# Scale these values to a range of 0 to 1 before feeding them to the neural network 
 train_images = train_images / 255.00
 test_images = test_images / 255.00
 
 # To verify that the data is in the correct format and that youre ready to build and train the network, lets display the first 25 images from the training set  and display the class name below each image
 plt.figure(figsize=(10,10))
 for i in range (25):
-    plt.subplot(5,5,i+1)
-    plt.xticks([])
-    plt.yticks([])
-    plt.grid(False)
-    plt.imshow(train_images[i], cmap='gray')
-    plt.imshow(train_images[i])
-    plt.xlabel(class_names[train_labels[i]])
+    plt.subplot(5,5,i+1) # Add a subplot to the current figureß
+    plt.xticks([]) # Get the current tick locations and labels of the x-axis
+    plt.yticks([]) # Get the current tick locations and labels of the y-axis 
+    plt.grid(False) # Get the grid of the image being shown - False will NOT show the grid (Where TRUE shows)
+    plt.imshow(train_images[i]) #Display an image
+    plt.xlabel(class_names[train_labels[i]]) # Set label for the x-axis
 plt.show()
 
 
-# ANCHOR https://www.tensorflow.org/tutorials/keras/classification
