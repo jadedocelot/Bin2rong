@@ -58,6 +58,26 @@ for i in range (25):
     plt.grid(False) # Get the grid of the image being shown - False will NOT show the grid (Where TRUE shows)
     plt.imshow(train_images[i]) #Display an image
     plt.xlabel(class_names[train_labels[i]]) # Set label for the x-axis
-plt.show()
+# plt.show()
 
 
+
+
+                                                                        
+                                                                        
+                                                                            
+                                                                            ##### BUILD THE MODEL ####### 
+
+# Building the neural network requires configuring the layers of the model, then compiling the model
+
+model = tf.keras.Sequential([
+tf.keras.layers.Flatten(input_shape=(28,28)),    
+tf.keras.layers.Dense(128, activation='relu'),
+tf.keras.layers.Dense(10)
+])
+
+# ANCHOR 'tf.keras.Flatten'
+# This first layer above, transforms the format of the images from two-dimensional array (of 28 by 28 pixels) to a one-dimensional array (of 28 * 28 = 784). Thinhk of this layer as
+# unstacking rows of pixels in the image and lining them up. This layer has now parameters to learn. it only reformats the data 
+# ANCHOR 'tf.kera.layers.Dense' 
+# Most of deep learning consists of changing together simple layers. Most layers have parameters that are learned during training    
