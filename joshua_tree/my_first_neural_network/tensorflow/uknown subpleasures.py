@@ -14,7 +14,7 @@ fig = plt.figure(figsize=(8,8), facecolor='white')
 # NOTE OG:ax = plt.subplot(111, frameon=False)
 ax = plt.subplot(111, frameon=False)
 
-# Generate random data
+# Generate random data 
 data = np.random.uniform(0, 1, (64, 75))
 X = np.linspace(-1, 1, data.shape[-1])
 G = 1.5 * np.exp(-4 * X ** 2)
@@ -54,7 +54,7 @@ def update(*args):
     # Fill-in new values
     data[:, 0] = np.random.uniform(0, 1, len(data))
 
-    # Update data
+    # Update data data 
     for i in range(len(data)):
         lines[i].set_ydata(i + G * data[i])
 
