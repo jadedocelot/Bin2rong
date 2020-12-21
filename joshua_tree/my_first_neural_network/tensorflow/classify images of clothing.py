@@ -81,3 +81,4 @@ tf.keras.layers.Dense(10)
 # unstacking rows of pixels in the image and lining them up. This layer has now parameters to learn. it only reformats the data 
 # ANCHOR 'tf.kera.layers.Dense' 
 # Most of deep learning consists of changing together simple layers. Most layers have parameters that are learned during training    
+# After the   
