@@ -61,9 +61,6 @@ for i in range (25):
 # plt.show()
 
 
-
-
-                                                                        
                                                                         
                                                                             
                                                                             ##### BUILD THE MODEL ####### 
@@ -82,3 +79,54 @@ tf.keras.layers.Dense(10)
 # ANCHOR 'tf.kera.layers.Dense' 
 # Most of deep learning consists of changing together simple layers. Most layers have parameters that are learned during training    
 # After the   
+
+
+                                                                            ##### COMPILE THE MODEL ####### 
+
+# Loss function - This measures how accurate the model is during training. You want to minimize thjis function to "steer" the model in the right direction
+
+model.compile(optimizer='adam',
+    loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+    metrics=['accuracy'])
+
+# ANCHOR - Optimizer:
+# This is how the model is updated based on the data it sees and its loss function
+# ANCHOR - Metrics:
+# Used to monitor the training and testing steps. The following example uses accuracy, the fraction of the images that are correctly classified
+
+model.fit(train_images,train_labels,epochs=10)
+
+# To start training, call the ((model.fit)(train_images, train_labels, epochs=10) method - so called because it "fits" the model to the training data:
+
+'''
+60000
+[9 0 0 ... 3 0 5]
+2020-12-21 17:33:34.406668: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f823722dd90 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-12-21 17:33:34.406703: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Epoch 1/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.4968 - accuracy: 0.8251
+Epoch 2/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3763 - accuracy: 0.8648
+Epoch 3/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3343 - accuracy: 0.8796
+Epoch 4/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.3137 - accuracy: 0.8852
+Epoch 5/10
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.2956 - accuracy: 0.8907
+Epoch 6/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.2806 - accuracy: 0.8958
+Epoch 7/10
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.2697 - accuracy: 0.9000
+Epoch 8/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.2585 - accuracy: 0.9039
+Epoch 9/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.2486 - accuracy: 0.9079
+Epoch 10/10
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.2395 - accuracy: 0.9103
+'''
+# As the model trains, the loss and accuracy metrics are displayed. This model reaches an accuracy of about 0.91 (or 91%) on  the training data
+
+test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
+
+print('\nTest accuracy: ', test_acc)
+
