@@ -215,3 +215,7 @@ test_loss, test_acc = model.evaluate(test_images, test_labels, verbose=2)
 
 print('\nTest accuracy: ', test_acc)
 
+# ANCHOR Demonstrate Oversifting
+# https://www.tensorflow.org/tutorials/keras/overfit_and_underfit#demonstrate_overfitting
+# ANCHOR Strategies to prevent overfitting
+# https://www.tensorflow.org/tutorials/keras/overfit_and_underfit#strategies_to_prevent_overfitting

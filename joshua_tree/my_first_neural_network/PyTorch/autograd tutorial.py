@@ -14,7 +14,6 @@ def taylor_sine(x):
         i += 1
     return ans
 
-
 grad_sine = grad(taylor_sine)
-print("Gradient of sin(pie) is ",grad_sine(np.pie))
+print("Gradient of sinpie is ",grad_sine(np.pie))
 print("Hello Autograd!")
