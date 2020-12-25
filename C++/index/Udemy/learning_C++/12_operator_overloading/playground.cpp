@@ -15,6 +15,7 @@ class rational
         p = 1;
         q = 1;
      } 
+     
      rational(int p,int q)
      {
         this -> p = p;
