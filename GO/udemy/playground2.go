@@ -6,15 +6,20 @@ import (
 
 func main() {
 
-	key := true
-	int var_pi = 103107472059779211826284
+	var user_input int
+
+	key := false
+	piCode := 1031042624842059779
 
 	if key == false {
 		fmt.Println("Access Denied!")
+		fmt.Println("Please guess the number between 1-20 to gain access to the secret code")
+		fmt.scan(user_input)
+		if user_input == 13 {
+			key := true
+		}
 	} else if key == true {
 		fmt.Println("Access Granted")
-		fmt.Println(&var_pi)
+		fmt.Println("Generated Discounted Code Is:", piCode)
 	}
-
-
 }
