@@ -58,7 +58,7 @@ for i in range (25):
     plt.grid(False) # Get the grid of the image being shown - False will NOT show the grid (Where TRUE shows)
     plt.imshow(train_images[i]) #Display an image
     plt.xlabel(class_names[train_labels[i]]) # Set label for the x-axis
-# plt.show()
+plt.show()
 
 
                                                                         
@@ -94,7 +94,7 @@ model.compile(optimizer='adam',
 # ANCHOR - Metrics:
 # Used to monitor the training and testing steps. The following example uses accuracy, the fraction of the images that are correctly classified
 
-model.fit(train_images,train_labels,epochs=35)
+model.fit(train_images,train_labels,epochs=10)
 
 # To start training, call the ((model.fit)(train_images, train_labels, epochs=10) method - so called because it "fits" the model to the training data:
 

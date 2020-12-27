@@ -1,3 +1,7 @@
+# Neural networks are a series of algorithms that mimic the operations of a human brain to recognize relationships between vast amounts of data. 
+# They are used in a variety of applications in financial services, from forecasting and marketing research to fraud detection and risk assessment
+
+
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -8,6 +12,15 @@ mnist = tf.keras.datasets.mnist
 
 (x_train,y_train),(x_test,y_test) = mnist.load_data()
 x_train, x_test = x_train / 255.0, x_test / 255.0
+# The training set is a subset of the data set used to train the model
+
+# x_train = is the training data set
+# y_train = is the set of labels to all the data in x_train
+
+# The test is a subset of data set that you use to test your model after the model has gone through the initial vetting by the validation set
+
+# x_test = is the test data set
+# y_test = is the set of labels to all the data in x_test
  
 # Now we re gonna build tje tf.keras.Sequential model by stacking layers. Choose an optimizer and loss function for training:
 #  Sequential: Groups a linear stack of layers into a tf.keras.Model
