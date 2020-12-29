@@ -40,6 +40,8 @@ x_train, x_test = x_train / 255.0, x_test / 255.0
 # It received input from the previous layer, which is why it is dense
 # The 128 represents the dimensionality of the output space
 # An activation function takes the input of the node in the network and generates the output that will be passed into the next layer.
+# Without a non-linear activation function, this would just be a linear regression model ("Ew, look at the boring STRAIGHT model. Its so 2 dimensional")
+# The type of activation function that we use here is the "RELU" or "Rectified Linear Unit..... which is one of the most basic activation functions any basic bitch would use
 # tf.keras.layers.Dense(128, activation='relu')
 
 model = tf.keras.models.Sequential([
@@ -48,6 +50,7 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dropout(0.2),
     tf.keras.layers.Dense(10)
 ])
+
 '''
 2020-12-10 18:46:12.509037: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7feb32cce840 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
 2020-12-10 18:46:12.509093: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
