@@ -34,8 +34,13 @@ x_train, x_test = x_train / 255.0, x_test / 255.0
 
 # we re taking the image being fed in the "Flattening" it into a 2D array. The input shape is the dimension of the image being fed into the layer. Think
 # of this as the reformatting the image for the model
-# tf.keras.layers.Flatten(input_shape=(28,28))
+#tf.keras.layers.Flatten(input_shape=(28,28))
 
+# This creates a densely connected layer. Each input input node in the layer is connected to an output node
+# It received input from the previous layer, which is why it is dense
+# The 128 represents the dimensionality of the output space
+# An activation function takes the input of the node in the network and generates the output that will be passed into the next layer.
+# tf.keras.layers.Dense(128, activation='relu')
 
 model = tf.keras.models.Sequential([
     tf.keras.layers.Flatten(input_shape=(28,28)),
