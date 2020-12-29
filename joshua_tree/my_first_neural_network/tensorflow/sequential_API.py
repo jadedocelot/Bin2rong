@@ -13,18 +13,29 @@ mnist = tf.keras.datasets.mnist
 (x_train,y_train),(x_test,y_test) = mnist.load_data()
 x_train, x_test = x_train / 255.0, x_test / 255.0
 # The training set is a subset of the data set used to train the model
-
 # x_train = is the training data set
 # y_train = is the set of labels to all the data in x_train
 
 # The test is a subset of data set that you use to test your model after the model has gone through the initial vetting by the validation set
-
 # x_test = is the test data set
 # y_test = is the set of labels to all the data in x_test
+
+# The
  
 # Now we re gonna build tje tf.keras.Sequential model by stacking layers. Choose an optimizer and loss function for training:
 #  Sequential: Groups a linear stack of layers into a tf.keras.Model
 #   Sequential provides training and inference features on this model
+
+# A sequential model can be thought of as a stack of pancakes, each layer is a pancake
+# And cosider what goes on within the sequential model as our "Filling", and in this case we want our filling to be better than the ingredients 
+# The ingredients are the training sets
+
+# The layers that follow the first can automatically recognize that the input shape of the model is sequential, which is why this is done only once
+
+# we re taking the image being fed in the "Flattening" it into a 2D array. The input shape is the dimension of the image being fed into the layer. Think
+# of this as the reformatting the image for the model
+# tf.keras.layers.Flatten(input_shape=(28,28))
+
 
 model = tf.keras.models.Sequential([
     tf.keras.layers.Flatten(input_shape=(28,28)),
@@ -94,7 +105,7 @@ model.compile(optimizer='adam',
     metrics=['accuracy']
 )
 
-model.fit(x_train, y_train, epochs=1)
+model.fit(x_train, y_train, epochs=5)
 
 
 

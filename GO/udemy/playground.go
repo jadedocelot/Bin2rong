@@ -1,3 +1,4 @@
+
 package main
 
 import (
@@ -11,10 +12,6 @@ yay := True
 
 func main()
 {
-
-
-
-
 
 
 }
