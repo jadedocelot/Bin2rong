@@ -44,6 +44,11 @@ x_train, x_test = x_train / 255.0, x_test / 255.0
 # The type of activation function that we use here is the "RELU" or "Rectified Linear Unit..... which is one of the most basic activation functions any basic bitch would use
 # tf.keras.layers.Dense(128, activation='relu')
 
+# The dropout layer is the regularization technique where randomly selected neurons are ignored in training
+# Here we have 20% rate set. Which will drop 1 of 5 inputs in the next training cycle
+# tf.keras.Dropout(0.2)
+
+
 model = tf.keras.models.Sequential([
     tf.keras.layers.Flatten(input_shape=(28,28)),
     tf.keras.layers.Dense(128, activation='relu'),
@@ -100,7 +105,6 @@ __________________________________________
 '''
 
 loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
-
 
 print("Loss:")
 print("__________________________________________\n")
