@@ -21,3 +21,4 @@ func main() {
 		fmt.Println("Generated Discounted Code Is:", piCode)
 	}
 }
+ds
