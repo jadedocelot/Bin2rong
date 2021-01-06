@@ -12,4 +12,18 @@ df.columns = list('ABC')
 # B = [3,4,5]
 # C = [4,5,6] 
 
-print(df['A'])
+def sumFunc(col):
+    val = sum(col)/2
+    return(val)
+
+sumNew = sumFunc(df['B'] - 1)
+
+
+if sumFunc(df['B']) <= 10.0:
+    print("We gettin there")
+    print(sumNew)
+else:
+    print("NULL")
+
+
+#print(df['A'])
