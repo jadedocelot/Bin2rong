@@ -18,12 +18,15 @@ def sumFunc(col):
 
 sumNew = sumFunc(df['B'] - 1)
 
-
-if sumFunc(df['B']) <= 10.0:
+if sumFunc(df['A']) <= 10.0:
     print("We gettin there")
     print(sumNew)
 else:
     print("NULL")
 
+
+# Still dont know what to do with this
+# if sumFunc(df['A']) <= 10.00:
+    
 
 #print(df['A'])
