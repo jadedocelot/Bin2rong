@@ -8,10 +8,13 @@ data = np.array([[1,2,3],
                [65,54,1]
                ])
 
+# df will create a dataframe
 df = pd.DataFrame(data)
-df.columns = list("ABC")
+# .column will add column names to our "df" dataframe
+# which will be A, B, C
+df.columns = list("ABCDE")
 
-
+# The 
 def functions1(col):
     val = sum(col)/2
     return(val)
