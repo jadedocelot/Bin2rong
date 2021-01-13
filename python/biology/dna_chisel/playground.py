@@ -1,6 +1,6 @@
 import dnachisel
 from dnachisel import *
-
+from dnachisel import DnaOptimizationProblem
 # Define the optimization problem
 
 #
@@ -23,8 +23,13 @@ problem.optimize()
 
 # Print sumarries to check that constraints
 
-print(problem.constraints_text_summary())
-print(problem.objectives_text_summary())
+# print(problem.constraints_text_summary())
+# print(problem.objectives_text_summary())
+
+# ADD NOTES
+problemTwo = DnaOptimizationProblem.from_record("my_record.gb")
+problemTwo.optimize_with_report(target="report.zip")
+
 
 
 

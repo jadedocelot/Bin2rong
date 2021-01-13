@@ -16,6 +16,8 @@ ______________________________
 
 	- Polynucleotide:
 
+	- DNA Replication:
+
 
 RNA (Ribonucleic acids):
 
@@ -29,9 +31,7 @@ Genome:
 
 Protein:
 
-
 Polypeptid:
-
 
 Plasma:
 
@@ -42,5 +42,17 @@ Translation:
 Tracnscription:
 
 
+________
+___
+__
+_
+Question:
+____________
+
+		-------------------
+		-- True or False --
+		------------------- 
+
+Genes and their encoded proteins are co-linear; that is, the order of amino acids in proteins is the same as the order of the codons in the RNA and DNA? 
 
 
