@@ -7,13 +7,19 @@ y_tower = np.arange(50).reshape(10,5)
 
 # sprint("Tower X")
 # sprint(x_tower)
-# sprint("t\∂Tower Y")
-# sprint(y_tower)
 
 for i in x_tower:
+	print(i)
 	for j in i:
 		for x in j:
-			if x != 28:
-				print(x)
-			else:
-				print("Code RED. WE ARE SO SMART!")
+			if x % 2 == 0:
+				x = "RED"
+				# print(x)
+			# elif x % 2 != 0:
+
+# redacted = red_marker()
+# print(redacted) 
+
+
+# print("Tower X\t")
+# print(x_tower)
