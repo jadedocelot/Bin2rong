@@ -22,6 +22,7 @@
     
     
 # DNA Structure
+- DNA uses bases A, C, G, & T. (RNA uses A, C, G, & U)
     - A : Adenine
     - T : Thymine
     - G : Guanine

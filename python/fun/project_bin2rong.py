@@ -16,7 +16,7 @@ from timeit import timeit
 
 x = [["c","c","c","c","a"],["c","c","c","c","a"],["c","c","c","c","b"]]
 
-y = np.reshape(x, (5,3))
+y = np.reshape(x,(5,3))
 
 # y = our reshape of x
 '''
@@ -26,9 +26,20 @@ y = np.reshape(x, (5,3))
  ['a' 'c' 'c']
  ['c' 'c' 'b']]
 '''
-
+y.remove(x)
 
 for i in y:
 	for x in i:
-		print(x)
+		if x == "c":
+			list(y)
+			print(y)
+			# y.remove(x)
+			# array(y:)
+
+
+
+# y.pop(x)
+# x = 'Cystonine'
+
+
 
