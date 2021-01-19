@@ -1,0 +1,36 @@
+html{
+	background-color: #eff0f4;
+	font:inherit;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#cube{
+	width: 100px;
+	height: 100px;
+	background: red;
+	display: block;
+  	margin-left: auto;
+ 	margin-right: auto;
+ 	animation: colorSwitch 3s infinite
+}
+
+@keyframes colorSwitch{
+  0% {background: blue;}
+  25% {background: blue;}
+  75% {background: green;}
+  100% {background: black;}
+
+
+}
+
+#hashtag{
+	display: block;
+	font-family: 'Montserrat', sans-serif;
+  	margin-left: auto;
+ 	margin-right: auto;
+  	width: 38%;
+  	text-align: center;
+    display: block;
+    margin: 0 auto;
+}/
