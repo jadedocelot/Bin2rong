@@ -23,7 +23,7 @@ Ribonncleic Acid (RNA) is very similar to DNA, but is only half of a DOUBLE-HELI
 
 # Chromosomes 
 - A chromosome is an entire chain of DNA along with a group of stabalizing proteins 
-
+- Chromosomes are only packaged tightly when when a cell is repoducing. This helps with durability as the cell is splitting in 2.
 - Chromosome is a long DNA molecule
 - Most EUKARYOTIC chromosomes include packaging proteins called HISTONES, which aided by chaperone proteins, bind and condense the DNA molecule to maintain integrity
 - What are Chromosomes? Chromosomes contain DNA, and they keep all the genetic information safe. Different organisms have different numbers of chromosomes. We have 46

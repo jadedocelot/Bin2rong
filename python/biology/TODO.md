@@ -22,5 +22,7 @@
 - Guanine (G)
 - Histones
 
+# Questions
+Why does a cell split into two?
 
 # COMPLETED
