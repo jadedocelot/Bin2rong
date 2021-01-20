@@ -26,3 +26,15 @@ Lets take quick look at some of the key featurs.
 - Writting applications in a dynamic language makes you more productive but the trade off is that dynamic languages dont offer the type of safety that static languages do and often need comprehensive test suite to avoid discovering incorrect type bugs at runtime.
 
 ### Cocurrency
+
+* One of the hardest things to do as a programmer is to write an application that effectively uses the available resources of the hardware running it. 
+
+- Goroutines are like threads, but use far less memory and require less code to use.
+
+### GoRoutines
+
+- Goroutines are functions that run concurrently with other goroutines
+
+- Each inbound request automatically runs on its own GoRoutine 
+
+- Goroutines use less memory than threads and the Go runtime will automatically schedule the execution of Goroutines against a set of configured logical processors. 
