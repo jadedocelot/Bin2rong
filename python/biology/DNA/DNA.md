@@ -1,3 +1,6 @@
+# Molecules
+
+
 # DNA 
 
 - Transcriptions: When a protein needs to be made, the gene that makes it must be ACTIVATED. This process is called TRANSCRIPTION.	
@@ -20,8 +23,9 @@ Ribonncleic Acid (RNA) is very similar to DNA, but is only half of a DOUBLE-HELI
 * Adenine(A) pairs with Thymine(T) in the DOUBLE HELIX, and Cytosine(C), which pairs with guanine (G)
 * Ribosomes: Ribosomes are tiny factories inside a cell that makes proteins. RNA copies of the genes are delivered to ribomes. There, they are decoded to make the correct proteins.
 
-
+# Proteins
+- DNA is the instruction manual of the cell, but proteins do all the work! 
+- Proteins allow cells to do all the things things they need to do to keep our bodies working. They often act as tine but very complicated machines
 
 # GENES
-
 - Genes make proteins
