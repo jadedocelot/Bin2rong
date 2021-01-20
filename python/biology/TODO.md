@@ -20,5 +20,7 @@
 - Thymine (T)
 - Cytosine (C)
 - Guanine (G)
+- Histones
+
 
 # COMPLETED
