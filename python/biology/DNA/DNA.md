@@ -12,7 +12,12 @@
 Ribonncleic Acid (RNA) is very similar to DNA, but is only half of a DOUBLE-HELIX. It is used to make a temporary copy of the DNA sequence when a gene is used.
 
 
-# Chromosomes
+# Chromosomes 
+- Chromosome is a long DNA molecule
+
+- What are Chromosomes? Chromosomes contain DNA, and they keep all the genetic information safe. Different organisms have different numbers of chromosomes. We have 46
+chromosomes, guinea pigs have 64, and chimps have 48  - the same number as potatoes.
+
 - Each chromosome contains one continuous molecule of DNA. Our biggest chromosome is 249,956,422 bases (A,T,C,G) long. If you were to write all the letters out in a book,youd need 16,597 books just for that one chromosome.
 
 * BASES: The bases in the rungs of the DNA ladder come in four types;
@@ -22,6 +27,8 @@ Ribonncleic Acid (RNA) is very similar to DNA, but is only half of a DOUBLE-HELI
 	* Guanine (G)
 * Adenine(A) pairs with Thymine(T) in the DOUBLE HELIX, and Cytosine(C), which pairs with guanine (G)
 * Ribosomes: Ribosomes are tiny factories inside a cell that makes proteins. RNA copies of the genes are delivered to ribomes. There, they are decoded to make the correct proteins.
+* Base pairs (the building material of DNA)
+- Human Chromosomes
 
 # Proteins
 - DNA is the instruction manual of the cell, but proteins do all the work! 
