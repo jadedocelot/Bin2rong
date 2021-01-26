@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import timeit
 from timeit import timeit
 
-
 # testAr = np.arange(20).reshape(4,5)
 # print(testAr)
 '''
@@ -26,14 +25,13 @@ y = np.reshape(x,(5,3))
  ['a' 'c' 'c']
  ['c' 'c' 'b']]
 '''
-y.remove(x)
 
 for i in y:
 	for x in i:
 		if x == "c":
 			list(y)
 			print(y)
-			# y.remove(x)
+			y.remove(x)
 			# array(y:)
 
 

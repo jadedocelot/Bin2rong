@@ -17,6 +17,7 @@
 * DNA cant leave the NUCLEUS of the cell, so instead, a temporary copy of the DNA code is transcribed into a molecule of messanger RNA (mRNA), which can leave the nucleus
 * The DNA code is made up of genes. Genes only read once they get a "go" signal from its cell.
 
+
 # RNA
 Ribonncleic Acid (RNA) is very similar to DNA, but is only half of a DOUBLE-HELIX. It is used to make a temporary copy of the DNA sequence when a gene is used.
 
@@ -47,6 +48,10 @@ chromosomes, guinea pigs have 64, and chimps have 48  - the same number as potat
 macromelecular structures.
 
 # GENES
+
+- Transcription: When proteins need to be made, The gene that makes it must be activated. This process is called transcription
+* DNA can't leave the nucleus of the cell so a temp copy of the DNA code is transcribed into a molecule of messanger RNA (mRNA) which can leave the nucleus
+
 
 - A LONG stretch of DNA that codes for something, usually a protein or a group of proteins. A typical human gene may be anywhere from 300 to 1,000,000 nucleotide pairs long
 

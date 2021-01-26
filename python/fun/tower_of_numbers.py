@@ -26,12 +26,12 @@ def tempConversion():
 tempConversion()
 
 temp = (temp * 1/5) + 32
-tempConvTime = timeit(tempConversion, number = 1000)
+tempConvTime = timeit(tempConversion, number = 100000)
 
-# print("You current temp is:| {}˚F |".format(temp))
-# print(tempConvTime)
+print("You current temp is:| {}˚F |".format(temp))
+print(tempConvTime)
 
-print(y_tower)
+# print(y_tower)
 
 # print(int(temp))
 # redacted = red_marker()
