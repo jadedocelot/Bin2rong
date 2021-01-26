@@ -14,8 +14,7 @@
 Lets take quick look at some of the key featurs. 
 
 
-
-### Development Speed
+~### Development Speed
 
 - GO offers lightning quick compiles (unlike C and C++ which can take up a large amount of your time to compile a large program)
 
