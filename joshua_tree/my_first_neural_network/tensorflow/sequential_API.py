@@ -1,7 +1,6 @@
 # Neural networks are a series of algorithms that mimic the operations of a human brain to recognize relationships between vast amounts of data. 
 # They are used in a variety of applications in financial services, from forecasting and marketing research to fraud detection and risk assessment
 
-
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers

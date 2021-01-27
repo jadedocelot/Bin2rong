@@ -5,12 +5,15 @@
 
 - A Spiralling chain like molecule made up of nucleotides. DNA nucleotides come in 4 different types: A, C , T. and G 
 
-* BASES: The bases in the rungs of the DNA ladder come in four types;
+- BASES: The bases in the rungs of the DNA ladder come in four types;
         * Adenin (A)
         * Thymine (T)
         * Cytonine (C)
         * Guanine (G)
 * Adenine(A) pairs with Thymine(T) in the DOUBLE HELIX, and Cytosine(C), which pairs with guanine (G)
+* The structural framwork of a nucleic acids, including DNA and RNA is consists of sugar phosphate. This backbone is composed of 
+alternating sugar and phosphate groups, and defines the directionality of the molecule.
+
 
 - Transcriptions: When a protein needs to be made, the gene that makes it must be ACTIVATED. This process is called TRANSCRIPTION.	
 

@@ -60,7 +60,6 @@ for i in range (25):
     plt.xlabel(class_names[train_labels[i]]) # Set label for the x-axis
 plt.show()
 
-
                                                                         
                                                                             
                                                                             ##### BUILD THE MODEL ####### 

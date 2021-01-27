@@ -22,14 +22,16 @@ def tempConversion():
 			for x in j:
 				if x % 2 == 0:
 					temp = 1 + temp
+print(temp)
 
-tempConversion()
 
-temp = (temp * 1/5) + 32
-tempConvTime = timeit(tempConversion, number = 100000)
+# tempConversion()
 
-print("You current temp is:| {}˚F |".format(temp))
-print(tempConvTime)
+# temp = (temp * 1/5) + 32
+# tempConvTime = timeit(tempConversion, number = 100000)
+
+# print("You current temp is:| {}˚F |".format(temp))
+# print(tempConvTime)
 
 # print(y_tower)
 
