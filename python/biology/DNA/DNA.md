@@ -11,9 +11,20 @@
         * Cytonine (C)
         * Guanine (G)
 * Adenine(A) pairs with Thymine(T) in the DOUBLE HELIX, and Cytosine(C), which pairs with guanine (G)
+
+# Nucleotides
+- DNA and RNA are composed nucleotides that are linked to one another in a chain by chemical bonds called ESTER BONDS,
+between the sugar base of 1 nucleotide and the phosphate group of the adjacent nucloetide. The sugar is the 3' end
+
+
+# Phosphate Backbone
 * The structural framwork of a nucleic acids, including DNA and RNA is consists of sugar phosphate. This backbone is composed of 
 alternating sugar and phosphate groups, and defines the directionality of the molecule.
 
+# Ester Bond
+- Esters are formed by linking 2 hyrogencarbon groups together with an oxygen atom, or by linking phosphate or nitrogen to a hydrocarbon group
+with and oxygen atom.
+- Trigley ceride lipids are composed of 3 ester linkages and are extremely important biological molecule 
 
 - Transcriptions: When a protein needs to be made, the gene that makes it must be ACTIVATED. This process is called TRANSCRIPTION.	
 
