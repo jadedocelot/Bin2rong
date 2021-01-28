@@ -20,6 +20,8 @@ between the sugar base of 1 nucleotide and the phosphate group of the adjacent n
 # Phosphate Backbone
 * The structural framwork of a nucleic acids, including DNA and RNA is consists of sugar phosphate. This backbone is composed of 
 alternating sugar and phosphate groups, and defines the directionality of the molecule.
+- DID THIS WORK
+
 
 # Ester Bond
 - Esters are formed by linking 2 hyrogencarbon groups together with an oxygen atom, or by linking phosphate or nitrogen to a hydrocarbon group
