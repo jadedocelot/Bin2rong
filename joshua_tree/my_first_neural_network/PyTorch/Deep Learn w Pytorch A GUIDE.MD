@@ -13,3 +13,15 @@
 
 	* GPUs (Graphical Processing Units) are very effective when it comes to performing operations bewtween tensors.
 
+ - Earlier we used the following example:
+
+	import torch
+	x = torch.rand(5, 3)
+	print(x)
+
+* There are various ways through which we can declare Tensors in PyTorch
+
+	import torch
+
+	x = torch
+
