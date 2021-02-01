@@ -1,6 +1,5 @@
 # Thinly wrapped version of NumPy 
 # Below is a simple example of using an open-ended loop to compute the sine function
-
 import autograd.numpy as np
 from autograd import grad
 
