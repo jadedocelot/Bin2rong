@@ -11,4 +11,5 @@
 
 - Tensors are data structures that look like martrices and they are very critical components for effient computation in deep learning.
 
+	* GPUs (Graphical Processing Units) are very effective when it comes to performing operations bewtween tensors.
 
