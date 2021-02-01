@@ -6,7 +6,10 @@ from autograd import grad
 # Taylor approximation to sine funtion
 def taylor_sine(x):
     ans = currterm = x
-    i = 0
+    # OG i
+    #i = 0
+    # i below is our fuckaround variable
+    i = 5
     while np.abs(currterm) > 0.001:
         currterm = -currterm * x**2 /((2 * i + 3) * (2 * i + 2))
         ans = ans + currterm
@@ -14,5 +17,5 @@ def taylor_sine(x):
     return ans
 
 grad_sine = grad(taylor_sine)
-print("Gradient of sinpie is ",grad_sine(np.pie))
-print("Hello Autograd!")
+print("Gradient of sinpie is ",grad_sine(np.pi))
+# print("Hello Autograd!")
