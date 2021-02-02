@@ -1,5 +1,7 @@
 # Why Pytorch for Deep Learning
 
+################################################################################
+
  * Pytorch is a library based on Python developed to implemet flexibility regarding the 	developemnt of deep learning.
 
 - Why should you used Pytorch to build deep learning models?
@@ -26,5 +28,7 @@
 	x = torch.Tensor(3,5)
 
 * The above code will generate a tensor of size (3,5), that is, 3 rows and 5 columns. The tensor 
+
+################################################################################
 
 # Autograd in Pytorch
