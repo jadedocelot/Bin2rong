@@ -23,5 +23,7 @@
 
 	import torch
 
-	x = torch
+	x = torch.Tensor(3,5)
+
+* The above code will generate a tensor of size (3,5), that is, 3 rows and 5 columns. The tensor 
 
