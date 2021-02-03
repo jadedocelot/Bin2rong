@@ -33,7 +33,7 @@
 	- The first one sees that then tells the first element is an 8
 	- So it only does one pass through the list and only when you need it
                     
-                    When you want something from a (LAZY LANGUAGE) you can just take some initial data and effeciantly transform and mend it so it resembles what you want in the end.
+- When you want something from a (LAZY LANGUAGE) you can just take some initial data and effeciantly transform and mend it so it resembles what you want in the end.
                      
                 
 # Haskell is (statically typed)
