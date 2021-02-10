@@ -1,5 +1,5 @@
 # 4 Layer Neural Network
-	- Our NN will be fully connected and will analyze the MNIST dataset.
+	- Our NN will be `ully connected and will analyze the MNIST dataset.
 	- The input layer will have 28 x 28 (= 784) greyscale pixels which make up the MNIST dataset
 
 	-  Onece the data has been received at the input layer, it will propogate through two hidden layers, each having 200 nodes
@@ -32,4 +32,10 @@
 
 So if you're like me, you're probaly think ing to yourself, "What the FUCK is going on above????". Well, lets find out, together.
 
+* We import the nn.Module class through the inheritance.
 
+	class Net(nn.Module):
+
+* In the first line of our inititialization,
+
+	def __init__(self)
