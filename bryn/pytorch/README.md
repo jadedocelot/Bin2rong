@@ -10,3 +10,15 @@
 			otherwise, it will output zero
 			 - It has become the default activation function for many types of neural networks becuase the model it uses is easier to train and ofter achieves better performance.
 
+	- The output layer will have 10 nodes which will represent the 10 classes to which each digit belongs to.
+
+
+
+	### The Neuaral Network Class
+
+	- The creation of a Neural Network in Pytorch is done via the (nn.Module) 
+		* This is a BASE class, and we use inhertnaces to access it.
+
+
+		
+
