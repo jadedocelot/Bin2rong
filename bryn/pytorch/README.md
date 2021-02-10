@@ -39,3 +39,8 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 * In the first line of our inititialization,
 
 	def __init__(self)
+
+* We ahve the super() function. This will create an instance of a base class, this is, the nn.module.
+
+	super(Net,self).__init__()
+
