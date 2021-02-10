@@ -7,5 +7,6 @@
 	- The nodes will use the ReLu activation function.
 
 			* ReLu (Rectified Linear Activated Function): A linear function that will output the input directly if it is a positive
+			otherwise, it will output zero
+			 - It has become the default activation function for many types of neural networks becuase the model it uses is easier to train and ofter achieves better performance.
 
-		
