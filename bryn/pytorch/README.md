@@ -56,6 +56,16 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 
 	self.fc1 = nn.Linear(28 * 28,200)
 
+* The next argument denotes the number of nodes in the layer l + 1. 
+
+- The first layer will take 28 * 28 input pixels and it will connect to the first 2oo hidden node layers. 
+
+* We then have 200 to 200 hidden layers then a connection between the hidden layer and the output layer with a total of 10 nodes
+
+	self.fc3 = nn.Linear(200,10)
+
+- At this point we have created a skeleton of our network achitecture
+
 
 
 
