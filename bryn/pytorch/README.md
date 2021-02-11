@@ -44,3 +44,20 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 
 	super(Net,self).__init__()
 
+* The next three lines have then been used to create fully connected layers of neural networks
+
+-	The nn.Linear object represents a fully connected	
+
+	self.fc1 = nn.Linear(28 * 28,200)
+	self.fc2 = nn.Linear(200,200)
+	self.fc3 = nn.Linear(200,10)
+
+* The first argument in this definition denotes the number of nodes in a layer
+
+	self.fc1 = nn.Linear(28 * 28,200)
+
+
+
+
+
+
