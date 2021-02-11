@@ -1,3 +1,5 @@
+# See (and run) main.py for code in its entirety without notes
+
 # 4 Layer Neural Network
 	- Our NN will be `ully connected and will analyze the MNIST dataset.
 	- The input layer will have 28 x 28 (= 784) greyscale pixels which make up the MNIST dataset
