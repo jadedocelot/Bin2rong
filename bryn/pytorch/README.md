@@ -64,7 +64,11 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 
 	self.fc3 = nn.Linear(200,10)
 
-- At this point we have created a skeleton of our network achitecture
+## At this point we have created a skeleton of our network achitecture
+
+- Now we will need to establish how the data will flow through the network. This will be done adding te foward() method to our class. Which  will overwrite the dummy method in our base class, and this should be defined for every network.
+
+
 
 
 
