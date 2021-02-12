@@ -86,11 +86,14 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 
 - A ReLu activation function has then been applied to the nodes in the layer via F.relu()
 
-* The network is hierarchial in nature, hence we have added x at every stage, so that it can be fed into the next layer
+* The network is hierarchial in nature, hence we have added x at every stage, so that it can be fed into the next layer. 
 
+	def forward(self, x):
+			x = F.relu(self.fc1(x))
+			x = F.relu(self.fc2(x))
+			x = self.fc3(x)
 
-
-
+* Except the last one, where we have used a 'log_softmax' activation function rather than ReLu.
 
 * Now below you will see that we have created and instance for our network architecture.
 
@@ -111,8 +114,7 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 
 
 
-
-
+# Training
 
 
 
