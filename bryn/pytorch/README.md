@@ -122,6 +122,10 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 
 # Training
 
+It is now time to train this damn network! We should begin by setting up an optimizer and a loss criterion:
+
+
+* First we need to create a stochastic gradient descent optimizer
 
 
 
