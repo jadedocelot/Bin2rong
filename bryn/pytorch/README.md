@@ -101,7 +101,13 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 			print(net)
 
 
+###  OUTPUT:
 
+	Net(
+  		(fc1): Linear(in_features=784, out_features=200, bias=True)
+  		(fc2): Linear(in_features=200, out_features=200, bias=True)
+  		(fc3): Linear(in_features=200, out_features=10, bias=True)
+  	)
 
 
 

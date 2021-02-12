@@ -18,3 +18,10 @@ class Net(nn.Module):
 net = Net()
 
 print(net)
+
+
+Net(
+  (fc1): Linear(in_features=784, out_features=200, bias=True)
+  (fc2): Linear(in_features=200, out_features=200, bias=True)
+  (fc3): Linear(in_features=200, out_features=10, bias=True)
+)
