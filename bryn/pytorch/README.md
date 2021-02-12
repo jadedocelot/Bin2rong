@@ -91,3 +91,31 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 
 
 
+
+* Now below you will see that we have created and instance for our network architecture.
+
+			net = Net()
+
+* The instance has been given the name "net", printing "net" will output the structure of your network.
+			
+			print(net)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

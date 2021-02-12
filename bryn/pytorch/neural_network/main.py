@@ -15,7 +15,6 @@ class Net(nn.Module):
 
 		return F.log_softmax(x)
 
-
 net = Net()
 
 print(net)
