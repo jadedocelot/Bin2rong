@@ -134,6 +134,10 @@ It is now time to train this damn network! We should begin by setting up an opti
 	criterion = nn.NLLLoss()
 
 
+## Dont know what the two examples abvove do? Well dont fret, We'll show you.....I think.
+
+
+
 
 
 
