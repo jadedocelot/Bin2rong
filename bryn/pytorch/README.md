@@ -95,6 +95,13 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 
 * Except the last one, where we have used a 'log_softmax' activation function rather than ReLu.
 
+
+	return F.log_softmax(x)
+
+
+- NOTE: Do not confuse LOG_SOFTMAX with SOFTMAX. LOG_SOFTMAX applies logarithm after softmax
+
+
 * Now below you will see that we have created and instance for our network architecture.
 
 			net = Net()
@@ -111,7 +118,6 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
   		(fc2): Linear(in_features=200, out_features=200, bias=True)
   		(fc3): Linear(in_features=200, out_features=10, bias=True)
   	)
-
 
 
 # Training

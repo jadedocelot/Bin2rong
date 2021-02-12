@@ -13,11 +13,12 @@ class Net(nn.Module):
 		x = F.relu(self.fc2(x))
 		x = self.fc3(x)
 
+	
 		return F.log_softmax(x)
 
 net = Net()
 
 # This will print output the structure of your network (or that DAMN 'Net' class)
-# print(net)
+print(net)
 
 
