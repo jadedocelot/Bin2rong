@@ -71,9 +71,21 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 - Now we will need to establish how the data will flow through the network. This will be done adding te foward() method to our class. Which  will overwrite the dummy method in our base class, and this should be defined for every network.
 
 
+	def forward(self, x):
+		x = F.relu(self.fc1(x))
+		x = F.relu(self.fc2(x))
+		x = slef.fc3(x)
 
+		return F.log_softmax(x)
 
+- In the forward method above, we have passed the input data (x) to be th primary argument
 
+* This has been fed into the first fully connected layer
 
+	x = F.relu(self.fc2(x))
+
+- A ReLu activation function has then been applied to the nodes in the layer via F.relu()
+
+* The network is hierarchial in nature, hence we have added x at every stage, so that it can be fed into the next layer
 
 

@@ -14,6 +14,3 @@ class Net(nn.Module):
 		x = slef.fc3(x)
 
 		return F.log_softmax(x)
-
-
-
