@@ -14,3 +14,10 @@ class Net(nn.Module):
 		x = self.fc3(x)
 
 		return F.log_softmax(x)
+
+
+
+net = Net()
+
+
+print(Net)
