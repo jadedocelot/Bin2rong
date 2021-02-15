@@ -125,7 +125,7 @@ So if you're like me, you're probaly think ing to yourself, "What the FUCK is go
 It is now time to train this damn network! We should begin by setting up an optimizer and a loss criterion:
 
 
-* First we need to create a stochastic gradient descent optimizer
+* We need to create a stochastic gradient descent optimizer
 
 	OPTIMIZER = optim.SGD(net.parameters(),lr=learning_rate, momentum=0.9)
 
@@ -136,9 +136,9 @@ It is now time to train this damn network! We should begin by setting up an opti
 
 ## Dont know what the two examples abvove do? Well dont fret, We'll show you.....I think.
 
+- FIRST, the stochastic gradient optimizer
 
-
-
+	
 
 
 

@@ -1,8 +1,10 @@
-import torch.nn.functional as F
-import torch.nn as nn
+import tinygrad
+from tinygrad.tensor import Tensor
 
+x = Tensor.eye(3)
+y = Tensor([[2.0,0,-2.0]])
+z = y.matmul(x).sum()
+z.backward()
 
-m = F.Logsoftmax()
-
-input = torch.randn(2,3)
-output = m(input)
+# print(x.grad)  # dz/dx
+# print(y.grad)  # dz/dy
