@@ -133,10 +133,13 @@ It is now time to train this damn network! We should begin by setting up an opti
 
 	criterion = nn.NLLLoss()
 
-
 ## Dont know what the two examples abvove do? Well dont fret, We'll show you.....I think.
 
-- FIRST, the stochastic gradient optimizer
+- FIRST, the Stochastic Gradient Descent Optimizer and speified learning rate of 0.01 and a momentum of 0.09
+
+- We also need to supply the network with parameters to the network
+
+
 
 	
 
