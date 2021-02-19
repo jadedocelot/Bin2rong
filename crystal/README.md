@@ -3,6 +3,23 @@
 
 
 ## Reference/Tutorials:
-- https://getgood.at/in-a-day/crystal
+- https://getgood.at/in-a-day/crystals
 - https://github.com/crystal-lang/crystal/
 - https://crystal-lang.org
+
+## printing out a value
+
+- In the example below we are printing out Hello World!
+
+	puts "Hello World!"
+	
+	#### OUTPUT:
+	#### Hello World!
+
+
+
+### Creating a class 
+
+class <class_name>
+
+end 
