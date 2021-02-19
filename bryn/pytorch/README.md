@@ -126,7 +126,7 @@ It is now time to train this damn network! We should begin by setting up an opti
 
 
 * We need to create a stochastic gradient descent optimizer
-
+	
 	OPTIMIZER = optim.SGD(net.parameters(),lr=learning_rate, momentum=0.9)
 
 * Then we create a loss function
