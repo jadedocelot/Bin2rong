@@ -16,7 +16,7 @@ if user_pass == "can":
  		while x < rand_int:
  			print(x)
  			x += 1
-	else:
+	elif x > 299:
 		print("I Have No Idea What You Are Talking About....")
 
 
